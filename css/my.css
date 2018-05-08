@@ -1,0 +1,1347 @@
+li,ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.layer-date{
+	float: left;
+	margin: 12px 0 0 0;
+	border: none;
+}
+.laydate-icon{
+	border: none;
+}
+#laydate_hms{
+	display: none;
+}
+.btnBox{
+	
+	background:#fcfeff;
+	position: fixed;
+    width: 100%;
+	top: 205px;
+    padding: 20px 0;
+}
+.navigation{
+	height: 40px;
+	line-height: 40px;
+	background: #FFFFFF;
+	position: fixed;
+    width: 100%;
+    top: 0px;	
+    padding-left: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.navigation a.first{
+	color: #999;
+}
+.navigation a.now{
+	color: #666666;
+}
+.mommunity_btnBox{
+	height: 56px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #e6e6e6;
+	position: fixed;
+    width: 100%;
+    top: 50px;
+}
+.commuinityTop{
+	background: #FFFFFF;
+	overflow: hidden;
+	padding: 0 30px 0;
+	border-bottom: 1px solid #e6e6e6;
+	position: fixed;
+	width: 100%;
+}
+.commuinityTop img{
+	display: block;
+	width: 160px;
+	height: 100px;
+	float: left;
+	margin-right: 20px;
+}
+.commuinityTop .leftBox{
+	float: left;
+}
+.commuinityTop ul{
+	float: left;
+	overflow: hidden;
+}
+.commuinityTop ul li{
+	float: left;
+	text-align: center;
+	width: 154px !important;
+}
+.commuinityTop ul li span{
+	display: block;
+}
+.commuinityTop .text_box{
+	float: left;
+	margin-right: 46px;
+}
+.commuinityTop .text_box h3{
+	font-size: 18px;
+	line-height: 30px;
+	margin-bottom: 40px;
+	font-weight: normal;
+	color: #333;
+}
+.commuinityTop .text_box span{
+	font-size: 14px;
+	color: #333333;
+}
+.sysTxtBox{
+	margin-top: 20px;
+}
+.sysTxtBox span{
+	color: #3e424b;
+}
+.sysTxtBox i{
+	font-style: normal;
+	font-size: 28px;
+	color: #3e424b;
+    font-family: serif;
+	display: block;
+	margin-top: 10px;
+}
+.afterDiv{
+	clear: both;
+	height: 10px;
+}
+.tipDiv span{
+	display: block;
+	width:80px;
+	text-align: center;
+	line-height:40px;
+	border-bottom: 1px solid #1890FF;
+	color: #1890FF;
+	font-size: 14px;
+	float: left;
+	margin-right: 80px;
+}
+.tipDiv .tipOne{
+	float: left;
+	margin-right: 40px;
+	margin-top: 12px;
+}
+.tipDiv .tipOne em{
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 10px;
+}
+.tipDiv .tipOne p{
+	float: left;
+}
+.tipDiv .tipOne .em_blue{
+	background: #8cc8ff;
+}
+.tipDiv .tipOne .em_gray{
+	background: #d9d9d9;
+}
+.tipDiv .tipOne .em_green{
+	background: rgba(139, 195, 74, 1);
+}
+.tipDiv .tipOne .em_redAll{
+	background: rgba(255, 88, 51, 1);
+}
+.tipDiv .tipOne .em_red{
+	background: url(../img/shou_03.png) no-repeat;
+}
+.houseBigBox{
+	position: absolute;
+	top: 290px;
+	padding: 10px 30px 30px;
+	height: calc(100% - 230px);
+	overflow-y: auto;
+	width: 100%;
+}
+.houseBigBox ul li{
+	padding:7px  0 10px 12px;
+	width: 19% !important;
+	height: 84px;
+	float: left;
+	margin: 5px 5px 0 0;
+	cursor: pointer;
+	border: 1px solid #50a9fc;
+	box-sizing: border-box;
+}
+houseBigBox ul li p{
+	margin:0 !important;
+	line-height: 20px !important;
+}
+.houseBigBox ul li.normal_li{
+	
+	background: #b1d7fa;
+	/* border: 1px solid #50a9fc; */
+}
+.houseBigBox ul li.normal_li p{
+	margin:0 0 5px  !important;
+	
+}
+
+
+.houseBigBox ul li.vacancy_li{
+	background: #d9d9d9;
+	border: 1px solid #acacac;
+}
+.houseBigBox ul li.vacancy_li p{
+	margin:0 0 5px  !important;
+	
+}
+.houseBigBox ul li.rent_li{
+	background: #b1d7fa url(../img/shou1.png) no-repeat right top;
+	
+}
+.houseBigBox ul li.rent_li p{
+	margin:0 0 5px  !important;
+	
+}
+.houseBigBox .houseBox{
+	border-bottom: 1px solid #E6E6E6;
+	overflow: hidden;
+	width: 100%;
+	padding-left: 120px;
+	box-sizing: border-box;
+	border-left:4px solid transparent;
+	position: relative;
+	margin: 0 0 20px 0;
+}
+.houseBigBox .houseBox:hover{
+	border-left:4px solid #20a8ff ;
+}
+.houseBigBox .houseBox .leftFloor{
+	float: left;
+	width: 100px;
+	position: absolute;
+	left: 30px;
+	bottom: 10px;
+}
+.houseBigBox .houseBox ul{
+	float: left;
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+}
+.houseBigBox .houseBox .leftFloor p{
+	font-size: 20px;
+	color: #000000;
+	margin: 0;
+}
+.houseBigBox .houseBox .leftFloor span{
+	font-size: 14px;
+	color: #333;
+}
+.rightBoxDiv{
+	width: 1000px;
+    position: fixed;
+    right: -1000px;
+    top: 0;
+    background: #FFFFFF;
+    height: 100%;
+    box-shadow: 0 0 10px #e2e2e2;
+    z-index: 9999999;
+    padding: 0  0 30px;
+}
+.rightBoxDiv .rightBoxDivTop{
+	border-bottom:1px solid #E6E6E6;
+	overflow: hidden;
+}
+.rightBoxDiv .rightBoxDivTop h5{
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+	float: left;
+	width: calc(100% - 70px);
+	margin: 0;
+	color: #333333;
+}
+.rightBoxDiv .rightBoxDivTop i{
+	display: block;
+	width: 70px;
+	height: 50px;
+	float: left;
+	cursor: pointer;
+	background: url(../img/closeWhite.png) no-repeat center;
+}
+.rightBoxDiv .houseInfo{
+	padding: 0 30px;
+}
+.rightBoxDiv .houseInfo li p{
+    color: #7087a4;
+}
+.rightBoxDiv .houseInfo li span{
+	font-size: 22px;
+    color: #353b4b;
+    margin-top: 5px;
+}
+.houseInfo .houseNum{
+	padding: 15px 0;
+	overflow: hidden;
+	border-bottom: 1px solid #E6E6E6;
+	line-height: 30px;
+}
+.houseInfo .houseNum h6{
+	float: left;
+	font-size: 24px;
+    font-weight: normal;
+    color: #333333;
+}
+.houseInfo .houseNum span{
+	float: right;
+	cursor: pointer;
+	width: 60px;
+	height: 30px;
+	display: block;
+	border:1px solid #d9d9d9;
+	text-align: center;
+	line-height: 30px;
+	margin-left: 10px;
+	margin-top: 8px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+}
+.houseInfo ul{
+	padding: 15px 0;
+	overflow: hidden;
+	border-bottom: 1px solid #E6E6E6;
+}
+.houseInfo ul li{
+	padding: 0 35px;
+	float: left;
+	border-right: 1px solid #E6E6E6;
+}
+.houseInfo ul li:first-of-type{
+	padding-left: 0;
+}
+.houseInfo ul li:last-of-type{
+	border: none;
+}
+.houseContentTop{
+	padding: 0 20px;
+}
+.houseContentTop .spanBox{
+	border-bottom: 1px solid #E6E6E6;
+	overflow: hidden;
+}
+.houseContentTop span{
+	width: 50%;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	font-size: 16px;
+}
+.houseContentTop span.active{
+	border-bottom: 2px solid #20a8ff;
+	color: #20a8ff;
+}
+.houseContentTop span:hover{
+	border-bottom: 2px solid #20a8ff;
+	color: #20a8ff;
+}
+.houseTableBox{
+	display: none;
+}
+.houseTableBox p i{
+	float: right;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    display: block;
+    border: 1px solid #d9d9d9;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+    margin-top: -8px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-size: 14px;
+	font-style: normal;
+	color: #333;
+}
+.vacancyCarPort{
+	height: calc(100% - 200px);
+	padding:0 30px 30px;
+	display: none;
+}
+.vacancyCarPort img{
+	width: 134px;
+	height: 160px;
+	display: block;
+	margin: 20% auto 0;
+}
+.vacancyCarPort b{
+	width: 200px;
+	text-align: center;
+	display: block;
+	margin: 30px auto 0;
+	font-weight: 600;
+	font-size: 16px;
+	color: #333333;
+}
+.vacancyCarPort .carAdd{
+	width: 90px;
+    text-align: center;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 15px auto 0; 
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    background: #20a8ff;
+    cursor: pointer;
+}
+.houseContentInfo{
+	overflow-y: auto;
+	height: calc(100% - 240px);
+	padding:0 30px 30px;
+}
+.houseTableBox p{
+	font-size: 16px;
+	color: #1890ff;
+	margin-top: 20px;
+}
+.houseTableBox .carDetail{
+	overflow: hidden;
+	padding-left: 30px;
+}
+.houseTableBox span{
+	display: block;
+	float: left;
+	width: 230px;
+	margin-bottom: 15px;
+	color:#262626;
+}
+.houseTableBox ul li{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #E6E6E6;
+	padding: 0 30px;
+	color: #333333;
+	overflow: hidden;
+}
+.houseTableBox a{
+	color: #333333;
+	text-indent: 30px;
+	margin-top: 20px;
+	display: block;
+	background: url(../img/right.jpg) no-repeat left center;
+}
+.houseTableBox span a{
+	color: #20a8ff;
+	background: none;
+	float: left;
+	text-indent: 0;
+	margin: 0;
+}
+.houseTableBox ul li:first-of-type{
+	background: #FAFAFA;
+	border: 1px solid #E6E6E6;
+	font-weight: bold;
+}
+.houseTableBox ul li span{
+	display: block;
+	float: left;
+	width: 120px;
+}
+.houseTableBox ul li span.wait_payFees{
+	color: red;
+}
+.houseTableBox ul li span.wait-ord{
+	color: #06ab06;
+}
+.houseTableBox ul li i{
+	display: block;
+	float: left;
+	margin-right: 10px;
+	color: #20a8ff;
+    cursor: pointer;
+    font-style: normal;
+}
+.houseTableBox ul li i:last-of-type{
+	margin: 0;
+}
+.contractDetail .imgBox{
+	overflow: hidden;
+	width: 100%;
+}
+.contractDetail .imgBox img{
+	
+	width: 62px;
+	height: 46px;
+	margin:0 10px 10px 0;
+}
+.tableMain{
+	max-height: calc(100% - 100px);
+	margin: 20px 20px 20px;
+	background: #FFFFFF;
+	padding-top: 10px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.detailBox{
+	background: #FFFFFF;
+	
+	overflow: hidden;
+	
+}
+.detailBox h6{
+	margin: 0;
+	padding: 10px 30px;
+	color: #1890ff;
+	font-size: 16px;
+}
+/* .detailBox h6 p{
+	font-size: 16px;
+    color: #1890ff;
+   
+    font-weight: bold;
+    font-weight: normal;
+    margin: 0;
+} */
+.communityList td img{
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+.chooseBox label{
+	margin-right: 10px;
+	overflow: hidden;
+}
+.chooseBox label i{
+	display: block;
+	float: left;
+	width: 14px;
+	height: 14px;
+	background: url(../img/green.png) no-repeat;
+	background-position: 0 0;
+}
+.chooseBox label i:hover{
+	background-position: -20px 0;
+}
+.chooseBox label i.active{
+	background-position: -40px 0;
+}
+.chooseBox label span{
+	display: block;
+	float: left;
+	margin-left: 5px;
+}
+.chooseBox{
+	margin-bottom: 10px;
+}
+.detailBox .form-group .floatDiv .laydate-icon{
+	max-width: 220px;
+    width: 220px;
+}
+.form-horizontal .control-label {
+    height: 30px;
+    line-height: 30px;
+}
+.communityList td span.btn_blue{
+	color: #20a8ff;
+	margin-right: 15px;
+	cursor: pointer;
+}
+.upload_btn{
+	background: none repeat scroll 0 0 #20a8ff;
+    font-size: 12px;
+    padding: 0 20px;
+    line-height: 32px;
+}
+.webuploader_pick {
+    font-size: 12px;
+    padding: 0 20px;
+    line-height: 30px;
+}
+.borderTop{
+	border-top: 1px solid #E6E6E6;
+	clear: both;
+	margin: 0 20px 20px;
+}
+.chooseHouse p{
+	font-size: 12px;
+	float: left;
+	width: 120px;
+	text-align: right;
+}
+.chooseHouse h4{
+	width: 100px;
+	font-weight: normal;
+	font-size: 12px;
+	border: 1px solid #cfdadd;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+}
+.chooseHouse .houseBox{
+	overflow: hidden;
+}
+.chooseHouse  .houseNum{
+	width: 100px;
+	height: 35px;
+	position: relative;
+	margin-right:20px ;
+	float: left;
+}
+.chooseHouse h4:hover{
+	color: #20a8ff;
+	border: 1px solid #20a8ff;
+}
+.chooseHouse i.active{
+	display: block;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    right: 0px;
+    bottom: -13px;
+    background: url(../img/deleteOne.png) no-repeat;
+}
+.chooseHouse{
+	margin-bottom: 10px;
+}
+.deleteRent{
+	cursor: pointer;
+}
+.deleteRent:hover{
+	color: red!important;
+}
+.addAnother p.p_btn {
+    font-size: 14px;
+    color: #333;
+    float: left;
+    height: 33px;
+    background: #FFFFFF;
+    text-align: center;
+    line-height: 33px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -ms-border-radius: 4px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 1px solid #cfdadd;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+.chargeBox td select{
+	width: 100px;
+	margin: 0;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border: 1px solid #cfdadd;
+}
+.chargeBox td input{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border: 1px solid #cfdadd;
+	outline: none;
+	padding: 0 3px;
+}
+.chargeBox th{
+	font-weight: normal;
+}
+.detailBox_contract{
+	display: none;
+} 
+.detailBox_property{
+	display: none;
+}
+.ul_boxBig {
+    width: auto;
+    margin-left: 25px;
+    border: 1px solid #e6e6e6;
+    margin: 20px 10px;
+}
+.chooseOneHouse ul.ul_box{
+	max-height: 200px;
+    overflow-y: auto;
+}
+.chooseOneHouse ul.ul_box .li_first {
+    height: 40px;
+    line-height: 40px;
+    background: #f2f2f2;
+    overflow: hidden;
+    border: ;
+}
+.chooseOneHouse ul.ul_box .li_first span{
+	height: 40px;
+	line-height: 40px;
+}
+.chooseOneHouse ul.ul_box li label .icheckbox_square-green{
+	margin-left: -25px;
+	margin-right: 10px;
+}
+.chooseOneHouse ul.ul_box li{
+	overflow: hidden;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #E6E6E6;
+}
+.chooseOneHouse ul.ul_box li:last-of-type{
+	border: none;
+}
+.chooseOneHouse ul.ul_box li span{
+	display: block;
+	width: 28%;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.chooseOneHouse ul.ul_box li i{
+	display: block;
+	width: 10%;
+	float: left;
+	text-align: center;
+	font-style: normal;
+	color: #20a8ff;
+	cursor: pointer;
+}
+.chooseOneHouse ul.ul_box li label{
+	width: 100%;
+	margin: 0;
+}
+.addAnother p.addRentClause{
+	float: right;
+    margin-right: 40px;
+}
+.formContent{
+	overflow: hidden;
+    overflow-y: auto;
+    padding:20px 20px 0;
+}
+.formContent .leftBorder{
+	font-size: 16px;
+	text-indent:10px ;
+	clear: both;
+	margin-bottom: 10px;
+}
+.formContent strong{
+	width: 250px;
+	display: block;
+	margin-right: 30px;
+	margin-bottom: 20px;
+	font-weight: normal;
+	float: left;
+}
+.formContent strong:nth-child(2n+1){
+	margin-right: 0;
+}
+.formContent strong span{
+	display: block;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.formContent strong input.readOnly{
+	border: none;
+	outline: none;
+	width: 250px;
+	height: 30px;
+	background: #f0f0f0;
+	font-size:12px;
+	padding-left:15px ;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+}
+.formContent .twoList{
+	width: 530px;
+}
+.formContent .twoList li{
+	min-height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	padding: 0 15px;
+	border-bottom: 1px solid #e8e8e8;
+	font-size: 14px;
+}
+.formContent .twoList li.first{
+	background:#fafafa ;
+}
+.formContent .twoList li span{
+	display: block;
+	float: left;
+	width: 230px;
+	line-height: 20px;
+    padding: 10px 0;
+    margin-right: 10px;
+}
+.formContent .twoList li i{
+	display: block;
+	width: 100px;
+	float: left;
+	font-style: normal;
+}
+.formContent .twoList li b{
+	display: block;
+	float: right;
+	font-weight: normal;
+	width:125px;
+}
+.formContent .twoList li input{
+	float: right;
+	border: none;
+	border: 1px solid #e8e8e8;
+	outline: none;
+	height: 30px;
+	box-sizing: border-box;
+	width: 130px;
+	margin-top: 5px;
+	padding-left: 10px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+}
+.moneyDetail{
+    clear: both;
+    width: 660px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #cfdadd;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -ms-border-radius: 4px;
+}
+.moneyDetail:hover{
+	border:1px solid #20a8ff;
+	color: #20a8ff;
+}
+.form-group-btn1{
+	position: fixed;
+	width: 100%;
+	background: #FFFFFF;
+	bottom: 0;
+}
+.m-t{
+	margin: 0;
+}
+.tableMain thead{
+	background: #F5F5F5;
+	border: 1px solid #e7eaec;
+}
+label{
+	font-weight: normal;
+	color: #333333;
+}
+.form-group label{
+	float: left;
+	width: 110px;
+	text-align: right;
+	padding-right: 5px;
+}
+.form-group label i{
+	color: red;
+	font-size: 18px;
+	margin-right: 2px;
+}
+.form-group .floatDiv{
+	float: left;
+	width: 80%;
+}
+.form-group .floatDiv i{
+	display: block;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-style: normal;
+}
+.form-group .floatDiv textarea{
+	resize: none;
+	height: 60px;
+}
+.form-group .floatDiv .laydate-icon {
+    border: 1px solid #cfdadd;
+    height: 30px;
+    margin: 0;
+    max-width: 300px;
+    width: 300px;
+}
+.form-group .floatDiv3 label {
+    float: left;
+    width: 300px;
+    text-align: left; 
+    padding-right: 5px;
+    margin-top: 5px;
+}
+.form-group .floatDiv3 input{
+	width: 30px;
+}
+.form-group .floatDiv select{
+    border:1px solid #cfdadd;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #cfdadd;
+    box-shadow: none;
+    margin: 0;
+}
+.btn-w-m {
+    min-width: auto;
+    float: right;
+    margin-left: 15px;
+    margin-top: 14px;
+}
+.form-horizontal .form-group-btn1{
+	margin: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+   
+    padding: 15px 0;
+    width: 100%;
+}
+.btn{
+	padding: 5px 20px;
+}
+.btn-info{
+	background-color: #20a8ff;
+    border-color: #20a8ff;
+}
+.float-e-margins .btn{
+	margin: 0 10px;
+}
+.float-e-margins .btn-info{
+	margin-right: 40px;
+}
+.formImg{
+	height: 150px;
+}
+.errorTip{
+	margin-top: 5px;
+	
+}
+
+.commenBtnBox strong {
+    display: block;
+    float: left;
+    
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    margin-right: 30px;
+    overflow: hidden;
+   
+    margin-left: 38px;
+    box-sizing: border-box;
+}
+.commenBtnBox strong input {
+    padding-left: 20px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    width: 160px;
+    float: left;
+    border: none;
+    font-weight: normal;
+    outline: none;
+}
+.commenBtnBox strong i {
+    display: block;
+    width: 50px;
+    height: 32px;
+    float: left;
+    background: url(../img/search.png) no-repeat center;
+    cursor: pointer;
+}
+.commenBtnBox .spanAdd {
+    float: left;
+    display: block;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 45px;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-left: 20px;
+    
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    background: #20a8ff url(../img/addWhite.png) no-repeat 20px center;
+    cursor: pointer;
+}
+.commenBtnBox b{
+	float: left;
+	line-height: 30px;
+	font-weight: normal;
+	margin-left: 38px;
+	margin-right: 5px;
+}
+.commenBtnBox .spanAddC{
+	background: #20a8ff url(../img/addWhite.png) no-repeat 20px center;
+}
+select{
+	outline: none;
+	width: 290px;
+	position: relative;
+	border: none;
+	border: 1px solid #e6e6e6;
+	height: 30px;
+	float: left;
+	margin: 0 0 20px 0;
+	padding: 0 10px;
+	 border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+}
+.chosen-container{
+	float: left;
+	margin: 12px  0 0 0;
+}
+.analysisTop{
+	position: relative;
+	top: 120px;
+	background: #FFFFFF;
+	margin: 0 20px;
+	padding: 25px 0 20px 0;
+}
+.analysisTop ul li {
+	float: left;
+	padding: 0 30px;
+    text-align: center;
+   
+}
+.portBox {
+	overflow: hidden;
+}
+.portBox .portAnalysis{
+	width: 15%;
+	float: left;
+	text-align: center;
+}
+.portBox .portAnalysis span{
+	display: block;
+}
+.portBox .portAnalysis i{
+	display: block;
+	font-style: normal;
+    font-size: 28px;
+    color: #000;
+    font-family: serif;
+    display: block;
+}
+.houseBigBox .carportBox{
+	overflow: hidden;
+}
+.houseBigBox .carportBox li{
+	width: 173px;
+	height: 230px;
+	border:3px solid #FFFFFF;
+	float: left;
+	margin:0 30px 30px 0;
+	cursor: pointer;
+	padding: 30px 0 0 12px;
+	color: #333333;
+	color: #FFFFFF;
+}
+.houseBigBox .carportBox li h3{
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+.houseBigBox .carportBox .car_blue{
+	background: #8cc8ff url(../img/car.png) no-repeat 105px 110px;
+	background-size:35%;
+}
+.houseBigBox .carportBox .car_gray{
+	background: #d9d9d9;
+}
+.houseBigBox .carportBox .car_green{
+	background: rgba(139, 195, 74, 1) url(../img/car.png) no-repeat 105px 110px;
+	background-size:35%;
+}
+.houseBigBox .carportBox .car_redAll{
+	background: rgba(255, 88, 51, 1) url(../img/car.png) no-repeat 105px 110px;
+	background-size:35%;
+}
+.standard{
+	padding: 0 15px;
+}
+.standardTop{
+	position: relative;
+	margin-left: 20px;
+}
+.standardTip{
+	position: absolute;
+	width:300px;
+	height: auto;
+	padding: 10px;
+	top: 50px;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	color: #FFFFFF;
+	font-size: 12px;
+	display: none;
+}
+.standardTitle{
+	height: 60px;
+	overflow: hidden;
+}
+.standardTitle p{
+	float: left;
+	line-height: 60px;
+	margin-right: 7px;
+}
+.standardTitle i{
+	width: 30px;
+    height: 30px;
+    display: block;
+    margin-left: -5px;
+    margin-top: -5px;
+    float: left;
+    cursor: default;
+	background: url(../img/wenhao.png) no-repeat center;
+	margin-top: 15px;
+	cursor: pointer;
+}
+.moneyDetail_1{
+	width: 700px;
+	margin-left: 25px;
+}
+.moneyDetail_1 .moneyDetail_1T{
+	width: 700px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #cfdadd;
+	margin-bottom: 10px;
+}
+.moneyDetail_1 .moneyDetail_1B{
+	border: 1px solid #cfdadd;
+	height: auto;
+	padding-bottom: 30px;
+}
+.moneyDetail_1 .moneyDetail_1T span:first-of-type{
+	width:200px ;
+}
+.moneyDetail_1 .moneyDetail_1B span:first-of-type{
+	width:230px ;
+}
+.moneyDetail_1 .moneyDetail_1B li{
+	height: 50px;
+	line-height: 50px;
+	overflow: hidden;
+}
+.moneyDetail_1 .moneyDetail_1B li.bigLi{
+	background: url(../img/zhankai.png) 20px center no-repeat;
+	cursor: pointer;
+}
+.moneyDetail_1 .moneyDetail_1B li.bigLi span:last-of-type{
+	margin-left: 5px;
+}
+.moneyDetail_1 .moneyDetail_1B li.bigLi.active{
+	background: url(../img/shouqi.png) 20px center no-repeat;
+}
+.moneyDetail_1 .moneyDetail_1B .detail_Ul{
+	border: 1px solid #cfdadd;
+	margin: 0 50px;
+	background: #EFEFEF;
+	display: none;
+}
+.moneyDetail_1 .moneyDetail_1B .detail_Ul li{
+	height:auto;
+	line-height: 40px;
+	border-bottom: 1px solid #cfdadd;
+}
+.moneyDetail_1 .moneyDetail_1B .detail_Ul li span{
+	width: 170px;
+}
+
+.moneyDetail_1 .moneyDetail_1B .detail_Ul li:last-of-type{
+	border: none;
+}
+.moneyDetail_1 p{
+	float: right;
+	margin:20px 0;
+}
+.moneyDetail_1 span{
+	width: 200px;
+	float: left;
+	text-align: center;
+	margin-left: 20px;
+	font-size: 14px;
+}
+.moneyDetail_1 span#yj{
+	width:150px;
+	text-align: left;
+}
+.moneyDetailBox{
+	clear: both;
+}
+.form1 .rentTipBox i {
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin-left: -5px;
+	margin-top: -5px;
+	float: left;
+	cursor: default;
+	background: url(../img/wenhao.png) no-repeat left center;
+}
+.rentTip {
+	width: 220px;
+	padding: 10px;
+	background: rgba(0,0,0,0.6);
+	color: #FFFFFF;
+	font-size: 12px;
+	position: absolute;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	line-height: 17px;
+	display: none;
+	margin-top: 65px;
+}
+.labelBox{
+	margin-bottom: 20px;
+	overflow: hidden;
+	margin-left: 25px; /*杩欎釜鏄磾鏋楁灄鏀圭殑*/
+}
+.labelBox label{
+	display: block;
+	margin-right: 30px;
+	float: left;
+}
+labelBox label span{
+	font-size: 14px;
+}
+.moneyDetail_1{
+	display: none;
+}
+.moneyDetail_1 h4{
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	text-align: center;
+}
+.labelBox label b{
+	display: block;
+	float: left;
+	width: 14px;
+	height: 14px;
+	border:1px solid #999999;
+	margin:5px 5px 0 0;
+	box-sizing: border-box;
+}
+.labelBox label b.active{
+	background: url(../img/active.png) no-repeat;
+	border: none;
+}
+.moneyDetailBox .moneyList{
+	overflow: hidden;
+	border:1px solid #e6e6e6;
+	padding:10px;
+	margin-bottom:20px;
+	/* margin-left:25px; */
+	width:600px;
+}
+.moneyDetailBox .moneyList .moneyList_L{
+	float: left;
+	margin-right: 30px;
+}
+.moneyDetailBox .moneyList .moneyList_L p{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.moneyDetailBox .moneyList .moneyList_L span{
+	font-size: 14px;
+}
+.moneyDetailBox .moneyList .moneyList_L label input{
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.moneyDetailBox .moneyList .moneyList_L label{
+	margin-right: 10px;
+}
+
+.moneyDetailBox .moneyList .title{
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.gudingDiv1{
+	display: none;
+}
+.zizhuprice{
+	display: none;
+}
+.zizhuprice1{
+	display: none;
+}
+.gudingDiv{
+	display: none;
+}
+.moneyList_L label b{
+	display: block;
+	float: left;
+	width: 14px;
+	height: 14px;
+	border:1px solid #999999;
+	margin:4px 5px 0 0;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+.moneyList_L {
+	overflow: hidden;
+}
+.moneyList_L label{
+	display: block;
+	float: left;
+	overflow: hidden;
+	margin-right: 20px;
+}
+.moneyList_L label span{
+	float: left;
+}
+.moneyList_L label b.active{
+	background: url(../img/active.png) no-repeat;
+	border: none;
+}

@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document  */
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+.houseTableBox ul li {
+    padding: 0 20px;
+}
+.houseTableBox ul li span{
+    width: 150px;
+}
+
+.houseTableBox .carDetail{
+    padding-left: 0;
+}
+.houseTableBox .ownerDetail ul li{
+    padding: 0 30px;
+}
+.houseTableBox .ownerDetail ul li span{
+    width: 150px;
+}
+.houseTableBox .ownerDetail ul li span.span_1{
+    width: 80px;
+}
+.houseTableBox .ownerDetail ul li span.span_2{
+    width: 70px;
+}
+.houseTableBox .ownerDetail ul li span.span_3{
+    width: 100px;
+}
+.houseTableBox .ownerDetail ul.carport li span{
+    width: 105px;
+}
+.houseTableBox_contract ul.carport li span.span_1{
+    width: 100px;
+}
+.houseTableBox_contract ul.carport li span.span_2{
+    width: 170px;
+}
+.houseTableBox .ownerDetail ul.carport li span:last-of-type{
+    text-align: right;
+}
+.houseTableBox_contract ul li{
+    padding: 0 30px;
+}
+.houseTableBox_contract p{
+    margin-top: 30px;
+}
+.contractDetail ul li{
+    padding: 0 10px;
+}
+.contractDetail ul li span{
+    width: 100px;
+}
+.contractDetail .charages li span{
+    width: 16%;
+}
+.contractDetail ul li span.span_1{
+    width: 60px;
+}
+.contractDetail ul li span.sfrift{
+    width: 95px;
+}
+.contractDetail ul li span.span_2{
+    width: 90px;
+}
+.contractDetail ul li span.ranks{
+    width: 180px;
+}
+.contractDetail ul li span.telsh{
+    width: 115px;
+}
+.contractDetail ul li span.sfour{
+    width: 130px;
+}
+.contractDetail ul li span.span_3{
+    width: 110px;
+}
+.housesel{
+    width: 84px;
+    height: 30px;
+    margin:0;
+}
+.housestong{
+    
+    width: 160px !important;
+}
+.nopul{
+    background: #20a8ff no-repeat 20px center !important;
+}
+.smchedk{
+    width: 30px !important;
+}
+.yezhumsg{
+    width: 100%;
+    height: 90px;
+}
+.houseTableBox .billDetail .billspan{
+    width: 275px !important;
+}
+.houseTableBox .billList p{
+    color: #666;
+}
+.houseTableBox .billList p i{
+    border: none;
+    color: #1890ff;
+}
+.hoverbox{
+    padding: 5px;
+
+    color: #000;
+
+}
+.hoverbox p{
+   
+    font:14px/24px "微软雅黑";
+
+}
+.hoverbox p i{
+    font-style: normal;
+    color:red;
+}
+.hoverbox ul li{
+    padding: 5px 0;
+    font:14px/24px "微软雅黑";
+}
+.prolook span{
+    width: 275px !important;
+}

@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+.clearfix{*zoom:1;}
+	.clearfix:after{content:""; clear:both; display:block;}
+.con-layout{
+    padding: 0 38px;
+}
+.navder{
+    width: 100%;
+    background: #fff;
+}
+.navder a,navder aspan{
+    line-height: 54px;
+    color: #999;
+}
+.navder .aon{
+    color: #333;
+}
+/* wininm.html */
+.top-head{
+    background: #fff;
+    height: 70px;
+}
+.pu-btn{
+    margin: 13px 20px 0;
+    background: #20a8ff;
+    color: #fff;
+}
+.pu-btn:hover{
+   color: #fff;
+}
+/* .pu-btnb{
+  
+    background: #fff;
+    border: 1px solid #d9d9d9;
+   
+} */
