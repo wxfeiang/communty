@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收费标准管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/wpublic.css">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        tr {
+            cursor: pointer;
+        }
+
+        .tableMain {
+            height: calc(100% - 100px);
+            margin: 80px 30px 20px;
+        }
+
+        .commenBtnBox .feeAdd {
+            width: 130px;
+            text-indent: 30px;
+            background: #20a8ff url(img/addWhite.png) no-repeat 10px center;
+        }
+
+        .cosset {
+            width: 136px;
+        }
+
+        .cost-inpt {
+            margin: 0 5px 0;
+            width: 64px;
+            line-height: 28px;
+            text-align: center;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            background: none;
+            outline: none;
+
+        }
+
+        .cost-on {
+            margin: 0 5px 0 10px;
+        }
+
+        .cost-on,
+        .cost-inpt:hover {
+            background: #1890ff;
+            color: #fff;
+        }
+
+        .coinput {
+
+            line-height: 28px;
+            padding: 0 10px;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            background: none;
+            outline: none;
+        }
+        .page-header{
+			padding: 0 0 0 10px;
+		}
+    </style>
+</head>
+
+<body class="gray-bg">
+    <!-- 头部导航展示 -->
+    <div class="con-layout navder">
+        <a href="">费项设置 </a>
+        <span>/</span>
+        <a href="" class="aon">收费项目管理 </a>
+    </div>
+
+
+    <!--操作区域-->
+    <div class="mommunity_btnBox commenBtnBox">
+        <form action="">
+            <b>小区切换:</b>
+            <select name="" class="cosset">
+                <option value="">请选择</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+            <b>费项名称：</b>
+            <input name="" class="coinput cosset" type="text" placeholder="费用标准名称">
+
+            <input type="button" value="查询" class="cost-inpt cost-on">
+            <input type="button" value="新增" class="cost-inpt" id="costadd">
+            <input type="button" value="删除" class="cost-inpt">
+
+        </form>
+    </div>
+    <!--小区展示-->
+    <div class="tableMain">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox-content communityList">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+
+                                <th>
+                                    <input type="checkbox" class="i-checks" id="allOptionId" name="allOptionId">
+                                </th>
+                                <th>序号</th>
+                                <th>项目名称</th>
+                                <th>费项名称</th>
+                                <th>收费方式</th>
+                                <th>创建时间</th>
+                                <th>创建人</th>
+
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>
+                                    <input type="checkbox" class="i-checks" name="input[]">
+                                </td>
+                                <td>1</td>
+                                <td>天庆花园</td>
+                                <td>物业费</td>
+                                <td>周期性</td>
+                                <td>2017.01.02</td>
+                                <td>叶云龙</td>
+
+                                <td>
+                                    <span class="btn_blue mommunityEdit">编辑</span>
+                                    <span class="btn_blue">删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>
+                                    <input type="checkbox" class="i-checks" name="input[]">
+                                </td>
+                                <td>1</td>
+                                <td>天庆花园</td>
+                                <td>物业费</td>
+                                <td>周期性</td>
+                                <td>2017.01.02</td>
+                                <td>叶云龙</td>
+
+                                <td>
+                                    <span class="btn_blue mommunityEdit">编辑</span>
+                                    <span class="btn_blue">删除</span>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <!-- 分页框 -->
+                    <div class="page-header position-relative">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="vertical-align:top;">
+                                    <div class="pagination" style="float: right;padding-top: 0px;margin-top: 0px;">
+                                        <ul class="pagination pull-right no-margin">
+                                            <li>
+                                                <a>共
+                                                    <font color="red">2</font>条</a>
+                                            </li>
+                                            <li>
+                                                <input type="number" value="" id="toGoPage" style="width:55px;padding-left:10px;float:left;height:28px;border: 1px solid #ddd;border-left: none;margin:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;"
+                                                    placeholder="页码" />
+                                            </li>
+                                            <li style="cursor:pointer;">
+                                                <a onclick="toTZ();" class="btn btn-mini btn-success" style="height:28px;color:#19a9d5!important">跳转</a>
+                                            </li>
+                                            <li>
+                                                <a>首页</a>
+                                            </li>
+                                            <li>
+                                                <a>上页</a>
+                                            </li>
+                                            <li class="active">
+                                                <a>
+                                                    <font color="blue">1</font>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>下页</a>
+                                            </li>
+                                            <li>
+                                                <a>尾页</a>
+                                            </li>
+                                            <li>
+                                                <a>共1页</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+
+    <script>
+        var elem = document.querySelector('.js-switch');
+        var switchery = new Switchery(elem, {
+            color: '#20a8ff'
+        });
+
+        //  点击新增
+        $("#costadd").click(function () {
+            parent.layer.open({
+                type: 2,
+                title: '新增收费项目',
+                shadeClose: false, //点击遮罩关闭层
+                area: ['512px', '290px'],
+                content: 'costminadd.html',
+                end: function () {
+                    location.reload(); //点击后刷新父页面
+                }
+            });
+        })
+
+        // 点击编辑按钮
+        $(".mommunityEdit").each(function () {
+            $(this).click(function () {
+                parent.layer.open({
+                    type: 2,
+                    title: '编辑',
+                    shadeClose: false, //点击遮罩关闭层
+                    area: ['512px', '290px'],
+                    content: 'costadminedit.html',
+                    end: function () {
+                        location.reload(); //点击后刷新父页面
+                    }
+                });
+            })
+        })
+    </script>
+    <!-- 分页 -->
+    <script type="text/javascript">
+        function nextPage(page) {
+            if (true && document.forms[0]) {
+                var url = document.forms[0].getAttribute("action");
+                if (url.indexOf('?') > -1) {
+                    url += "&currentPage=";
+                } else {
+                    url += "?currentPage=";
+                }
+                url = url + page + "&showCount=10";
+                document.forms[0].action = url;
+                document.forms[0].submit();
+            } else {
+                var url = document.location + '';
+                if (url.indexOf('?') > -1) {
+                    if (url.indexOf('currentPage') > -1) {
+                        var reg = /currentPage=\d*/g;
+                        url = url.replace(reg, 'currentPage=');
+                    } else {
+                        url += "&currentPage=";
+                    }
+                } else {
+                    url += "?currentPage=";
+                }
+                url = url + page + "&showCount=10";
+                document.location = url;
+            }
+        }
+
+        function changeCount(value) {
+            if (true && document.forms[0]) {
+                var url = document.forms[0].getAttribute("action");
+                if (url.indexOf('?') > -1) {
+                    url += "&currentPage=";
+                } else {
+                    url += "?currentPage=";
+                }
+                url = url + "1&showCount=" + value;
+                document.forms[0].action = url;
+                document.forms[0].submit();
+            } else {
+                var url = document.location + '';
+                if (url.indexOf('?') > -1) {
+                    if (url.indexOf('currentPage') > -1) {
+                        var reg = /currentPage=\d*/g;
+                        url = url.replace(reg, 'currentPage=');
+                    } else {
+                        url += "1&currentPage=";
+                    }
+                } else {
+                    url += "?currentPage=";
+                }
+                url = url + "&showCount=" + value;
+                document.location = url;
+            }
+        }
+
+        function toTZ() {
+            var toPaggeVlue = document.getElementById("toGoPage").value;
+            if (toPaggeVlue == '') {
+                document.getElementById("toGoPage").value = 1;
+                return;
+            }
+            if (isNaN(Number(toPaggeVlue))) {
+                document.getElementById("toGoPage").value = 1;
+                return;
+            }
+            nextPage(toPaggeVlue);
+        }
+    </script>
+</body>
+
+</html>

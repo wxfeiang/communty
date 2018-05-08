@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>统计分析页面</title>
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link rel="stylesheet" href="css/wpublic.css">
+    <style>
+        body{
+            margin: 0;
+            background: #f0f3f4;
+            padding: 30px 0 0 30px;
+          
+          
+        }
+      
+        .wapbox{
+            display: -webkit-flex;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        .embox{
+            margin: 0 20px 20px 0;
+            width: 48%;
+            background:#fff;
+            height: 485px;
+        }
+        .embox .datop{
+        height: 50px;
+        background: #ccc;
+          }
+         .embox .datop input{
+         width: 160px;
+
+      }
+    </style>
+</head>
+<body>
+  
+        <div class="wapbox">
+        
+            <div class="embox">
+                  <div class="datop">
+                <input type="text" placeholder="情绪那">
+                <input type="text" placeholder="情绪那">
+                <input type="text"  placeholder="请选择日期" id="test1">
+
+                <button >查询</button>
+
+              </div>
+            <canvas id="myChart">
+                请升级你的浏览器版本
+            </canvas>
+
+
+
+            </div>
+            <div class="embox">
+              <div class="datop">
+                <input type="text" placeholder="情绪那">
+                <input type="text" placeholder="情绪那">
+                <button >查询</button>
+
+              </div>
+
+
+            </div>
+            <div class="embox">3</div>
+            <div class="embox">4</div>
+            <div class="embox">5</div>
+            <div class="embox">6</div>
+            <div class="embox">7</div>
+
+            <div class="embox">8</div>
+            <div class="embox">9</div>
+            <div class="embox">10</div>
+
+        
+
+        </div>
+        <script src="js/plugins/laydate/laydate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script>
+
+
+
+
+
+
+
+        lay('#version').html('-v'+ laydate.v);
+
+        //执行一个laydate实例
+        laydate.render({
+          elem: '#test1' //指定元素
+        })
+
+
+
+
+
+
+   var ctx = document.getElementById("myChart").getContext('2d');
+   var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '这算是标题吗',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

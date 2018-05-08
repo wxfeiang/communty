@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <!-- iCheck -->
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/wpublic.css">
+	<style type="text/css">
+		html,body{
+			height: 100%;
+			overflow: hidden;
+		}
+		tr{
+			cursor: pointer;
+		}
+		.tableMain {
+		    height: calc(100% - 100px);
+    		margin: 80px 30px 20px;
+		}
+		.commenBtnBox .feeAdd{
+			width: 130px;
+    		text-indent: 30px;
+    		background: #20a8ff url(img/addWhite.png) no-repeat 10px center;
+        }
+        input{
+			outline: none;
+		    width: 160px;
+		    position: relative;
+		    border: none;
+		    border: 1px solid #e6e6e6;
+		    height: 30px;
+		    float: left;
+		    padding: 0 10px;
+		    border-radius: 4px;
+		    -webkit-border-radius: 4px;
+		    -moz-border-radius: 4px;
+		    -ms-border-radius: 4px;
+		}
+        .cosset{
+            width: 136px;
+        }
+        .cost-inpt{
+            margin: 0  0 0 20px; 
+            width: 64px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            background: none;
+            outline: none;
+
+        }
+        .cost-on,.cost-inpt:hover{
+            background: #1890ff;
+            color: #fff;
+        }
+        @media screen and (min-width: 1700px){
+        .select, .cosset {
+               width:160px !important;
+         }
+         
+       }
+	</style>
+</head>
+<body class="gray-bg">
+    <!-- 头部导航展示 -->
+    <div class="con-layout navder">
+        <a href="">部门管理</a>
+        <span>/</span>
+        <a href="" class="aon">员工管理 </a>
+    </div>
+    
+
+    <!--操作区域-->
+    <div class="mommunity_btnBox commenBtnBox">
+        <form action="">
+		<b>小区切换：</b>
+		<select name="" class="cosset">
+    		<option value="">请选择</option>
+    		<option value="">2</option>
+    		<option value="">3</option>
+        </select>
+        <b>部门切换:</b>
+		<select name="" class="cosset">
+    		<option value="">请选择</option>
+    		<option value="">2</option>
+    		<option value="">3</option>
+        </select>
+        <b>业主姓名：</b>
+		<input type="text" placeholder="请输入业主名">
+        
+        <input type="button" value="查询"  class="cost-inpt cost-on" >
+        <input type="button" value="新增"  class="cost-inpt" id="newstaff">
+        <input type="button" value="删除"  class="cost-inpt">
+
+    </form> 
+    </div>
+     <!--小区展示-->
+     <div class="tableMain">
+            <div class="row">
+                <div class="col-sm-12">
+                     <div class="ibox-content communityList">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+            
+                                        <th>
+                                            <input type="checkbox" class="i-checks"  id="allOptionId" name="allOptionId">
+                                           </th>
+                                        <th>序号</th>
+                                        <th>部门名称</th>
+                                        <th>姓名</th>
+                                      
+                                        <th>姓别</th>
+                                        <th>工作岗位</th>
+                                        <th>联系电话</th>
+                                      
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        
+                                        <td>
+                                            <input type="checkbox"  class="i-checks" name="input[]">
+                                        </td>
+                                        <td>1</td>
+                                        <td>维修部</td>
+                                        <td>二大爷</td>
+                                        <td>男</td>
+                                        <td>修水管</td>
+                                        <td>19845624562</td>
+                                        <td class="operation">
+                                            
+                                            <span class="btn_blue buildingDel mommunityEdit">编辑</span>
+                                            <span class="btn_blue buildingDel mommunityDel">删除</span>
+                                        </td>
+                                    </tr>
+                                   
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+     <!-- Switchery -->
+     <script src="js/plugins/switchery/switchery.js"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>	
+
+    <script>
+    
+        var elem = document.querySelector('.js-switch');
+            var switchery = new Switchery(elem, {
+                color: '#20a8ff'
+            });
+
+    //  点击新增
+    $("#newstaff").click(function(){
+    		parent.layer.open({
+		      type: 2,
+		      title: '新增员工',
+		      shadeClose: false, //点击遮罩关闭层
+		      area : ['512px' , '600px'],
+		      content: 'staffadd.html',
+		      end: function () {
+               location.reload();//点击后刷新父页面
+              }
+		    });
+    	})
+   //  点击操作里面的编辑
+   $(".mommunityEdit").each(function(){
+    		$(this).click(function(){
+	    		 parent.layer.open({
+			      type: 2,
+			      title: '编辑',
+			      shadeClose: false, //点击遮罩关闭层
+			      area : ['512px' , '600px'],
+			      content: 'staffedit.html',
+			      end: function () {
+	               location.reload();//点击后刷新父页面
+	              }
+			    });
+	    	})
+    	})
+
+
+
+
+
+
+    </script>
+</body>
+</html>

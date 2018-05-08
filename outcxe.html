@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查看详情页面</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="css/my.css" />
+    <link rel="stylesheet" href="css/wpublic.css">
+	<style type="text/css">
+		#signupForm{
+           padding:0 20px;
+           width: 100%;
+        }
+        #signupForm p{
+            width:50%;
+            padding: 5px;
+            margin: 0;
+            float: left;
+            
+           
+        }
+        .clearfix{*zoom:1;}
+        .clearfix:after{content:""; clear:both; display:block;}
+	</style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="float-e-margins">
+                <div class="ibox-content">
+                    <form class="clearfix form-horizontal m-t" id="signupForm" novalidate="novalidate">
+                      <p>物品编码:jhdifh</p>
+                      <p>物品名称: 马赛克</p>
+                      <p>规格:44</p>
+                      <p>型号:444</p>
+                      <p>单位:个</p>
+                      <p>厂家:444</p>
+                      <p>当前库存:444</p>
+                      <p>入库价:444</p>
+                      <p>保质期状态:444</p>
+                    
+
+
+                      
+                    </form>
+                </div>
+            </div>
+    	</div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+	<script type="text/javascript">
+		//状态控制
+		var elem = document.querySelector('.js-switch');
+        var switchery = new Switchery(elem, {
+            color: '#20a8ff'
+        });
+        //弹框内部高度控制
+        $(".formContent").height($("body,html").height()-70);
+		/*获取弹出窗口索引*/
+		var index = parent.layer.getFrameIndex(window.name); 
+		/*保存，并进行表单验证*/
+        
+	</script>
+</body>
+</html>

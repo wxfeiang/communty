@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增房间的基本信息1</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <!--上传图片-->
+    <link rel="stylesheet" href="js/plugins/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/my.css" /> -->
+    <link rel="stylesheet" href="css/wpublic.css">
+
+    <style type="text/css">
+        .ibox-content {
+            padding: 0;
+            width: 880px;
+            background: #f5f6f8;
+        }
+
+        .form-horizontal .control-label {
+            padding-top: 0;
+            margin-bottom: 0;
+            text-align: right;
+        }
+
+        .form-group {
+            width: 340px;
+            float: left;
+        }
+
+        .form-group .floatDiv {
+            width: 220px;
+        }
+
+        .upload_box {
+            margin: 0;
+        }
+
+        .form-horizontal .form-group {
+            margin-right: 0px;
+            margin-left: -18px;
+        }
+
+        .status_bar {
+            height: 47px;
+            border: none;
+        }
+
+        .webuploader_pick {
+            margin-left: 0;
+        }
+
+        .upload_submit {
+            padding-top: 0;
+        }
+
+        .upload_main {
+            border: none;
+        }
+
+        .upload_preview {
+            border: none;
+        }
+
+        .upload_append_list {
+            margin-left: 0;
+        }
+
+        .table {
+            background: #FFFFFF;
+        }
+
+        .table thead {
+            background: #fafafa;
+            border: 1px solid #e6e6e6;
+        }
+
+        .layer-date {
+            margin: 0;
+        }
+
+        .form-horizontal .form-group-btn1 {
+            margin: 0;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+
+            padding: 15px 0;
+            width: 100%;
+            background: #fff;
+        }
+
+        .btn {
+            padding: 5px 20px;
+        }
+
+        .btn-info {
+            background-color: #20a8ff;
+            border-color: #20a8ff;
+        }
+
+        .float-e-margins {
+            width: 880px;
+            height: 570px;
+            overflow: hidden;
+        }
+
+        .float-e-margins .btn {
+            margin: 0 10px;
+        }
+
+        .float-e-margins .btn-info {
+            margin-right: 40px;
+            float: right;
+        }
+
+        .tabpos {
+            position: relative;
+        }
+
+        .porpay {
+            margin: 0 0 30px 45px;
+            width: 624px;
+            border: 1px solid #ccc;
+        }
+
+        .porpay .flli {
+            border-top: 0 solid #ccc;
+        }
+
+        .porpay li {
+            padding: 0 20px 0;
+            height: 30px;
+            font: 14px/30px "微软雅黑";
+            border-top: 1px solid #ccc;
+
+        }
+
+        .porpay li .frspan {
+            float: right;
+        }
+
+        .porpay li .flblue {
+            color: #1890ff;
+
+        }
+
+        .porpay li b {
+            margin: 0 0 0 70px;
+            width: 140px;
+            font-weight: normal;
+        }
+
+        .romtab {
+            padding: 0 20px;
+            border-bottom: 1px solid #e8e8e8;
+            height: 40px;
+        }
+
+        .romtab .tabfl {
+            margin: 0;
+            float: left;
+            width: 84px;
+            text-align: center;
+            line-height: 39px;
+            cursor: pointer;
+
+        }
+
+        .romtab .tactiv {
+            color: #1890ff;
+            border-bottom: 1px solid #1890ff;
+        }
+
+        .taboder {
+            border: none;
+        }
+
+        .rommsg {
+            padding: 0 0 24px 0;
+            border-bottom: 1px solid #e8e8e8;
+            ;
+        }
+
+        .rommsg h3 {
+            padding: 0 64px;
+            font: 14px/44px "微软雅黑";
+            color: #1890ff;
+        }
+
+        .rommsg .msgflix {
+            display: -webkit-flex;
+            display: flex;
+            padding: 0 34px;
+        }
+
+        .rommsg .msgflix .msgld {
+            margin: 0 27px 20px 0;
+            width: 30%;
+
+        }
+
+        .rommsg .msgflix .msgld b {
+            display: inline-block;
+            margin: 0 10px 0 0;
+            width: 70px;
+            text-align: right;
+            color: #3b414e;
+        }
+
+        .rommsg .msgflix .msgld b i {
+            color: red;
+        }
+
+        .rommsg .msgflix .msgld .selip {
+            box-sizing: border-box;
+            padding: 0 0 0 10px;
+            width: 152px;
+            height: 30px;
+            outline: none;
+            border: solid 1px #d9d9d9;
+            border-radius: 4px;
+
+
+        }
+
+        .rommsg .msgflix .msgld .upspan {
+            display: inline-block;
+            width: 152px;
+            height: 30px;
+            border: 1px solid ccc;
+            ;
+            border-radius: 4px;
+            background: #ccc;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+
+        }
+
+        .rommsg .msgflix .msgld .upimg {
+            position: relative;
+            top: -25px;
+            left: 124px;
+            opacity: 0;
+
+        }
+
+        .rommsg .msgflix .msgld .selavg {
+            padding: 0;
+            width: 92px;
+
+        }
+
+        .selinp {
+            width: 54px;
+            height: 30px;
+            outline: none;
+            border: solid 1px #d9d9d9;
+            border-radius: 4px;
+        }
+
+        table .bgselt {
+            width: 93px;
+            height: 30px;
+            padding: 0 0 0 10px;
+        }
+
+        table .bginpt {
+            width: 70px;
+            height: 30px;
+            padding: 0 0 0 10px;
+            outline: none;
+            border: solid 1px #d9d9d9;
+            border-radius: 4px;
+        }
+
+        .btnactive {
+            display: none;
+        }
+
+        .firstbox {
+            position: relative;
+            top: 0;
+
+        }
+
+        .twobox {
+            position: relative;
+            top: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- 切换条 -->
+            <div class="float-e-margins">
+                <div class="clearfix romtab">
+                    <p class="tabfl tactiv" id="tabfl1">基本信息</p>
+                    <p class="tabfl " id="tabfl2">费用条款</p>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+                        <!-- 第一页基本信息 -->
+                        <div class="firstbox">
+                            <div class="rommsg">
+                                <h3>关联房间</h3>
+                                <div class="clearfix msgflix">
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>选择单元:</b>
+                                        <select name="" id="" class="selip">
+                                            <option value="">111111</option>
+                                        </select>
+                                    </div>
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>选择楼层:</b>
+                                        <select name="" id="" class="selip">
+                                            <option value="">111111</option>
+                                        </select>
+                                    </div>
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>选择房间:</b>
+                                        <select name="" id="" class="selip">
+                                            <option value="">111111</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="rommsg">
+                                <h3>业主信息</h3>
+                                <div class="clearfix msgflix">
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>业主姓名:</b>
+                                        <input type="text" class="selip" value="姓名">
+                                    </div>
+
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>性别:</b>
+                                        <select name="" class="selip">
+                                            <option value="">男</option>
+                                            <option value="">女</option>
+                                        </select>
+                                    </div>
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>手机号码:</b>
+                                        <input type="text" class="selip" value="184165156484">
+                                    </div>
+                                </div>
+                                <div class="clearfix msgflix">
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>居住类型:</b>
+                                        <select name="" class="selip">
+                                            <option value="">常住</option>
+                                            <option value="">暂住</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>身份证号:</b>
+                                        <input type="text" class="selip" value="56615415451551515">
+                                    </div>
+
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>紧急联系人:</b>
+                                        <input type="text" class="selip" value="张三">
+                                    </div>
+
+
+                                </div>
+
+                                <div class="clearfix msgflix">
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>紧急人电话:</b>
+                                        <input type="text" class="selip" value="1865156498651">
+                                    </div>
+
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>户口类型:</b>
+                                        <select name="" class="selip">
+                                            <option value="">城镇户口</option>
+                                            <option value="">农村户口</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="msgld">
+
+                                        <b>户籍地址:</b>
+                                        <input type="text" class="selip" value="4846548949841">
+                                    </div>
+
+
+                                </div>
+
+                                <div class="clearfix msgflix">
+                                    <div class="msgld">
+                                        <b>住户户号:</b>
+                                        <input type="text" class="selip" value="51">
+                                    </div>
+
+
+                                    <div class="msgld">
+
+                                        <b>副业主姓名:</b>
+                                        <input type="text" class="selip" value="李四">
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 第二页 费用条款 -->
+
+                        <div class="twobox">
+                            <div class="rommsg">
+                                <h3>基本条款</h3>
+                                <div class="clearfix msgflix">
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>签订时间:</b>
+                                        <input value="2017-17-17" class="laydate-icon layer-date selip" id="start2">
+                                    </div>
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>开始时间:</b>
+                                        <input value="2017-17-17" class="laydate-icon layer-date selip" id="start">
+                                    </div>
+
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>结束时间:</b>
+                                        <input value="2017-17-17" class="laydate-icon layer-date selip" id="end">
+                                    </div>
+
+
+                                </div>
+                                <div class="clearfix msgflix">
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>支付方式:</b>
+                                        <select name="" class="selip">
+                                            <option value="">押一付一</option>
+                                            <option value="">全款</option>
+                                        </select>
+                                    </div>
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>收费时间:</b>
+                                        <select name="" class="selip selavg">
+                                            <option value="">固定日收款</option>
+                                            <option value="">提前日收款</option>
+                                        </select>
+                                        <input type="text" class="selinp" value="">
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="clearfix msgflix">
+                                    <div class="msgld">
+
+                                        <b>
+                                            <i>*</i>附件上传:</b>
+                                        <span class="upspan">点击上传</span>
+                                        <input type="file" class="upimg">
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <!-- 表格部分 -->
+                            <div class="rommsg">
+                                <h3>条款费用</h3>
+                                <div class="clearfix msgflix">
+                                    <table class="table table-hover">
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" checked  class="i-checks" id="allOptionId" name="allOptionId">
+                                            </th>
+                                            <th>费项名称</th>
+                                            <th>标准名称</th>
+                                            <th>收费价格</th>
+                                            <th>金额计算方式</th>
+                                            <th>抄表读数</th>
+                                            <th>抄表时间</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" checked  class="i-checks" name="input[]">
+                                            </td>
+                                            <td>水费</td>
+                                            <td>
+                                                <select name="" id="" class="bgselt">
+                                                    <option value="">卡式抄表</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="请输入" class="bginpt">
+                                            </td>
+                                            <td>
+                                                单价*用量
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="请选择" class="bginpt">
+
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="请选择" class=" laydate-icon layer-date  bginpt" id="lastdat">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" checked  class="i-checks" name="input[]">
+                                            </td>
+                                            <td>电费</td>
+                                            <td>
+                                                <select name="" id="" class="bgselt">
+                                                    <option value="">卡式抄表</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="请输入" class="bginpt">
+                                            </td>
+                                            <td>
+                                                单价*用量
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="请选择" class="bginpt">
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="请选择" class=" laydate-icon layer-date  bginpt" id="lastdat1">
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 点击下一步  这个按钮小时 -->
+
+
+                        <div class="form-group form-group-btn1">
+                            <button class="btn btn-w-m btn-info" type="button" id="romnext">下一步</button>
+                            <button class="btn btn-w-m btn-info  btnactive" type="button" id="romsure">确定</button>
+                            <button class="btn btn-w-m btn-info  btnactive" type="button" id="befores">上一步</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- 表单验证-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+    <script src="js/plugins/layer/laydate/laydate.js"></script>
+    <!--上传图片-->
+    <script type="text/javascript" src="js/plugins/zyupload/zyupload.basic-1.0.0.js"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+    <script type="text/javascript">
+        //日期选择
+        var start = {
+            elem: '#start',
+            format: 'YYYY/MM/DD',
+            // min: laydate.now(), //设定最小日期为当前日期
+            // max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var start2 = {
+            elem: '#start2',
+            format: 'YYYY/MM/DD',
+            // min: laydate.now(), //设定最小日期为当前日期
+            // max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end = {
+            elem: '#end',
+            format: 'YYYY/MM/DD',
+            min: laydate.now(),
+            // max: '2099-06-16 23:59:59',
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var lastdat = {
+            elem: '#lastdat',
+            format: 'YYYY/MM/DD',
+            min: laydate.now(),
+            // max: '2099-06-16 23:59:59',
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var lastdat1 = {
+            elem: '#lastdat1',
+            format: 'YYYY/MM/DD',
+            min: laydate.now(),
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+
+        laydate(start);
+        laydate(end);
+        laydate(start2);
+        laydate(lastdat);
+        laydate(lastdat1);
+        //弹框内部高度控制
+        $(".formContent").height($("body,html").height() - 70);
+        /*取消*/
+        $(".btnCancle").click(function () {
+            parent.layer.close(index);
+        })
+        //点击下一步
+        $("#romnext").click(function () {
+
+            $(".firstbox").css("top", "-1000px");
+            $(".twobox").css("top", "-420px");
+            $("#romnext").hide();
+            $(this).nextAll().show();
+            $("#tabfl1").removeClass("tactiv").next().addClass('tactiv');
+        })
+
+        //点击上一步
+        $("#befores").click(function () {
+
+            $("#tabfl1").addClass("tactiv").siblings().removeClass("tactiv");
+            $(".firstbox").css("top", "0");
+            $(".twobox").css("top", "500px");
+            $(this).hide().prev().hide();
+            $("#romnext").show();
+
+        })
+
+
+        // 点击费用条款
+
+        $("#tabfl2").click(function () {
+
+            $("#tabfl2").addClass("tactiv").siblings().removeClass("tactiv");
+            $(".firstbox").css("top", "-1000px");
+            $(".twobox").css("top", "-420px");
+            $("#romnext").hide();
+            $("#romsure").show();
+            $("#befores").show();
+
+
+        })
+        //点击基本信息
+        $("#tabfl1").click(function () {
+
+            $("#tabfl1").addClass("tactiv").siblings().removeClass("tactiv");
+            $(".firstbox").css("top", "0");
+            $(".twobox").css("top", "500px");
+            $("#romnext").show();
+            $("#romsure").hide();
+            $("#befores").hide();
+        })
+        // 点击确定按钮  验证表单  提交
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预存详情</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="css/my.css" />
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <style type="text/css">
+        .tabBox {
+            width: 600px !important;
+            margin: 0 auto;
+        }
+
+        .tabBox h3 {
+            padding: 10px 20px;
+            font-weight: normal;
+            font-size: 12px;
+            text-align: right;
+            cursor: pointer;
+        }
+
+        .tabBox h3 i {
+            margin: 0 5px 0 0;
+            color: #1890ff;
+        }
+
+        .tabBox tr th,
+        .tabBox tbody tr td {
+            text-align: center;
+        }
+
+        .tabBox .caoselet {
+            padding: 10px 0 0 0;
+        }
+
+        .tabBox .caoselet select {
+            width: 200px;
+            height: 30px;
+
+        }
+
+        .tabBox .caoselet span {
+            display: block;
+            float: left;
+            margin: 0 0 0 10px;
+            width: 64px;
+            height: 30px;
+            border-radius: 4px;
+            background: #1890ff;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+        }
+        .page-header{
+			padding: 0 0 0 10px;
+		}
+    </style>
+</head>
+
+<body>
+    <div class="row ">
+        <div class="tabBox">
+            <div class="caoselet">
+                <select name="" id="">
+                    <option value="">缴费记录</option>
+                    <option value="">充值记录</option>
+                    <option value="">退款记录</option>
+
+                </select>
+                <span>查询</span>
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+
+                        <th>序号</th>
+                        <th>金额</th>
+                        <th>费用类型</th>
+                        <th>账户余额</th>
+                        <th>创建时间</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td>1</td>
+                        <td>100</td>
+                        <td>账号充值</td>
+                        <td>100</td>
+                        <td>2017-12-12</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 分页框 -->
+            <div class="page-header position-relative">
+                <table style="width:100%;">
+                    <tr>
+                        <td style="vertical-align:top;">
+                            <div class="pagination" style="float: right;padding-top: 0px;margin-top: 0px;">
+                                <ul class="pagination pull-right no-margin">
+                                    <li>
+                                        <a>共
+                                            <font color="red">2</font>条</a>
+                                    </li>
+                                    <li>
+                                        <input type="number" value="" id="toGoPage" style="width:55px;padding-left:10px;float:left;height:28px;border: 1px solid #ddd;border-left: none;margin:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;"
+                                            placeholder="页码" />
+                                    </li>
+                                    <li style="cursor:pointer;">
+                                        <a onclick="toTZ();" class="btn btn-mini btn-success" style="height:28px;color:#19a9d5!important">跳转</a>
+                                    </li>
+                                    <li>
+                                        <a>首页</a>
+                                    </li>
+                                    <li>
+                                        <a>上页</a>
+                                    </li>
+                                    <li class="active">
+                                        <a>
+                                            <font color="blue">1</font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>下页</a>
+                                    </li>
+                                    <li>
+                                        <a>尾页</a>
+                                    </li>
+                                    <li>
+                                        <a>共1页</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <script src="js/plugins/laydate/laydate.js"></script>
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+    <script type="text/javascript">
+        //弹框内部高度控制
+        $(".formContent").height($("body,html").height() - 70);
+
+
+        /*获取弹出窗口索引*/
+        var index = parent.layer.getFrameIndex(window.name);
+        /*保存，并进行表单验证*/
+
+        /*取消*/
+        $(".btnCancle").click(function () {
+            parent.layer.close(index);
+        })
+    </script>
+
+<!-- 分页 -->
+<script type="text/javascript">
+    function nextPage(page) {
+        if (true && document.forms[0]) {
+            var url = document.forms[0].getAttribute("action");
+            if (url.indexOf('?') > -1) {
+                url += "&currentPage=";
+            } else {
+                url += "?currentPage=";
+            }
+            url = url + page + "&showCount=10";
+            document.forms[0].action = url;
+            document.forms[0].submit();
+        } else {
+            var url = document.location + '';
+            if (url.indexOf('?') > -1) {
+                if (url.indexOf('currentPage') > -1) {
+                    var reg = /currentPage=\d*/g;
+                    url = url.replace(reg, 'currentPage=');
+                } else {
+                    url += "&currentPage=";
+                }
+            } else {
+                url += "?currentPage=";
+            }
+            url = url + page + "&showCount=10";
+            document.location = url;
+        }
+    }
+
+    function changeCount(value) {
+        if (true && document.forms[0]) {
+            var url = document.forms[0].getAttribute("action");
+            if (url.indexOf('?') > -1) {
+                url += "&currentPage=";
+            } else {
+                url += "?currentPage=";
+            }
+            url = url + "1&showCount=" + value;
+            document.forms[0].action = url;
+            document.forms[0].submit();
+        } else {
+            var url = document.location + '';
+            if (url.indexOf('?') > -1) {
+                if (url.indexOf('currentPage') > -1) {
+                    var reg = /currentPage=\d*/g;
+                    url = url.replace(reg, 'currentPage=');
+                } else {
+                    url += "1&currentPage=";
+                }
+            } else {
+                url += "?currentPage=";
+            }
+            url = url + "&showCount=" + value;
+            document.location = url;
+        }
+    }
+
+    function toTZ() {
+        var toPaggeVlue = document.getElementById("toGoPage").value;
+        if (toPaggeVlue == '') {
+            document.getElementById("toGoPage").value = 1;
+            return;
+        }
+        if (isNaN(Number(toPaggeVlue))) {
+            document.getElementById("toGoPage").value = 1;
+            return;
+        }
+        nextPage(toPaggeVlue);
+    }
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

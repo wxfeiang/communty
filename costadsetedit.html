@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑小区</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+	<link rel="stylesheet" href="css/my.css" />
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+	<style type="text/css">
+		.ibox-content{
+			padding: 0;
+		}
+		.form-group .floatDiv {
+		    float: left;
+		    width: 300px;
+		}
+		.form-group label{
+			width: 140px;
+		}
+		.form-group .floatDiv2{
+			width: 330px;
+		}
+		.form-group .floatDiv2 input{
+			width: 300px;
+			float: left;
+			margin-right:5px;
+		}
+		.form-horizontal .formContent{
+    		margin-left: auto;
+		}
+		.heatingOne{
+			display: none;
+		}
+		.heatingTwo{
+			display: none;
+		}
+		.form-group .floatDiv3 input{
+			width: 30px;
+		}
+		.form-group-fine{
+			display: none;
+
+		}
+	</style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+                        <div class="formContent">
+	                        <div class="form-group">
+	                            <label class="col-sm-1 control-label"><i>*</i>所属项目：</label>
+	                            <div class="floatDiv">
+	                                <select name="">
+							    		<option value="">高新大厦</option>
+							    		<option value="">高新大厦2</option>
+							    		<option value="">高新大厦3</option>
+									</select>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label"><i>*</i>选择费项：</label>
+	                            <div class="floatDiv">
+	                                <select name="" id="charge_type">
+							    		<option value="1">水费</option>
+							    		<option value="2">电费</option>
+							    		<option value="3">暖气费</option>
+							    		<option value="4">其他费用</option>
+									</select>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label"><i>*</i>标准名称：</label>
+	                            <div class="floatDiv">
+	                                <input id="username" name="username" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入标准名称">
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label"><i>*</i>金额计算方式：</label>
+	                            <div class="floatDiv">
+	                                <select name="">
+							    		<option value="">固定金额</option>
+							    		<option value="">单价*面积</option>
+							    		<option value="">单价*用量(本期读数-上期读数)</option>
+										<option value="">自主充值</option>
+	                                </select>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label"><i>*</i>收费价格：</label>
+	                            <div class="floatDiv">
+	                            	<input class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入单价" style="width: 120px;float: left;margin-right: 20px;">
+	                                <select name="" style="width: 160px;float: left;">
+							    		<option value="">元</option>
+							    		<option value="">元/吨</option>
+							    		<option value="">元/度</option>
+										<option value="">元/平方米</option>
+										
+	                                </select>
+	                            </div>
+	                        </div>
+	                        <div class="form-group heatingOne">
+	                            <label class="col-sm-3 control-label"><i>*</i>是否供暖：</label>
+	                        	<div class="floatDiv floatDiv2 floatDiv3">
+	                            	<label class="heatingBox">
+                                        <div class="iradio_square-green i-checks" style="position: relative;"><input type="radio" checked="checked" value="5" name="c" style="position: absolute; opacity: 0;"></div> 
+                                        <i></i>是
+                                        <div class="iradio_square-green i-checks" style="position: relative;margin-left: 50px;"><input type="radio" value="6" name="c" style="position: absolute; opacity: 0;"></div> 
+                                        <i></i>否
+	                            	</label>
+	                        	</div>
+	                        </div>
+	                        <div class="form-group heatingOne">
+	                            <label class="col-sm-3 control-label"><i>*</i>开始时间：</label>
+	                            <div class="floatDiv">
+	                                <input placeholder="开始日期" class="laydate-icon form-control layer-date" id="start">
+	                            </div>
+	                        </div>
+	                        <div class="form-group heatingOne">
+	                            <label class="col-sm-3 control-label"><i>*</i>结束时间：</label>
+	                            <div class="floatDiv">
+	                               <input placeholder="开始日期" class="laydate-icon form-control layer-date" id="end">
+	                            </div>
+	                        </div>
+	                        <div class="form-group heatingOne heatingTwo">
+	                            <label class="col-sm-3 control-label"><i>*</i>过热费比例：</label>
+	                            <div class="floatDiv">
+	                                <input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入标准名称">
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label"><i>*</i>计算精度：</label>
+	                            <div class="floatDiv">
+	                                <select name="">
+							    		<option value="">不保留小数</option>
+							    		<option value="">保留一位</option>
+							    		<option value="">保留两位</option>
+	                                </select>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label"><i>*</i>是否四舍五入：</label>
+	                        	<div class="floatDiv floatDiv2 floatDiv3">
+	                            	<label class="roundBox">
+                                        <div class="iradio_square-green i-checks" style="position: relative;"><input type="radio" checked="checked" value="3" name="b" style="position: absolute; opacity: 0;"></div> 
+                                        <i></i>是
+                                        <div class="iradio_square-green i-checks" style="position: relative;margin-left: 50px;"><input type="radio" value="4" name="b" style="position: absolute; opacity: 0;"></div> 
+                                        <i></i>否
+	                            	</label>
+	                        	</div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label class="col-sm-3 control-label"><i>*</i>是否收取滞纳金：</label>
+	                        	<div class="floatDiv floatDiv2 floatDiv3">
+	                            	<label class="warmBox">
+                                        <div class="iradio_square-green i-checks" style="position: relative;">
+											<input type="radio"  value="1" name="a" style="position: absolute; opacity: 0;">
+										</div> 
+                                        <i></i>是
+                                        <div class="iradio_square-green i-checks" style="position: relative;margin-left: 50px;">
+											<input type="radio" checked="checked" value="2" name="a" style="position: absolute; opacity: 0;">
+										</div> 
+                                        <i></i>否
+	                            	</label>
+	                        	</div>
+	                        </div>
+	                        <div class="form-group form-group-fine">
+	                            <label class="col-sm-3 control-label"><i>*</i>滞纳金收取时间：</label>
+	                            <div class="floatDiv floatDiv2">
+	                                <input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="从账单结束多少天开始收取" >
+	                            	<i>天</i>
+	                            </div>
+	                        </div>
+	                        <div class="form-group form-group-fine">
+	                            <label class="col-sm-3 control-label"><i>*</i>收取比例(天)：</label>
+	                            <div class="floatDiv floatDiv2">
+	                                <input id="rate" name="rate" class="form-control" type="text" aria-required="true" aria-invalid="true" >
+	                            	<i>‰</i>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label class="col-sm-1 control-label"><i>*</i>状态：</label>
+	                            <div class="floatDiv">
+	                            	<input type="checkbox" checked class="js-switch" data-switchery="true" style="display: none;">
+	                            </div>
+	                        </div>
+	                        <div class="form-group" style="margin-bottom: 30px;">
+	                            <label class="col-sm-3 control-label">备注：</label>
+	                            <div class="floatDiv">
+	                            	<textarea id="ccomment" name="comment" class="form-control" required="" aria-required="true"></textarea>
+	                            </div>
+	                        </div>
+                       </div>
+                        <div class="form-group form-group-btn1">
+                            <button class="btn btn-w-m btn-info" type="submit">提交</button>
+                            <button type="button" class="btn btn-w-m btn-white btnCancle">取消</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    	</div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+	<script src="js/plugins/layer/layer.min.js"></script>
+	<script src="js/plugins/layer/laydate/laydate.js"></script>
+	<!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+	<script type="text/javascript">
+		 //弹框内部高度控制
+        $(".formContent").height($("body,html").height()-70);
+		//判断是否收取滞纳金
+		$(".warmBox input").each(function(){
+			$(this).on('ifChanged', function(event){  
+	            if($(this).is(':checked')){//就是这么简单  
+	                if($(this).val()=="1"){
+	                	$(".form-group-fine").show();
+	                }else{
+	                	$(".form-group-fine").hide();
+	                }
+	            }  
+	        });
+		})
+		//费项为暖气费时
+		$("#charge_type").change(function(){
+		    var selectedValue=$(this).val();
+		    if(selectedValue=="3"){
+		    	//暖气费
+		    	$(".heatingOne").show();
+		    	$(".heatingTwo").hide()
+		    }else{
+		    	$(".heatingOne").hide();
+		    }
+		});
+		//不供暖时
+		$(".heatingBox input").each(function(){
+			$(this).on('ifChanged', function(event){  
+	            if($(this).is(':checked')){//就是这么简单  
+	                if($(this).val()=="6"){
+	                	$(".heatingTwo").show()
+	                }else{
+	                	$(".heatingTwo").hide()
+	                }
+	            }  
+	        });
+		})
+		//开关状态控制
+		var elem = document.querySelector('.js-switch');
+        var switchery = new Switchery(elem, {
+            color: '#20a8ff'
+        });
+        //日期选择
+        var start = {
+            elem: '#start',
+            format: 'YYYY/MM/DD',
+           // min: laydate.now(), //设定最小日期为当前日期
+           // max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end = {
+            elem: '#end',
+            format: 'YYYY/MM/DD',
+            min: laydate.now(),
+           // max: '2099-06-16 23:59:59',
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        laydate(start);
+        laydate(end);
+		/*获取弹出窗口索引*/
+		var index = parent.layer.getFrameIndex(window.name); 
+		/*保存，并进行表单验证*/
+		$().ready(function () {
+            var icon = "<i class='fa fa-times-circle errorTip'></i> ";
+            $("#signupForm").validate({
+                rules: {
+                    firstname: "required",
+                    lastname: "required",
+                    username: {
+                        required: true,
+                        minlength: 2
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    rate: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#password"
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    topic: {
+                        required: "#newsletter:checked",
+                        minlength: 2
+                    },
+                    agree: "required"
+                },
+                messages: {
+                    firstname: icon + "请输入你的姓",
+                    lastname: icon + "请输入您的名字",
+                    username: {
+                        required: icon + "请输入标准名称",
+                        minlength: icon + "用户名必须两个字符以上"
+                    },
+					rate: {
+                        required: icon + "请输入正常数字",
+                        minlength: icon + "用户名必须两个字符以上"
+                    },
+                    email: icon + "请输入您的E-mail",
+                    agree: {
+                        required: icon + "必须同意协议后才能注册",
+                        element: '#agree-error'
+                    }
+                },
+                submitHandler:function(form) {
+                	//表单验证成功执行以下代码
+					parent.layer.close(index);
+				}
+            });  
+        });
+		/*取消*/
+        $(".btnCancle").click(function(){
+			parent.layer.close(index);
+		})
+	</script>
+</body>
+</html>

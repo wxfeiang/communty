@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>撤销日志</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/newcss/wpublic.css">
+    <link rel="stylesheet" href="css/wpublic.css">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .commenBtnBox .feeAdd {
+            width: 135px;
+        }
+
+        .tableMain {
+            margin: 20px 30px 20px;
+        }
+        .page-header {
+			padding: 0 0 0 10px;
+		}
+    </style>
+</head>
+
+<body class="gray-bg">
+    <!-- 头部导航展示 -->
+    <div class="con-layout navder">
+        <a href="">缴费管理 </a>
+        <span>/</span>
+        <a href="" class="aon">撤销日志 </a>
+    </div>
+
+    <div class="tableMain">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox-content communityList">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>房间</th>
+                                <th>业主</th>
+                                <th>费用类型</th>
+                                <th>账单周期</th>
+                                <th>金额</th>
+                                <th>撤销时间</th>
+                                <th>撤销人</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>高新大厦B座16楼105室</td>
+                                <td>王五</td>
+                                <td>水费</td>
+                                <td>2018.03.14 10:00:25</td>
+                                <td>1600</td>
+                                <td>2015.02.03</td>
+                                <td>二大爷</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>高新大厦B座16楼105室</td>
+                                <td>王五</td>
+                                <td>水费</td>
+                                <td>2018.03.14 10:00:25</td>
+                                <td>1600</td>
+                                <td>2015.02.03</td>
+                                <td>二大爷</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 分页框 -->
+                    <div class="page-header position-relative">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="vertical-align:top;">
+                                    <div class="pagination" style="float: right;padding-top: 0px;margin-top: 0px;">
+                                        <ul class="pagination pull-right no-margin">
+                                            <li>
+                                                <a>共
+                                                    <font color="red">2</font>条</a>
+                                            </li>
+                                            <li>
+                                                <input type="number" value="" id="toGoPage" style="width:55px;padding-left:10px;float:left;height:28px;border: 1px solid #ddd;border-left: none;margin:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;"
+                                                    placeholder="页码" />
+                                            </li>
+                                            <li style="cursor:pointer;">
+                                                <a onclick="toTZ();" class="btn btn-mini btn-success" style="height:28px;color:#19a9d5!important">跳转</a>
+                                            </li>
+                                            <li>
+                                                <a>首页</a>
+                                            </li>
+                                            <li>
+                                                <a>上页</a>
+                                            </li>
+                                            <li class="active">
+                                                <a>
+                                                    <font color="blue">1</font>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>下页</a>
+                                            </li>
+                                            <li>
+                                                <a>尾页</a>
+                                            </li>
+                                            <li>
+                                                <a>共1页</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    	<!-- 分页 -->
+	<script type="text/javascript">
+		function nextPage(page) {
+			if (true && document.forms[0]) {
+				var url = document.forms[0].getAttribute("action");
+				if (url.indexOf('?') > -1) {
+					url += "&currentPage=";
+				} else {
+					url += "?currentPage=";
+				}
+				url = url + page + "&showCount=10";
+				document.forms[0].action = url;
+				document.forms[0].submit();
+			} else {
+				var url = document.location + '';
+				if (url.indexOf('?') > -1) {
+					if (url.indexOf('currentPage') > -1) {
+						var reg = /currentPage=\d*/g;
+						url = url.replace(reg, 'currentPage=');
+					} else {
+						url += "&currentPage=";
+					}
+				} else {
+					url += "?currentPage=";
+				}
+				url = url + page + "&showCount=10";
+				document.location = url;
+			}
+		}
+
+		function changeCount(value) {
+			if (true && document.forms[0]) {
+				var url = document.forms[0].getAttribute("action");
+				if (url.indexOf('?') > -1) {
+					url += "&currentPage=";
+				} else {
+					url += "?currentPage=";
+				}
+				url = url + "1&showCount=" + value;
+				document.forms[0].action = url;
+				document.forms[0].submit();
+			} else {
+				var url = document.location + '';
+				if (url.indexOf('?') > -1) {
+					if (url.indexOf('currentPage') > -1) {
+						var reg = /currentPage=\d*/g;
+						url = url.replace(reg, 'currentPage=');
+					} else {
+						url += "1&currentPage=";
+					}
+				} else {
+					url += "?currentPage=";
+				}
+				url = url + "&showCount=" + value;
+				document.location = url;
+			}
+		}
+
+		function toTZ() {
+			var toPaggeVlue = document.getElementById("toGoPage").value;
+			if (toPaggeVlue == '') {
+				document.getElementById("toGoPage").value = 1;
+				return;
+			}
+			if (isNaN(Number(toPaggeVlue))) {
+				document.getElementById("toGoPage").value = 1;
+				return;
+			}
+			nextPage(toPaggeVlue);
+		}
+	</script>
+</body>
+
+</html>

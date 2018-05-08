@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增房间管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="css/my.css" />
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <style type="text/css">
+        .ibox-content {
+            padding: 0;
+        }
+
+        .form-group .floatDiv {
+            float: left;
+            width: 300px;
+        }
+
+        .form-group label {
+            width: 140px;
+        }
+
+        .form-group .floatDiv2 {
+            width: 330px;
+        }
+
+        .form-group .floatDiv2 input {
+            width: 300px;
+            float: left;
+            margin-right: 5px;
+        }
+
+        .form-horizontal .formContent {
+            margin-left: auto;
+        }
+
+        .heatingOne {
+            display: none;
+        }
+
+        .heatingTwo {
+            display: none;
+        }
+
+        .form-group .floatDiv3 input {
+            width: 30px;
+        }
+
+        /*.form-group .floatDiv{
+			width: 290px;
+        }*/
+
+        .imgfile {
+            opacity: 0;
+            width: 138px;
+            height: 32px;
+            outline: none;
+
+            color: #fff;
+            text-align: center;
+            border: none;
+        }
+
+        .imgwarp {
+            background: #4f9eff;
+            cursor: pointer;
+        }
+
+        .newfile {
+            float: left;
+            width: 125px;
+            text-align: center;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            height: 80px;
+        }
+
+        .newfile input {
+            opacity: 0;
+            height: 80px;
+            cursor: pointer;
+
+        }
+
+        .form-group .floatDiv2 .newbtn {
+            width: 125px;
+            background: #1890ff;
+            color: #fff;
+        }
+
+        .newfile b {
+            position: relative;
+            top: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+                        <div class="formContent">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">
+                                    <i>*</i>选择单元:</label>
+                                <div class="floatDiv">
+                                    <select name="">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">
+                                    <i>*</i>选择楼层:</label>
+                                <div class="floatDiv">
+                                    <select name="">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group form-group-fine">
+                                <label class="col-sm-3 control-label">
+                                    <i>*</i>房间编号:</label>
+                                <div class="floatDiv floatDiv2">
+                                        <input name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="">
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="form-group form-group-fine">
+                                <label class="col-sm-3 control-label">
+                                        <i>*</i>建筑面积:</label>
+                                <div class="floatDiv floatDiv2">
+                                    <input name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入建筑面积">
+
+                                </div>
+                            </div>
+
+                            <div class="form-group form-group-fine">
+                                <label class="col-sm-3 control-label">
+                                    套内面积:</label>
+                                <div class="floatDiv floatDiv2">
+                                    <input id="" name="username" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入室内面积">
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group form-group-fine">
+                                <label class="col-sm-3 control-label">
+                                    公摊面积:</label>
+                                <div class="floatDiv floatDiv2">
+                                    <input name="username" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="公摊面积">
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">楼层朝向:</label>
+                                <div class="floatDiv">
+                                    <select name="">
+                                        <option value="1">东</option>
+                                        <option value="2">东北</option>
+                                        <option value="3">东南</option>
+                                        <option value="4">西</option>
+                                        <option value="5">西北</option>
+                                        <option value="6">西南</option>
+                                        <option value="7">南</option>
+                                        <option value="8">北</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">附件:</label>
+                                <div class="newfile">
+                                    <b>附件上传</b>
+                                    <input type="file">
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+
+                        <div class="form-group form-group-btn1">
+                            <button class="btn btn-w-m btn-info" type="submit">提交</button>
+                            <button type="button" class="btn btn-w-m btn-white btnCancle">取消</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <script src="js/plugins/layer/laydate/laydate.js"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+    <script type="text/javascript">
+        //弹框内部高度控制
+        $(".formContent").height($("body,html").height() - 70);
+        //判断是否收取滞纳金
+
+        laydate(start);
+        laydate(end);
+        /*获取弹出窗口索引*/
+        var index = parent.layer.getFrameIndex(window.name);
+        /*保存，并进行表单验证*/
+        $().ready(function () {
+            var icon = "<i class='fa fa-times-circle errorTip'></i> ";
+            $("#signupForm").validate({
+                rules: {
+                    firstname: "required",
+                    lastname: "required",
+                    username: {
+                        required: true,
+                        minlength: 2
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    confirm_password: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#password"
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    topic: {
+                        required: "#newsletter:checked",
+                        minlength: 2
+                    },
+                    agree: "required"
+                },
+                messages: {
+                    firstname: icon + "请输入你的姓",
+                    lastname: icon + "请输入您的名字",
+                    username: {
+                        required: icon + "请输入您的用户名",
+                        minlength: icon + "用户名必须两个字符以上"
+                    },
+                    password: {
+                        required: icon + "请输入您的密码",
+                        minlength: icon + "密码必须5个字符以上"
+                    },
+                    confirm_password: {
+                        required: icon + "请再次输入密码",
+                        minlength: icon + "密码必须5个字符以上",
+                        equalTo: icon + "两次输入的密码不一致"
+                    },
+                    email: icon + "请输入您的E-mail",
+                    agree: {
+                        required: icon + "必须同意协议后才能注册",
+                        element: '#agree-error'
+                    }
+                },
+                submitHandler: function (form) {
+                    //表单验证成功执行以下代码
+                    parent.layer.close(index);
+                }
+            });
+        });
+        /*取消*/
+        $(".btnCancle").click(function () {
+            parent.layer.close(index);
+        })
+    </script>
+</body>
+
+</html>

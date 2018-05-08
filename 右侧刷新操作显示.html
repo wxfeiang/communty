@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="hidden" name="mark" value="0" id="mark2" />
+    <input type="hidden" name="mark" value="" id="mark" />
+    <input type="hidden" name="mark" value="" id="lyn_floor_id" />
+    <input type="hidden" name="mark" value="" id="lyn_floor_num" />
+    <input type="hidden" name="mark" value="" id="lyn_house_num" />
+    <input type="hidden" name="mark" value="" id="lyn_house_area" />
+    <input type="hidden" name="mark" value="" id="lyn_house_status" />
+    <input type="hidden" name="mark" value="" id="lyn_houseinfo_id" />
+
+</body>
+<script>
+    $(function () {
+        var a = $("#mark").val();
+        if (a == 1) {
+            localStorage.id = $("#lyn_houseinfo_id").val();
+            billMessageDefault(
+            $("#lyn_floor_id").val(),
+            $("#lyn_floor_num").val(),
+            $("#lyn_house_num").val(),
+            $("#lyn_house_area").val(), 
+            $("#lyn_house_status").val(), 
+            $("#lyn_houseinfo_id").val());
+        }
+
+        function rightSlideShow() {
+            if (localStorage.slideType == 1) {
+                houseClick(localStorage.id);
+            }
+            if (localStorage.slideType == 2) {
+                houseClick(localStorage.id);
+                $(".rightBoxContent").hide();
+                $(".rightBoxTop1 span").removeClass("active");
+                $(".rightBoxTop1").find("span").eq(2).addClass("active");
+                $(".rightBoxContent2_1").show();
+            }
+            if (localStorage.slideType == 3) {
+                houseClick(localStorage.id);
+                $(".rightBoxContent").hide();
+                $(".rightBoxTop1 span").removeClass("active");
+                $(".rightBoxTop1").find("span").eq(1).addClass("active");
+                $(".rightBoxContent2").show();
+            }
+        }
+        rightSlideShow();
+        localStorage.slideType = "";
+        console.log(localStorage.slideType);
+    });
+
+
+    //   弹框 
+    layer.open({
+        type: 2,
+        title: '编辑合同',
+        shadeClose: false, //点击遮罩关闭层
+        area: ['803px', '700px'],
+        content: 'http://www.bdlgz.com:80//Office/Compact/goEdit.do?compact_id=' + compact_id +
+            '&houseinfo_id=' + houseinfo_id,
+        end: function () {
+            location.reload(); //点击后刷新父页面
+            localStorage.slideType = 3;
+            var a = $("#mark").val();
+            if (a == 1) {
+                houseClick(localStorage.id)
+            }
+        }
+    });
+
+    /*
+     * 删除点击事件
+     */
+    $("#delete").click(function () {
+        layer.confirm("确定要删除吗?", function (result) {
+            if (result) {
+                var url = "http://www.bdlgz.com:80/Office/Compact/deleteCompact";
+                var postData = {
+                    compact_id: compact_id,
+                    owner_id: compact.owner_id
+                };
+                $.post(url, postData, function (data) {
+                    if (data.result == "success") {
+                        successDialog("删除成功！");
+                        setTimeout(function () {
+                            location.reload();
+                        }, 600)
+                        localStorage.slideType = 3;
+                        var a = $("#mark").val();
+                        if (a == 1) {
+                            houseClick(localStorage.id);
+                        }
+                    }
+                })
+            }
+        })
+    })
+    
+</script>
+
+</html>

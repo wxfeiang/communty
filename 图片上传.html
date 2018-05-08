@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增附件上传</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="css/my.css" />
+    <link rel="stylesheet" href="css/wpublic.css">
+	<style type="text/css">
+		.updo{
+            margin:0 auto;
+            width: 408px; 
+            height: 50px; 
+            border: 1px dashed #999;
+            border-radius: 4px;
+
+
+        }
+        .updo h3{
+            margin:0;
+            text-align: center;
+            font: 14px/50px "微软雅黑";
+            color: #3b414e;
+            cursor: pointer;
+        }
+        .updo h3 i{
+            font-size: 18px;
+            margin: 0 10px 0 0;
+        }
+        .updo h3 span{
+            color: #2280ff;
+            position: relative;
+            cursor: pointer;
+            
+        }
+        .updo h3 span input{
+            position: absolute;
+            top: -15px;
+            left: 0px;
+            width: 99px;
+            height: 40px;
+            opacity: 0;
+            cursor: pointer;
+            
+        }
+        .upshow{
+            margin: 20px  auto 0;
+            padding: 10px 14px;
+            width: 408px;
+            height: 70px;
+            border-radius: 4px;
+	        border: solid 1px #d9d9d9;
+        }
+
+       .upshow .showimg{
+           float: left;
+           width: 50px;
+           height: 50px;
+           background: #ccc;
+           
+       }
+       
+       .upshow .showcont h4 ,.upshow .showcont p {
+           margin: 0;
+           padding: 0;
+           line-height: 30px;
+
+       }
+       .upshow .showcont{
+          float: left;
+           margin: 0 0 0 10px;
+           width: 250px;
+
+       }
+       .upshow .shouop{
+           line-height: 70px;
+       }
+       .upshow .shouop i{
+           margin: 0 5px;
+           color: #999;
+       }
+       .upshow .shouop i:hover{
+        cursor: pointer;
+       }
+	</style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+                    
+                        <div class="updo">
+                            <h3 id="hfile">
+                                <i class="fa fa-cloud-upload"></i>
+                                将文件拖拽至此
+                                <span>点击上传
+                                    <input type="file" id="filename" onchange="upload(this)">
+                                </span>
+                            </h3>
+                        </div>
+                      <!--  有图片的传上 的时候 显示 -->
+                       <div class="upshow">
+                            <div class="showimg">
+                                <img src="" alt="" width:50px; height:50px; >
+                            </div>
+                            <div class="showcont">
+                               <h4>我是文件名称.jpg</h4>
+                               <p>2018*12*12 三大爷上传</p>
+                            </div>
+                            
+                            <div class="shouop">
+                                <i class="fa fa-download"></i>
+                                <i class="glyphicon glyphicon-trash"></i>
+                                <!--  删除按钮 -->
+                            </div>
+
+                       </div>
+
+                    </form>
+                </div>
+            </div>
+    	</div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+	<script type="text/javascript">
+        //弹框内部高度控制
+        $(".formContent").height($("body,html").height()-70);
+		/*获取弹出窗口索引*/
+		var index = parent.layer.getFrameIndex(window.name); 
+        //  取消按钮
+		var index = parent.layer.getFrameIndex(window.name); 
+        $(".btnCancle").click(function(){
+			parent.layer.close(index);
+		})
+	    // 
+           
+
+      
+        
+
+
+
+
+
+	</script>
+</body>
+</html>

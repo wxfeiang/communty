@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>未缴账单的编辑页面</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+	<link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+	<link href="css/style.css?v=4.1.0" rel="stylesheet">
+	<!--上传图片-->
+	<link rel="stylesheet" href="js/plugins/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/my.css" />
+	<style type="text/css">
+		.ibox-content {
+			padding: 0;
+			width: 700px;
+			background: #f5f6f8;
+		}
+
+		.form-horizontal .control-label {
+			padding-top: 0;
+			margin-bottom: 0;
+			text-align: right;
+		}
+
+		.form-group {
+			width: 340px;
+			float: left;
+		}
+
+		.form-group .floatDiv {
+			width: 220px;
+		}
+
+		.upload_box {
+			margin: 0;
+		}
+
+		.form-horizontal .form-group {
+			margin-right: 0px;
+			margin-left: -18px;
+		}
+
+		.status_bar {
+			height: 47px;
+			border: none;
+		}
+
+		.webuploader_pick {
+			margin-left: 0;
+		}
+
+		.upload_submit {
+			padding-top: 0;
+		}
+
+		.upload_main {
+			border: none;
+		}
+
+		.upload_preview {
+			border: none;
+		}
+
+		.upload_append_list {
+			margin-left: 0;
+		}
+
+		.table {
+			background: #FFFFFF;
+		}
+
+		.table thead {
+			background: #fafafa;
+			border: 1px solid #e6e6e6;
+		}
+
+		.layer-date {
+			margin: 0;
+		}
+
+		.detailBox h6 {
+
+			padding: 10px 30px;
+		}
+
+		.detailBox h6 p {
+			font-size: 14px;
+		}
+
+		.fomtable {
+			width: 610px;
+			margin: 0 0 0 20px;
+		}
+
+		.fomtable #showvalue {
+			border: 1px solid #e8e8e8;
+			height: 30px;
+			box-sizing: border-box;
+			width: 130px;
+			margin-top: 5px;
+			padding-left: 10px;
+			border-radius: 2px;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			-o-border-radius: 2px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="float-e-margins">
+				<div class="ibox-content">
+					<form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+
+
+						<!--房间信息-->
+						<div class="detailBox">
+							<h6>
+								<p>基本信息</p>
+							</h6>
+							<!-- 不可编辑 -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">
+									<i>*</i>业主姓名:</label>
+								<div class="floatDiv">
+									<input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" disabled value="张三">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">
+									<i>*</i>账单周期:</label>
+								<div class="floatDiv">
+									<input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" disabled value="2017-17-17 -2017-18-15">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-1 control-label">
+									<i>*</i>应收日期:</label>
+								<div class="floatDiv">
+
+									<input value="201-17-17" disabled class="laydate-icon form-control layer-date" id="start" style="width:300px;">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-1 control-label">
+									<i>*</i>账单类型:</label>
+								<div class="floatDiv">
+									<input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" disabled value="水费">
+								</div>
+							</div>
+
+
+						</div>
+
+
+						<!--费用详情-->
+						<div class="detailBox">
+							<h6>
+								<p>账单明细</p>
+							</h6>
+
+							<table class="table  fomtable">
+								
+									<tr>
+										<th>房间</th>
+										<th>单价</th>
+										<th>面积</th>
+										<th>金额</th>
+									</tr>
+									<tr>
+										<td>兰州高信大厦</td>
+										<td>50元</td>
+										<td>150㎡</td>
+										<td>
+											<input type="text" id="showvalue">
+										</td>
+									</tr>
+									<tr>
+										<td>费用合计</td>
+										<td></td>
+										<td></td>
+										<td>
+											<span id="fonmsum">0.00</span> 元
+										</td>
+									</tr>
+							</table>
+
+						</div>
+
+						<div class="form-group form-group-btn1">
+							<button class="btn btn-w-m btn-info" type="submit">提交</button>
+							<button type="button" class="btn btn-w-m btn-white btnCancle">取消</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 全局js -->
+	<script src="js/jquery.min.js?v=2.1.4"></script>
+	<script src="js/bootstrap.min.js?v=3.3.6"></script>
+	<!-- 自定义js -->
+	<script src="js/content.js?v=1.0.0"></script>
+	<!--layer.js-->
+	<script src="js/plugins/layer/layer.min.js"></script>
+	<!-- 表单验证-->
+	<script src="js/plugins/validate/jquery.validate.min.js"></script>
+	<script src="js/plugins/validate/messages_zh.min.js"></script>
+	<script src="js/plugins/layer/laydate/laydate.js"></script>
+	<!--上传图片-->
+	<script type="text/javascript" src="js/plugins/zyupload/zyupload.basic-1.0.0.js"></script>
+	<!-- iCheck -->
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+	<script src="js/plugins/iCheck/myIcheck.js"></script>
+	<script type="text/javascript">
+		//日期选择
+		var start = {
+			elem: '#start',
+			format: 'YYYY/MM/DD',
+			// min: laydate.now(), //设定最小日期为当前日期
+			// max: '2099-06-16 23:59:59', //最大日期
+			istime: true,
+			istoday: false,
+			choose: function (datas) {
+				end.min = datas; //开始日选好后，重置结束日的最小日期
+				end.start = datas //将结束日的初始值设定为开始日
+			}
+		};
+
+
+		laydate(start);
+
+		//弹框内部高度控制
+		$(".formContent").height($("body,html").height() - 70);
+		/*取消*/
+		$(".btnCancle").click(function () {
+			parent.layer.close(index);
+		})
+		//  总计
+		$("#showvalue").keyup(function () {
+
+			var strl = $("#showvalue").val();
+			$("#fonmsum").html(strl)
+			if(strl==""){
+				$("#fonmsum").html("0.00");
+			}
+
+		});
+
+	   //  点击取消
+	   $(".btnCancle").click(function () {
+		// var index = parent.layer.getFrameIndex(window.name); 
+            parent.layer.close(index);
+        })
+
+
+	</script>
+</body>
+
+</html>

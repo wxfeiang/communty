@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑住户</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+	<link rel="stylesheet" href="css/my.css" />
+	<style type="text/css">
+		.form-horizontal .formContent{
+			margin-right: -15px;
+    		margin-left: 30px;
+		}
+		.form-group .floatDiv{
+			width: 290px;
+		}
+	</style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+                        <div class="formContent">
+	                        <div class="form-group">
+	                            <label class="col-sm-1 control-label"><i>*</i>住户姓名:</label>
+	                            <div class="floatDiv">
+	                                <input id="propertyName" name="propertyName" class="form-control" type="text" value="你大也">
+	                            </div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-1 control-label"><i>*</i>住户关系:</label>
+								<div class="floatDiv">
+									<input id="" name="" class="form-control" type="text" value="亲戚">
+								</div>
+							</div>
+                            <div class="form-group">
+								<label class="col-sm-3 control-label"><i>*</i>姓别：</label>
+								<div class="floatDiv">
+									<select name="">
+										<option value="">男</option>
+										<option value="">女</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-1 control-label"><i>*</i>手机号码:</label>
+								<div class="floatDiv">
+									<input id="" name="" class="form-control" type="text" value="1846515616549">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-1 control-label"><i>*</i>身份证号码:</label>
+								<div class="floatDiv">
+									<input id="" name="" class="form-control" type="text" value="622123199311564545">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-1 control-label"><i>*</i>紧急联系人:</label>
+								<div class="floatDiv">
+									<input id="" name="" class="form-control" type="text" value="二大爷">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-1 control-label"><i>*</i>紧急人电话:</label>
+								<div class="floatDiv">
+									<input id="" name="" class="form-control" type="text" value="18309469751">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label"><i>*</i>居住类型</label>
+								<div class="floatDiv">
+									<select name="">
+										<option value="">常住</option>
+										<option value="">暂住</option>
+										<option value="">其他</option>
+									</select>
+								</div>
+							</div>
+
+                       </div>
+                        <div class="form-group form-group-btn1">
+                            <button class="btn btn-w-m btn-info" type="submit">提交</button>
+                            <button type="button" class="btn btn-w-m btn-white btnCancle">取消</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    	</div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+	<script type="text/javascript">
+		//状态控制
+		var elem = document.querySelector('.js-switch');
+        var switchery = new Switchery(elem, {
+            color: '#20a8ff'
+        });
+        //弹框内部高度控制
+        $(".formContent").height($("body,html").height()-70);
+		/*获取弹出窗口索引*/
+		var index = parent.layer.getFrameIndex(window.name); 
+		/*保存，并进行表单验证*/
+	
+		/*取消*/
+        $(".btnCancle").click(function(){
+			parent.layer.close(index);
+		})
+	</script>
+</body>
+</html>

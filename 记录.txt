@@ -1,0 +1,203 @@
+
+   分页  效果
+
+   所有的表单没有加正则  
+
+   房间侧边栏刷新完以后返回的效果 
+      costssteadd.html 案例 
+
+
+
+首页  
+
+       业主信息管理页面   ( adminmsg.html
+                           编辑业主信息 : adminedit.html   变成竖排      
+
+       住户信息管理   ( residentmsg.html
+                       ( 弹出 新增 住户  resdadd.html     正则验证没有写完   resdedit.html
+
+
+    缴费管理
+
+
+           抄表数据管理 metrdata.html
+                新增抄表数据  metradd.html        框样式处了点问题
+ 
+
+           撤销日志  undlog.html
+
+           预存管理  perment.html     (待完善编辑选项)  框样式处了点问题
+
+              新增预存  permentadd.html       查看详情   predetails.html      分页  效果
+           充值页面    recharge.html                          
+
+                       rechargeadd.html
+                 
+
+
+          已缴账单   smCommunity.html   (账单周期项的日期期间修改)          (新增账单 按钮) (bulladd.html                   操作不分的 最后一行的上边距
+          未缴账单    unpaid.html
+          
+                             查看 弹框  examine.html
+                             编辑弹框   upedit.html
+
+
+
+
+
+    费项设置    收费标准管理   costadset.html        表格第二行开始(状态按钮   编辑 ( costadsetedit.html
+                               costadsetadd.html   添加收费项目
+
+                收费项目管理   costadmin.html
+                               costadminadd.html    添加收费管理         编辑( costadminedit.html)
+
+
+
+    社区管理
+             
+            小区管理页面 (   commagent.html
+                        commagentadd.htm 新增小区  编辑选项 ( commagentedit.html)
+                         
+                         
+
+
+
+            新增楼宇  (   conbuding.html
+                         conbudingadd.html  编辑 (conbudingedit.html
+
+
+            房间管理   house.html
+
+
+                       
+
+
+                      房间管理 
+                                房间管理划出菜单   
+
+  
+
+                                                  房屋编辑  
+
+                                                基本信息  {复选框 问题  (历史合同复选框)}                当前合同  新增合同 按钮 
+									点击查看   显示合同详情页面 (     信息多 
+ 									    编辑    conedit.html
+									    附件
+                                  
+                                       
+                                                 账单信息页面(     账单信息详情  { 查看  提醒  收款  编辑  更多} 跳出弹框 
+									点击查看  显示 账单的基本信息 费用信息页面  
+                                                                         票据打印  printer.html
+							  
+
+
+
+
+
+                               账单编辑  housebill.html     
+                               添加账单 : addbill.html
+                               新增合同信息1 :  newrommsg.html
+
+                         剖面图页 (主页面)  house.html
+                                        新增房间:  弹框  newhouse.html  (   图片  上传逻辑)
+
+
+                                     
+                                          
+                                        新增合同信息 newronmsg.html  (表单验证
+ 
+                                        房间管理侧边附件上传     attupding.html    (页面的图片上传按钮)
+  
+
+
+
+
+                      账单收款 ::  proceeds.html
+                      账单批量收款:　proceedsbat.html
+            
+
+    物业管理 
+            部门管理  新增文件夹是联动菜单菜单    divmerant.html  infream 引入      编辑部门  ( divmerantedit.html
+
+                                             左边树形结构 :   tree.html
+                                             (右边展示) rigeshow.html  
+
+                                              数据保存逻辑
+
+                 新增部门管理  departmentadd.html
+            报障管理                    编辑页面
+                       ermanage.html
+            派工管理 dispatching.html   编辑页面
+            评论管理  discuss.html
+            二手市场  secmarlket.html
+            公共租赁  publese.html
+               新增租赁  publieseadd.html
+                         编辑 publeseaddedit.html
+                              
+            物品出入  goods.html
+            员工管理  staff.html  员工管理编辑  staffedit.html  
+                新增员工 :  staffadd.html        
+          
+            通知管理    notification.html
+                    新增通知管理    notiadd.html   编辑选项页面 
+ 
+
+//统计分析
+ shart.html   //  调用 插件
+
+
+1200笔记本适配
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+ 
+      
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

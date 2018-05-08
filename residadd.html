@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>新增住户信息</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+	<link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+	<link href="css/style.css?v=4.1.0" rel="stylesheet">
+	<!--上传图片-->
+	<link rel="stylesheet" href="js/plugins/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">
+	 <!--下拉带搜索-->
+	 <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/my.css" />
+	<style type="text/css">
+		.ibox-content {
+			padding: 0;
+			width: 800px;
+			background: #f5f6f8;
+		}
+
+		.form-horizontal .control-label {
+			padding-top: 0;
+			margin-bottom: 0;
+			text-align: right;
+		}
+
+		.form-group {
+			width: 365px;
+			float: left;
+		}
+
+		.form-group .floatDiv {
+			width: 220px;
+		}
+
+		.upload_box {
+			margin: 0;
+		}
+
+		.form-horizontal .form-group {
+			margin-right: 0px;
+			margin-left: -18px;
+		}
+
+		.status_bar {
+			height: 47px;
+			border: none;
+		}
+
+		.webuploader_pick {
+			margin-left: 0;
+		}
+
+		.upload_submit {
+			padding-top: 0;
+		}
+
+		.upload_main {
+			border: none;
+		}
+
+		.upload_preview {
+			border: none;
+		}
+
+		.upload_append_list {
+			margin-left: 0;
+		}
+
+		.table {
+			background: #FFFFFF;
+		}
+
+		.table thead {
+			background: #fafafa;
+			border: 1px solid #e6e6e6;
+		}
+
+		.layer-date {
+			margin: 0;
+		}
+
+		.warpbox {
+			padding-bottom: 60px;
+		}
+
+		.detailBox .maytit {
+			padding: 0 0 0 40px;
+			color: #1890ff;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 54px;
+		}
+
+		.detailBox {
+			padding: 0 0 0 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="row warpbox">
+		<div class="col-sm-4">
+			<div class="float-e-margins">
+				<div class="ibox-content">
+					<form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+
+						<!--房间信息-->
+						<div class="detailBox">
+							<h3 class="maytit">房间信息</h3>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">
+									<i>*</i>选择小区:</label>
+								<div class="floatDiv">
+									<select>
+										<option value="0" selected="selected">01</option>
+										<option value="1">02</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">
+									<i>*</i>选择楼宇:</label>
+								<div class="floatDiv">
+									<select>
+										<option value="0" selected="selected">01</option>
+										<option value="1">02</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">
+									<i>*</i>选择单元:</label>
+								<div class="floatDiv">
+									<select>
+										<option value="0" selected="selected">01</option>
+										<option value="1">02</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">
+									<i>*</i>选择楼层:</label>
+								<div class="floatDiv">
+									<select name="" class="chosen-select">
+										<option value="">2</option>
+										<option value="">3</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">
+									<i>*</i>选择房号:</label>
+								<div class="floatDiv">
+									<select>
+										<option value="0" selected="selected">01</option>
+										<option value="1">02</option>
+									</select>
+								</div>
+							</div>
+
+
+						</div>
+
+
+						<!--费用详情-->
+						<div id="newuser">
+
+
+							<div class="detailBox">
+								<h3 class="maytit">住户详情</h3>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										<i>*</i>住户姓名：</label>
+									<div class="floatDiv">
+										<input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入业主姓名或公司名称">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										<i>*</i>住户关系：</label>
+									<div class="floatDiv">
+										<input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="与业主的关系">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										<i>*</i>性别:</label>
+									<div class="floatDiv">
+										<select name="sex" id="sex">
+											<option value="0" selected="selected">男</option>
+											<option value="1">女</option>
+
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										<i>*</i>手机号码:</label>
+									<div class="floatDiv">
+										<input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入手机号码">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										<i>*</i>身份证:</label>
+									<div class="floatDiv">
+										<input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入身份证号码">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										<i>*</i>紧急联系人:</label>
+									<div class="floatDiv">
+										<input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入紧急联系人">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										<i>*</i>紧急人电话：</label>
+									<div class="floatDiv">
+										<input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="请输入紧急电话号码">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										<i>*</i>居住类型:</label>
+									<div class="floatDiv">
+										<select name="dew" id="dew">
+											<option value="0" selected="selected">常住</option>
+											<option value="1">暂住</option>
+											<option value="">其他</option>
+
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group form-group-btn1">
+							<button class="btn btn-w-m btn-info" type="submit">提交</button>
+							<button type="button" class="btn btn-w-m btn-white btnCancle">取消</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 全局js -->
+	<script src="js/jquery.min.js?v=2.1.4"></script>
+	<script src="js/bootstrap.min.js?v=3.3.6"></script>
+	<!-- 自定义js -->
+	<script src="js/content.js?v=1.0.0"></script>
+	<!--layer.js-->
+	<script src="js/plugins/layer/layer.min.js"></script>
+	<!-- 表单验证-->
+	<script src="js/plugins/validate/jquery.validate.min.js"></script>
+	<script src="js/plugins/validate/messages_zh.min.js"></script>
+	<script src="js/plugins/layer/laydate/laydate.js"></script>
+	<!--上传图片-->
+	<script type="text/javascript" src="js/plugins/zyupload/zyupload.basic-1.0.0.js"></script>
+	 <!-- Chosen -->
+	 <script src="js/plugins/chosen/chosen.jquery.js"></script>
+	<!-- iCheck -->
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+	<script src="js/plugins/iCheck/myIcheck.js"></script>
+	<script type="text/javascript">
+		// 点击框内的新增按钮
+
+
+		//弹框内部高度控制
+		$(".formContent").height($("body,html").height() - 70);
+		/*取消*/
+		var index = parent.layer.getFrameIndex(window.name); 
+        $(".btnCancle").click(function(){
+			parent.layer.close(index);
+		})
+	</script>
+</body>
+
+</html>

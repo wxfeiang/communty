@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加批新增量收款=</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+	<!--上传图片-->
+	<link rel="stylesheet" href="js/plugins/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">	
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/my.css" />
+    <link rel="stylesheet" href="css/wpublic.css">
+	<style type="text/css">
+		.ibox-content{
+			padding: 0;
+   			width: 800px;
+   			background: #f5f6f8;
+		}
+		.form-horizontal .control-label {
+		    padding-top: 0; 
+		    margin-bottom: 0;
+		    text-align: right;
+		}
+		.form-group{
+			width: 340px;
+			float: left;
+		}
+		.form-group .floatDiv{
+			width: 220px;
+		}
+		.upload_box{
+			margin: 0;
+		}
+		.form-horizontal .form-group {
+		    margin-right: 0px;
+		    margin-left: -18px;
+		}
+		.status_bar {
+			height: 47px;
+		    border: none;
+		}
+		.webuploader_pick{
+			margin-left: 0;
+		}
+		.upload_submit{
+			padding-top:0 ;
+		}
+		.upload_main {
+		    border: none;
+		}
+		.upload_preview {
+			border: none;
+		}
+		.upload_append_list{
+			margin-left: 0;
+		}
+		.table{
+			background: #FFFFFF;
+		}
+		.table thead{
+			background: #fafafa;
+    		border: 1px solid #e6e6e6;
+		}
+		.layer-date{
+			margin: 0;
+        }
+        #ccomment{
+            margin:0 0 0 60px;
+            width: 600px;
+            height: 90px;
+        }
+        .porpay{
+            margin: 0 0  30px 45px;
+            width: 624px;
+            border: 1px solid #ccc;
+        }
+        .porpay .flli{
+            border-top: 0 solid #ccc;
+        }
+        .porpay li {
+            padding: 0 20px 0;
+            height: 30px;
+            font: 14px/30px "微软雅黑";
+            border-top: 1px solid #ccc;
+
+        }
+        .porpay li .frspan{
+            float: right;
+        }
+
+        .porpay li .flblue{
+           color: #1890ff;
+           
+        }
+        
+        .porpay li b{
+            margin: 0 0 0 130px;
+            width: 140px; 
+            font-weight: normal;
+        }
+        .detailBox .fav {
+            outline: none;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            width: 68px;
+            height: 28px;
+        }
+        .detailBox table {
+            margin: 0 30px;
+            width: 615px;
+            
+        }
+        .detailBox  table tr th{
+           font-weight: normal !important;
+        }
+	</style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+                      
+                        	
+                        <!--房间信息-->
+                        <div class="detailBox">
+                            <h6>基本信息</h6>
+                                <!-- 不可编辑 -->
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><i>*</i>房间信息:</label>
+                                <div class="floatDiv">
+                                    <input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" disabled placeholder="请输入业主姓名或公司名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><i>*</i>业主姓名:</label>
+                                <div class="floatDiv">
+                                    <input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" disabled placeholder="请输入业主姓名或公司名称">
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                        <div class="detailBox">
+                            <h6>账单信息</h6>  
+                            <table class="table table-hover">
+                                 <thead>
+                                     <tr>
+                                         <th>账单类型</th>
+                                         <th>账单周期</th>
+                                         <th>账单金额</th>
+                                         <th>滞纳金</th>
+                                         <th>应收金额</th>
+                                         <th>优惠金额</th>
+                                         <th>实收金额</th>
+
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     <tr>
+                                         <td>房屋租金</td>
+                                         <td>2017-12-12- 2018-12-12</td>
+                                         <td>200.00</td>
+                                         <td>0</td>
+                                         <td>200.00</td>
+                                         <td>
+                                             <input type="text" class="fav" placeholder="0.00">
+                                         </td>
+                                         <td>200.00</td>
+                                     </tr>
+                                     <tr>
+                                        <td>总计</td>
+                                        <td></td>
+                                        <td>200.00</td>
+                                        <td>0</td>
+                                        <td>200.00</td>
+                                        <td>
+                                           0.00
+                                        </td>
+                                        <td>200.00</td>
+                                    </tr>
+
+
+
+                                 </tbody>
+
+
+                            </table>
+                                
+                          
+                        </div>         
+                    <!--支付信息-->
+                    <div class="detailBox">
+                        <h6><p>支付信息</p></h6>
+    
+                        <div class="form-group">
+                            <label class="col-md-3 control-label"><i>*</i>支付金额:</label>
+                            <div class="floatDiv">
+                                <input id="" name="" class="form-control" type="text" aria-required="true" aria-invalid="true" placeholder="支付金额">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <label class="col-md-3 control-label"><i>*</i>支付类型:</label>
+                                <div class="floatDiv">
+                                    <select name="" id="">
+                                        <option value="">现金</option>
+                                        <option value="">支付宝</option>
+                                        <option value="">微信</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"><i>*</i>支付时间:</label>
+                            <div class="floatDiv">
+                                
+                                <input placeholder="开始时间" class="laydate-icon form-control layer-date" id="start" style="width:300px;">
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label"></label>
+                            <div class="floatDiv">
+                                
+                             
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 30px;">
+                            <label class="col-md-3 control-label" style="width: 100px;">备注：</label>
+                                <textarea id="ccomment" name="comment " class="form-control " required="" aria-required="true"></textarea>
+                            
+                        </div>
+
+
+
+                                          
+                  </div>
+                      
+                        <div class="form-group form-group-btn1">
+                            <button class="btn btn-w-m btn-info" type="submit">提交</button>
+                            <button type="button" class="btn btn-w-m btn-white btnCancle">取消</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    	</div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- 表单验证-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+	<script src="js/plugins/layer/laydate/laydate.js"></script>
+	<!--上传图片-->
+    <script type="text/javascript" src="js/plugins/zyupload/zyupload.basic-1.0.0.js"></script>
+	<!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+	<script type="text/javascript">
+	
+     //日期选择
+     var start = {
+            elem: '#start',
+            format: 'YYYY/MM/DD',
+           // min: laydate.now(), //设定最小日期为当前日期
+           // max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+      
+        laydate(start);
+    
+    
+		
+		//弹框内部高度控制
+        $(".formContent").height($("body,html").height()-70);
+		/*取消*/
+        $(".btnCancle").click(function(){
+			parent.layer.close(index);
+		})
+        //上传图片插件大小控制
+        $(function(){
+			// 初始化插件
+			$("#zyupload").zyUpload({
+				width            :   "615px",                 // 宽度
+				height           :   "auto",                 // 宽度
+				itemWidth        :   "100px",                 // 文件项的宽度
+				itemHeight       :   "80px",                 // 文件项的高度
+				url              :   "./up.php",              // 上传文件的路径
+				fileType         :   ["jpg","png","js","exe"],// 上传文件的类型
+				fileSize         :   51200000,                // 上传文件的大小
+				multiple         :   true,                    // 是否可以多个文件上传
+				dragDrop         :   false,                   // 是否可以拖动上传文件
+				tailor           :   false,                   // 是否可以裁剪图片
+				del              :   true,                    // 是否可以删除文件
+				finishDel        :   false,  				  // 是否在上传文件完成后删除预览
+				/* 外部获得的回调接口 */
+				onSelect: function(selectFiles, allFiles){    // 选择文件的回调方法  selectFile:当前选中的文件  allFiles:还没上传的全部文件
+					console.info("当前选择了以下文件：");
+					console.info(selectFiles);
+				},
+				onDelete: function(file, files){              // 删除一个文件的回调方法 file:当前删除的文件  files:删除之后的文件
+					console.info("当前删除了此文件：");
+					console.info(file.name);
+				},
+				onSuccess: function(file, response){          // 文件上传成功的回调方法
+					console.info("此文件上传成功：");
+					console.info(file.name);
+					console.info("此文件上传到服务器地址：");
+					console.info(response);
+					$("#uploadInf").append("<p>上传成功，文件地址是：" + response + "</p>");
+				},
+				onFailure: function(file, response){          // 文件上传失败的回调方法
+					console.info("此文件上传失败：");
+					console.info(file.name);
+				},
+				onComplete: function(response){           	  // 上传完成的回调方法
+					console.info("文件上传完成");
+					console.info(response);
+				}
+			});
+			
+		});
+		
+	</script>
+</body>
+</html>

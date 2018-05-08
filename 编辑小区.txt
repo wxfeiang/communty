@@ -1,0 +1,65 @@
+// 点击编辑按钮
+ $(".mommunityEdit").each(function(){
+    		$(this).click(function(){
+	    		 parent.layer.open({
+			      type: 2,
+			      title: '编辑',
+			      shadeClose: false, //点击遮罩关闭层
+			      area : ['512px' , '585px'],
+			      content: 'combudingadd.html',
+			      end: function () {
+	               location.reload();//点击后刷新父页面
+	              }
+			    });
+	    	})
+    	})
+
+//  点击取消
+        var index = parent.layer.getFrameIndex(window.name); 
+        $(".btnCancle").click(function(){
+			parent.layer.close(index);
+		})
+//
+附件上传部分  cs
+#uploader .filelist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 600px;
+}
+
+
+//   数据绑定计算
+
+	$("#showvalue").keyup(function () {
+
+			var strl = $("#showvalue").val();
+			$("#fonmsum").html(strl)
+			if(strl==""){
+				$("#fonmsum").html("0.00");
+			}
+
+		});
+
+.=●?·?
+
+
+
+
+<style>
+			.firsttd{
+				width:auto;
+				text-align: center;
+				padding-top: 13px;
+			}
+			.firsttd i{
+				color: red;
+			}
+			.twotd{
+				width: 98%;
+			}
+
+		</style>
+
+
+

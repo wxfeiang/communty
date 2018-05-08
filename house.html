@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>房间管理</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+	<link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+	<link href="css/style.css?v=4.1.0" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/my.css" />
+	<link rel="stylesheet" href="css/house.css">
+	<link rel="stylesheet" href="css/wpublic.css">
+	<style type="text/css">
+	</style>
+</head>
+
+<body class="gray-bg">
+	<div class="con-layout navder">
+		<a href="">首页 </a>
+		<span>/</span>
+		<a href="">楼宇管理 </a>
+		<span>/</span>
+		<a href="" class="aon">房间管理 </a>
+	</div>
+	<!-- //   局部存执 -->
+	<input type="hidden" name="mark" value="0" id="mark2" />
+	<input type="hidden" name="mark" value="" id="mark" />
+	<input type="hidden" name="mark" value="" id="lyn_floor_id" />
+	<input type="hidden" name="mark" value="" id="lyn_floor_num" />
+	<input type="hidden" name="mark" value="" id="lyn_house_num" />
+	<input type="hidden" name="mark" value="" id="lyn_house_area" />
+	<input type="hidden" name="mark" value="" id="lyn_house_status" />
+	<input type="hidden" name="mark" value="" id="lyn_houseinfo_id" />
+	<div class="wrapper wrapper-content ">
+		<div class="commuinityTop">
+			<div class="leftBox">
+				<img src="" style="width: 160px;height: 100px;" />
+				<div class="text_box">
+					<h3>兰州天庆国际星城</h3>
+					<span>兰州市·城关区</span>
+				</div>
+			</div>
+			<ul>
+
+				<li class="sysTxtBox">
+					<span>总户数</span>
+					<i>15000</i>
+				</li>
+				<li class="sysTxtBox">
+					<span>总面积</span>
+					<i>15000</i>
+				</li>
+				<li class="sysTxtBox">
+					<span>常住人口</span>
+					<i>15000</i>
+				</li>
+				<li class="sysTxtBox">
+					<span>流动人口</span>
+					<i>15000</i>
+				</li>
+			</ul>
+			<div class="afterDiv"></div>
+			<div class="tipDiv">
+				<span>剖面图</span>
+				<div class="tipOne">
+					<em class="em_blue"></em>
+					<p>正常</p>
+				</div>
+				<div class="tipOne">
+					<em class="em_gray"></em>
+					<p>空置</p>
+				</div>
+				<div class="tipOne">
+					<em class="em_red"></em>
+					<p>有账单</p>
+				</div>
+			</div>
+		</div>
+		<!--操作区域-->
+		<div class="btnBox commenBtnBox">
+
+			<b>选择单元:</b>
+			<select name="" id="" class="housesel">
+				<option value="">111</option>
+			</select>
+			<b>选择楼层:</b>
+			<select name="" id="" class="housesel">
+				<option value="">111</option>
+			</select>
+			<!-- <input type="text" plass="搜索楼宇名称"> -->
+			<strong class="housestong">
+				<input type="text" id="bname" value="" placeholder="搜索关键字">
+			</strong>
+			<span class="spanAdd nopul">搜索</span>
+			<span class="spanAdd" id="nowrom">新增房间</span>
+			<span class="spanAdd spanAddC" id="nowcont">新增合同</span>
+		</div>
+		<!--房屋展示-->
+
+		<div class="houseBigBox">
+
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="normal_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="normal_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="vacancy_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+
+			</div>
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="normal_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="normal_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="vacancy_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+
+			</div>
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+			</div>
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="houseBox">
+				<div class="leftFloor">
+					<p>11</p>
+					<span>150m²</span>
+				</div>
+				<ul>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+				</ul>
+			</div>
+
+
+
+		</div>
+		<!-- 右侧房间 -->
+		<div class="rightBoxDiv">
+			<div class="rightBoxDivTop">
+				<i></i>
+				<h5>房间信息</h5>
+			</div>
+			<div class="houseInfo">
+				<div class="houseNum">
+					<h6>1单元11楼1102室</h6>
+					<span id="houseDel">删除</span>
+					<span id="houseEdit">编辑</span>
+				</div>
+				<ul>
+					<li>
+						<p>面积(m²)</p>
+						<span>500</span>
+					</li>
+					<li>
+						<p>房间状态</p>
+						<span>正常</span>
+					</li>
+					<li>
+						<p>应收金额(元)</p>
+						<span>0.00</span>
+					</li>
+					<li>
+						<p>未收金额(元)</p>
+						<span>0.00</span>
+					</li>
+					<li>
+						<p>实收金额(元)</p>
+						<span>0.00</span>
+					</li>
+				</ul>
+			</div>
+			<!--基本信息,账单信息-->
+			<div class="houseContentTop">
+				<div class="spanBox">
+					<span class="active span_basic">基本信息</span>
+					<span class="span_bill">账单信息</span>
+				</div>
+			</div>
+			<div class="houseContentInfo">
+				<!--基本信息-->
+				<div class="houseTableBox houseTableBox_basic" style="display:block;">
+					<!--基本信息列表展示-->
+					<div class="basicInfoList">
+						<p>当前合同
+							<!-- 有合同不显示 -->
+							<i id="" style="display:none;">新增合同</i>
+						</p>
+						<ul class="contrat">
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check1" id="allOptionIdCurrent" name="allOptionIdCurrent">
+								</span>
+								<span>合同编号</span>
+								<span>业主姓名</span>
+								<span>签订时间</span>
+								<span>合同状态</span>
+								<span>操作</span>
+							</li>
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check1">
+								</span>
+								<span>1565151561</span>
+								<span>三打野</span>
+								<span>2017-09-10</span>
+								<span>正常</span>
+								<i class="look_contrat0">查看</i>
+								<i class="conedit">编辑</i>
+								<i class="attup">附件</i>
+							</li>
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check1">
+								</span>
+								<span>1565151561</span>
+								<span>三打野</span>
+								<span>2017-09-10</span>
+								<span>正常</span>
+								<i class="look_contrat0">查看</i>
+								<i class="conedit">编辑</i>
+								<i class="attup">附件</i>
+							</li>
+						</ul>
+						<p>历史合同</p>
+
+
+						<ul class="contrat">
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check2" id="allOptionHistory" naem="allOptionHistory">
+								</span>
+								<span>合同编号</span>
+								<span>业主姓名</span>
+								<span>失效时间</span>
+								<span>合同状态</span>
+								<span>操作</span>
+							</li>
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check2">
+								</span>
+								<span>1565151561</span>
+								<span>三打野</span>
+								<span>2017-09-10</span>
+								<span>失效</span>
+								<i class="look_contrat1">查看</i>
+								<i>删除</i>
+
+							</li>
+						</ul>
+					</div>
+
+					<!--当前合同信息查看详情-->
+					<div class="ownerDetail" style="display: none;">
+						<a href="javascript:;">返回上一页</a>
+						<p>房间信息</p>
+						<div class="carDetail">
+							<span>主业主姓名：张学友</span>
+							<span>副业主姓名：张学友2</span>
+							<span>性别：男</span>
+							<span>手机号码：18093195012</span>
+							<span>业主类型：个人</span>
+							<span>身份证号：61132515121521</span>
+							<span>紧急联系人：张三丰</span>
+							<span>紧急联系电话：18093195012</span>
+							<span>户口类型：城镇户口</span>
+							<span>户籍地址：甘肃省兰州市城关区</span>
+							<span>住户户号：1234567</span>
+						</div>
+						<p>关联费用</p>
+						<ul>
+							<li>
+								<span>费用名称</span>
+								<span>计费标准</span>
+								<span>单价</span>
+								<span>收费方式</span>
+								<span>收费周期</span>
+							</li>
+							<li>
+								<span>水费</span>
+								<span>抄表计费</span>
+								<span style="color:#20a8ff;">50.00</span>
+								<span>周期性</span>
+								<span>一月一付</span>
+							</li>
+							<li>
+								<span>物业费</span>
+								<span>建面计费</span>
+								<span style="color:#20a8ff;">50.00</span>
+								<span>周期性</span>
+								<span>三月一付</span>
+							</li>
+							<li>
+								<span>暖气费</span>
+								<span>固定金额</span>
+								<span style="color:#20a8ff;">50.00</span>
+								<span>临时性</span>
+								<span>一年一付</span>
+							</li>
+						</ul>
+						<p>住户信息</p>
+						<ul>
+							<li>
+								<span class="span_1">住户姓名</span>
+								<span class="span_2">关系</span>
+								<span class="span_2">性别</span>
+								<span class="span_3">手机号</span>
+								<span>身份证号</span>
+								<span class="span_2">居住类型</span>
+								<span class="span_3">紧急联系人</span>
+								<span class="span_3">紧急联系人电话</span>
+							</li>
+							<li>
+								<span class="span_1">国服信</span>
+								<span class="span_2">租户</span>
+								<span class="span_2">男</span>
+								<span class="span_3">18093195012</span>
+								<span>642226199001026541</span>
+								<span class="span_2">常住</span>
+								<span class="span_3">王五</span>
+								<span class="span_3">18093195012</span>
+							</li>
+						</ul>
+
+					</div>
+					<!-- 现有合同信息查看详情-->
+					<div class="contractDetail contractshow" style="display: none;">
+						<a href="javascript:;">返回上一页</a>
+						<p>房间信息</p>
+						<div>
+							<span>所在单元: 1单元</span>
+							<span>所在楼层:3层</span>
+							<span>房间编号: 301</span>
+							<span>建筑面积: 500m</span>
+							<span>套内面积:405m</span>
+							<span>公摊面积: 1000</span>
+							<span>房间朝向: 东南</span>
+
+
+
+							<span style="clear: both;" class>附件：</span>
+							<div class="imgBox">
+								<img src="" />
+								<img src="" />
+								<img src="" />
+								<img src="" />
+							</div>
+						</div>
+						<p>业主信息</p>
+						<div class="yezhumsg">
+							<span>主业主姓名: 马云</span>
+							<span>姓别 : 男 </span>
+							<span>手机号码: 18215646131</span>
+							<span>居住类型: 常驻</span>
+							<span>身份证号: 131354646131531</span>
+							<span>紧急联系人: 今年是</span>
+							<span>紧急联系人电话:124184121</span>
+							<span>户口类型: 城镇</span>
+							<span style="width:460px;">身份证地址:甘肃省兰州市陈冠区</span>
+							<span>住户户号: 546545</span>
+							<span>副业主姓名: 你大爷</span>
+
+						</div>
+						<p>住户信息</p>
+						<ul>
+							<li>
+								<span>住户姓名</span>
+								<span>住户关系</span>
+								<span class="span_2 telsh">手机号码</span>
+								<span class="span_2 ranks">身份证号码</span>
+								<span class="span_1 sfrift">紧急联系人</span>
+								<span class="sfour">紧急联系人电话</span>
+								<span>居住类型</span>
+
+							</li>
+							<li>
+								<span>你大爷</span>
+								<span>亲属</span>
+								<span class="span_2 telsh">18309469751</span>
+								<span class="span_2 ranks">622222222222222222</span>
+								<span class="span_1 sfrift">你大也</span>
+								<span class="sfour">45454545454</span>
+								<span>暂住</span>
+
+							</li>
+						</ul>
+						<p>基本条款</p>
+						<div>
+							<span>签订时间: 2017-12-12</span>
+							<span>开始时间:</span>
+							<span>结束时间: 2017-78-78</span>
+							<span>支付方式: 一月一付</span>
+							<span>收费时间:固定1号收费</span>
+							<span style="clear: both;">附件：</span>
+							<div class="imgBox">
+								<img src="" />
+								<img src="" />
+								<img src="" />
+								<img src="" />
+							</div>
+						</div>
+						<p>费用条款</p>
+						<ul class="charages">
+							<li>
+								<span>费用名称</span>
+								<span>标准名称</span>
+								<span>金额计算方式</span>
+								<span>收费价格</span>
+								<span>抄表读数</span>
+								<span>抄表时间</span>
+
+							</li>
+							<li>
+								<span>水费</span>
+								<span>水费固定</span>
+								<span>固定金额</span>
+								<span>1500元</span>
+								<span>50.00</span>
+								<span>25554</span>
+
+							</li>
+						</ul>
+					</div>
+					<!-- 历史合同信息查看详情-->
+					<div class=" contractDetail contrahistoy" style="display: none;">
+						<a href="javascript:;">返回上一页</a>
+						<p>房间信息</p>
+						<div>
+							<span>所在单元: 1单元</span>
+							<span>所在楼层:3层</span>
+							<span>房间编号: 301</span>
+							<span>建筑面积: 500m</span>
+							<span>套内面积:405m</span>
+							<span>公摊面积: 1000</span>
+							<span>房间朝向: 东南</span>
+
+
+
+							<span style="clear: both;" class>附件：</span>
+							<div class="imgBox">
+								<img src="" />
+								<img src="" />
+								<img src="" />
+								<img src="" />
+							</div>
+						</div>
+						<p>业主信息</p>
+						<div class="yezhumsg">
+							<span>主业主姓名: 马云</span>
+							<span>姓别 : 男 </span>
+							<span>手机号码: 18215646131</span>
+							<span>居住类型: 常驻</span>
+							<span>身份证号: 131354646131531</span>
+							<span>紧急联系人: 今年是</span>
+							<span>紧急联系人电话:124184121</span>
+							<span>户口类型: 城镇</span>
+							<span style="width:460px;">身份证地址:甘肃省兰州市陈冠区</span>
+							<span>住户户号: 546545</span>
+							<span>副业主姓名: 你大爷</span>
+
+						</div>
+						<p>住户信息</p>
+						<ul>
+							<li>
+								<span>住户姓名</span>
+								<span>住户关系</span>
+								<span class="span_2 telsh">手机号码</span>
+								<span class="span_2 ranks">身份证号码</span>
+								<span class="span_1 sfrift">紧急联系人</span>
+								<span class="sfour">紧急联系人电话</span>
+								<span>居住类型</span>
+
+							</li>
+							<li>
+								<span>你大爷</span>
+								<span>亲属</span>
+								<span class="span_2 telsh">18309469751</span>
+								<span class="span_2 ranks">622222222222222222</span>
+								<span class="span_1 sfrift">你大也</span>
+								<span class="sfour">45454545454</span>
+								<span>暂住</span>
+
+							</li>
+						</ul>
+						<p>基本条款</p>
+						<div>
+							<span>签订时间: 2017-12-12</span>
+							<span>开始时间:</span>
+							<span>结束时间: 2017-78-78</span>
+							<span>支付方式: 一月一付</span>
+							<span>收费时间:固定1号收费</span>
+							<span style="clear: both;">附件：</span>
+							<div class="imgBox">
+								<img src="" />
+								<img src="" />
+								<img src="" />
+								<img src="" />
+							</div>
+						</div>
+						<p>费用条款</p>
+						<ul class="charages">
+							<li>
+								<span>费用名称</span>
+								<span>标准名称</span>
+								<span>金额计算方式</span>
+								<span>收费价格</span>
+								<span>抄表读数</span>
+								<span>抄表时间</span>
+
+							</li>
+							<li>
+								<span>水费</span>
+								<span>水费固定</span>
+								<span>固定金额</span>
+								<span>1500元</span>
+								<span>50.00</span>
+								<span>25554</span>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--账单信息-->
+				<div class="houseTableBox houseTableBox_contract">
+					<div class="billList">
+						<p>待处理账单(
+							<b id="allsum">0.00</b>元)
+							<i id="addbill">添加账单</i>
+							<i id="coall">批量收款</i>
+						</p>
+						<div style="height: 10px;"></div>
+						<ul class="carport">
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check3" id="allOptionWait" name="allOptionWait">
+								</span>
+								<span class="span_2">账单周期</span>
+								<span class="span_1">账单类型</span>
+								<span class="span_1">账单状态</span>
+								<span class="span_1">账单金额</span>
+								<span class="span_1">应收日期</span>
+								<span>操作</span>
+							</li>
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check3 Pending" billMoney="150.00">
+								</span>
+								<span class="span_2">2017-09-10~2017-10-19</span>
+								<span class="span_1 typeex">水费</span>
+								<span class="wait_payFees span_1">待缴费</span>
+								<span class="span_1">150.00</span>
+								<span class="span_1">2017-78-78</span>
+								<i class="lookBill0">查看</i>
+								<i>提醒</i>
+								<i class="coll">收款</i>
+								<i class="moremsg">编辑</i>
+								<i>删除</i>
+
+							</li>
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check3 Pending" billMoney="180.00">
+								</span>
+								<span class="span_2">2017-09-10~2017-10-19</span>
+								<span class="span_1 typeex">物业费</span>
+								<span class="wait_payFees span_1">待缴费</span>
+								<span class="span_1">180.00</span>
+								<span class="span_1">2017-78-78</span>
+								<i class="lookBill0">查看</i>
+								<i>提醒</i>
+								<i class="coll">收款</i>
+								<i class="moremsg">编辑</i>
+								<i>删除</i>
+							</li>
+						</ul>
+					</div>
+					<div class="billList">
+						<p>已处理账单(
+							<b id="alpsum">0.00</b>元)
+							<i id="printer">票据打印</i>
+						</p>
+						<div style="height: 10px;"></div>
+						<ul class="carport">
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check4" id="allOptionAlready" name="allOptionAlready">
+								</span>
+								<span class="span_2">账单周期</span>
+								<span class="span_1">账单类型</span>
+								<span class="span_1">账单状态</span>
+								<span class="span_1">开票状态</span>
+								<span class="span_1">账单金额</span>
+								<span class="span_1">应收日期</span>
+								<span>操作</span>
+							</li>
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check4 Processed" billMoney1="160.00">
+								</span>
+								<span class="span_2">2017-09-10~2017-10-19</span>
+								<span class="span_1 typeex">水费</span>
+								<span class="wait-ord span_1">已缴费</span>
+								<span class="wait_payFees span_1 mstate">未开票</span>
+								<span class="span_1">160.00</span>
+								<span class="span_1">2017-78-78</span>
+								<i class="lookBill">查看</i>
+								<i class="attup">附件</i>
+								<i>删除</i>
+								<i>撤销</i>
+								<i class="magke">开票</i>
+
+							</li>
+							<li>
+								<span class="smchedk">
+									<input type="checkbox" class="i-checks i-check4 Processed" billMoney1="170.00">
+								</span>
+								<span class="span_2">2017-09-10~2017-10-19</span>
+								<span class="span_1 typeex">物业费</span>
+								<span class="wait-ord span_1">已缴费</span>
+								<span class="wait-ord span_1">已开票</span>
+								<span class="span_1">170.00</span>
+								<span class="span_1">2017-78-78</span>
+								<i class="lookBill">查看</i>
+								<i class="attup">附件</i>
+								<i>删除</i>
+								<i>撤销</i>
+
+							</li>
+						</ul>
+					</div>
+					<!-- 待处理账单信息查看详情 -->
+					<div class="billDetail" style="display: none;">
+						<a href="javascript:;">返回上一页</a>
+						<p>基本信息</p>
+						<div style="overflow: hidden;">
+							<span class="billspan">业主名称：叶云里</span>
+							<span class="billspan">账单周期: 2017-17-17 -2012-78-78</span>
+							<span class="billspan">应收日期: 2012-12-12</span>
+
+						</div>
+						<p>费用信息</p>
+						<!-- 没有抄表数据的显示情况 -->
+						<div style="overflow: hidden; display:none;" class="firstbill">
+							<span class="billspan">物业费: 62652.22元</span>
+							<span class="billspan">逾期时间: 10天</span>
+							<span class="billspan">逾期金额: 500元</span>
+
+						</div>
+						<!-- 有抄表数据的显示情况 -->
+						<div style="overflow: hidden; display:none;" class="twobill">
+							<span class="billspan">电费: 600.00元</span>
+							<span class="billspan">单价: 600.00</span>
+							<span class="billspan">上期抄表读数: 100</span>
+							<span class="billspan">上期抄表时间: 2017-17-17</span>
+							<span class="billspan">本期抄表读数: 1000</span>
+							<span class="billspan">本期抄表时间: 2017-78-78</span>
+							<span class="billspan">滞纳金: 0元</span>
+
+						</div>
+
+					</div>
+					<!--已处理账单信息查看详情-->
+					<div class="prolook" style="display: none;">
+						<a href="javascript:;">返回上一页</a>
+						<p>基本信息</p>
+						<div style="overflow: hidden;">
+							<span class="billspan">业主名称：叶云里</span>
+							<span class="billspan">账单周期: 2017-17-17 -2012-78-78</span>
+							<span class="billspan">应收日期: 2012-12-12</span>
+
+						</div>
+						<p>费用信息</p>
+						<!-- 没有抄表数据的显示情况 -->
+						<div style="overflow: hidden; display:none;" class="threebill">
+							<span class="billspan">物业费: 62652.22元</span>
+							<span class="billspan">逾期时间: 10天</span>
+							<span class="billspan">逾期金额: 500元</span>
+							<span class="billspan">实收金额: 500元</span>
+							<span class="billspan">优惠金额: 0元</span>
+							<span class="billspan">支付方式: 支付宝</span>
+							<span class="billspan">缴费时间: 2017-17-17</span>
+							<span class="billspan">备注:还没有写</span>
+
+						</div>
+						<!-- 有抄表数据的显示情况 -->
+						<div style="overflow: hidden; display:none;" class="fourbill">
+							<span class="billspan">电费: 600.00元</span>
+							<span class="billspan">单价: 600.00</span>
+							<span class="billspan">上期抄表读数: 100</span>
+							<span class="billspan">上期抄表时间: 2017-17-12</span>
+							<span class="billspan">本期抄表读数: 100</span>
+							<span class="billspan">本期抄表时间: 2017-17-12</span>
+							<span class="billspan">实收金额: 500元</span>
+							<span class="billspan">滞纳金: 0</span>
+							<span class="billspan">优惠金额: 0元</span>
+							<span class="billspan">支付方式: 支付宝</span>
+							<span class="billspan">缴费时间: 2017-17-17</span>
+							<span class="billspan">备注:还没有写</span>
+
+
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- 全局js -->
+	<script src="js/jquery.min.js?v=2.1.4"></script>
+	<script src="js/bootstrap.min.js?v=3.3.6"></script>
+	<!--layer.js-->
+	<script src="js/plugins/layer/layer.min.js"></script>
+	<!-- 自定义js -->
+	<script src="js/content.js?v=1.0.0"></script>
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+
+	<script type="text/javascript">
+
+  $(function () {
+        var a = $("#mark").val();
+        if (a == 1) {
+            localStorage.id = $("#lyn_houseinfo_id").val();
+            billMessageDefault(
+            $("#lyn_floor_id").val(),
+            $("#lyn_floor_num").val(),
+            $("#lyn_house_num").val(),
+            $("#lyn_house_area").val(), 
+            $("#lyn_house_status").val(), 
+            $("#lyn_houseinfo_id").val());
+        }
+
+        function rightSlideShow() {
+            if (localStorage.slideType == 1) {
+                houseClick(localStorage.id);
+            }
+            if (localStorage.slideType == 2) {
+                houseClick(localStorage.id);
+                $(".rightBoxContent").hide();
+                $(".rightBoxTop1 span").removeClass("active");
+                $(".rightBoxContent2_1").show();
+            }
+          
+        }
+        rightSlideShow();
+        localStorage.slideType = "";
+        console.log(localStorage.slideType);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// 当前合同
+		//单选
+		$('.i-checks').iCheck({
+			checkboxClass: 'icheckbox_square-green',
+			radioClass: 'iradio_square-green',
+		});
+
+		//全选
+		$('#allOptionIdCurrent').on('ifChecked', function (event) {
+			$('.i-check1').iCheck('check');
+
+		});
+		//反选
+		$('#allOptionIdCurrent').on('ifUnchecked', function (event) {
+			$('.i-check1').iCheck('uncheck');
+
+		});
+
+		//历史合同
+		//全选
+		$('#allOptionHistory').on('ifChecked', function (event) {
+			$('.i-check2').iCheck('check');
+
+		});
+		//反选
+		$('#allOptionHistory').on('ifUnchecked', function (event) {
+			$('.i-check2').iCheck('uncheck');
+		});
+		//待处理账单
+		//全选
+		$('#allOptionWait').on('ifChecked', function (event) {
+			$('.i-check3').iCheck('check');
+			var sum = 0;
+			$(".Pending").each(function (index) {
+				// console.log(index)
+				sum += Number($(".Pending").eq(index).attr("billMoney"));
+				// console.log($(".Pending").eq(index).attr("billMoney"));
+			})
+			// console.log(sum)
+			$("#allsum").html(sum);
+		});
+		//反选
+		$('#allOptionWait').on('ifUnchecked', function (event) {
+			$('.i-check3').iCheck('uncheck');
+			$("#allsum").html(0.00);
+		});
+		// 单选
+
+		$(".Pending").each(function (index) {
+			var sum = 0;
+			var sing = 0;
+			var sunatt = [];
+			$(this).on('ifChecked', function (event) {
+				sing = Number($(this).attr("billMoney"));
+				sunatt.push(sing);
+				for (var i = 0; i < sunatt.length; i++) {
+					sum += sunatt[i];
+					console.log(sum)
+				}
+				$("#allsum").html(sum);
+			})
+			$(this).on('ifUnchecked', function (event) {
+				sing = 0;
+				sunatt.push(sing);
+				for (var i = 0; i < sunatt.length; i++) {
+					sum += sunatt[i];
+				}
+				$("#allsum").html(sum);
+			})
+
+		});
+
+		//已处理账单
+		//全选
+		$('#allOptionAlready').on('ifChecked', function (event) {
+			$('.i-check4').iCheck('check');
+
+			var sum = 0;
+			$(".Processed").each(function (index) {
+				sum += Number($(".Processed").eq(index).attr("billMoney1"));
+			})
+			$("#alpsum").html(sum);
+
+		});
+		//反选
+		$('#allOptionAlready').on('ifUnchecked', function (event) {
+			$('.i-check4').iCheck('uncheck');
+			$("#alpsum").html(0.00);
+		});
+
+		//  房间
+		$(function () {
+			/*求顶部左侧宽度*/
+			var windowWidth = document.body.clientWidth;
+			var leftWidth = $(".leftBox").width();
+			var ulWidth1 = windowWidth - leftWidth
+			$(".commuinityTop ul").width(ulWidth1 - 200);
+			$(".commuinityTop ul li").width((ulWidth1 - 200) / 5);
+			/*求每个房间的宽度*/
+			var ulWidth = $(".houseBox").eq(0).find("ul").width(); //一层的宽度
+			$(".houseBox").each(function (i) {
+				var li_length = $(".houseBox").eq(i).find("li").length; //每层房间个数
+				var li_width = parseInt((ulWidth - li_length * 7) / li_length); //每个房间的宽度取整
+				var residueNum = ulWidth - (li_width * li_length + li_length * 5); //总宽减去每个宽度和右边距
+				var smallNum = parseInt(residueNum / li_length); //剩余宽度平均分配
+				li_width = li_width + smallNum - 2; //减掉边框后的li的宽
+				var minusNum = ulWidth - (li_width + 7) * li_length;
+				$(".houseBox").eq(i).find("li").each(function (j) {
+					var li_width1;
+					if (minusNum > 0) {
+						li_width1 = li_width + 1;
+					} else {
+						li_width1 = li_width;
+					}
+					$(".houseBox").eq(i).find("li").eq(j).width(li_width1);
+					minusNum = minusNum - 1;
+				})
+			})
+		})
+		/*有账单的每个房间显示tips*/
+		// var tipsi;
+		// $(".rent_li").each(function () {
+		// 	$(this).hover(function () {
+		// 		stips =
+		// 			`
+		// 		<div class="hoverbox">
+		// 			<p>账单总额(<i>7000元</i>)</p>
+		// 			<ul>
+		// 				<li>账单周期：2017-09-10至2017-10-12<br>
+		// 				水费：100元
+		// 			</li>
+		// 			<li>账单周期：2017-09-10至2017-10-12<br>
+		// 				水费：100元
+		// 			</li>
+		// 			<li>账单周期：2017-09-10至2017-10-12<br>
+		// 				水费：100元
+		// 			</li>
+		// 			<li>账单周期：2017-09-10至2017-10-12<br>
+		// 				水费：100元
+		// 			</li>
+		// 			</ul>
+		// 		</div>
+				
+		// 		`;
+		// 		tipsi = layer.tips(
+		// 			stips,
+		// 			this, {
+		// 				time: 0,
+		// 				tips: [3, '#fff'],
+		// 				area: ['auto', 'auto']
+		// 			}
+
+		// 		);
+		// 	}, function () {
+		// 		layer.close(tipsi);
+		// 	});
+		// })
+		/*点击完右侧划出里的操作按钮刷新页面后继续让后侧显示*/
+       //  测试
+	   var tipsi;
+		$(".rent_li").each(function () {
+			$(this).hover(function () {
+				stips =
+					`
+				<div class="hoverbox">
+				
+					<ul>
+						<li>
+							兰州益海仓 200
+							
+					  </li>
+					  <li>
+							兰州益海仓 200
+							
+					  </li>
+				
+				</div>
+				
+				`;
+				tipsi = layer.tips(
+					stips,
+					this, {
+						time: 0,
+						tips: [2, '#fff'],
+						area: ['auto', 'auto']
+					}
+
+				);
+			}, function () {
+				layer.close(tipsi);
+			});
+		})
+
+
+
+		/*点击房间右侧划出*/
+		$(".houseBigBox li").each(function () {
+			$(this).click(function () {
+				$(".rightBoxDiv").animate({
+					"right": 0
+				})
+				$(".basicInfoList").show();
+				$(".ownerDetail").hide();
+				$(".contractshow").hide();
+				$(".houseTableBox_basic").show();
+				$(".houseTableBox_contract").hide();
+				$(".span_basic").addClass("active");
+				$(".span_bill").removeClass("active");
+			})
+		})
+		/*点击合同信息的查看*/
+		$(".look_owner").click(function () {
+			$(".ownerDetail").show();
+			$(".basicInfoList").hide();
+		})
+		/*点击历史合同的查看*/
+		$(".look_contrat0").click(function () {
+			$(".contractshow").show();
+			$(".basicInfoList").hide();
+		})
+
+		$(".look_contrat1").each(function () {
+
+			$(this).click(function () {
+				$(".contrahistoy").show();
+				$(".basicInfoList").hide();
+			})
+
+		})
+
+
+
+		/*点击待处理账单信息的查看*/
+		$(".lookBill0").click(function () {
+			$(".billDetail").show();
+			$(".billList").hide();
+
+			var strtype = $(this).siblings(".typeex").html();
+			var prname = ["水费", "电费"];
+			if (strtype == prname[0] || strtype == prname[1]) {
+
+				$(".twobill").show();
+
+			} else {
+				// $(".twobill").show();
+				$(".firstbill").show();
+			}
+
+
+
+
+
+		})
+
+		//  点击已处里账单的每一个查看显示
+		$(".lookBill").each(function () {
+
+			$(this).click(function () {
+				$(".prolook").show();
+				$(".billList").hide();
+				var strtype = $(this).siblings(".typeex").html();
+				var prname = ["水费", "电费"];
+				if (strtype == prname[0] || strtype == prname[1]) {
+
+					$(".fourbill").show();
+
+				} else {
+
+					$(".threebill").show();
+				}
+
+			})
+
+		})
+		/*点击当前合同的返回上一页*/
+		$(".contractshow a").click(function () {
+			$(".basicInfoList").show();
+			$(".contractshow").hide();
+			$(".ownerDetail").hide();
+
+		})
+		/*点击历史合同的返回上一页*/
+		$(".contrahistoy a").click(function () {
+			$(".basicInfoList").show();
+			$(".contractshow").hide();
+			$(".contrahistoy").hide();
+
+		})
+
+		/*点击待处理账单信息的返回上一页*/
+		$(".billDetail a").click(function () {
+			$(".billList").show();
+			$(".twobill").hide();
+			$(".firstbill").hide();
+			$(".billDetail").hide();
+		})
+		//点击已处理账单里面的返回上一页
+		$(".prolook a").click(function () {
+			$(".billList").show();
+			$(".threebill").hide();
+			$(".fourbill").hide();
+			$(".prolook").hide();
+
+		})
+
+
+
+		/*点击右侧划出的关闭按钮*/
+		$(".rightBoxDivTop i").click(function () {
+			$(".rightBoxDiv").animate({
+				"right": "-1000px"
+			})
+		})
+
+
+		/*点击右侧房间的编辑*/
+		$("#houseEdit").click(function () {
+			parent.layer.open({
+				type: 2,
+				title: '房屋编辑',
+				shadeClose: false, //点击遮罩关闭层
+				area: ['512px', '585px'],
+				content: 'conedit.html',
+				end: function () {
+					location.reload(); //点击后刷新父页面
+					localStorage.type = 1;
+				}
+			});
+		})
+		/*点击右侧房间的删除*/
+		$("#houseDel").click(function () {
+			parent.layer.open({
+				type: 2,
+				title: '删除',
+				shadeClose: false, //点击遮罩关闭层
+				area: ['520px', '600px'],
+				content: '确定删除',
+				end: function () {
+					location.reload(); //点击后刷新父页面
+				}
+			});
+
+		})
+		/*点击右侧划出房间上的两个按钮切换div*/
+		$(".spanBox span").each(function (index) {
+			$(this).click(function () {
+				$(".spanBox span").removeClass("active");
+				$(this).addClass("active");
+				$(".houseTableBox").hide();
+				$(".houseTableBox").eq(index).show();
+				$(".basicInfoList").show();
+				$(".ownerDetail").hide();
+				$(".contractshow").hide();
+				$(".billDetail").hide();
+				$(".billList").show();
+			})
+		})
+
+		//  点击新增房间
+		$("#nowrom").click(function () {
+			parent.layer.open({
+				type: 2,
+				title: '新增房间',
+				shadeClose: false, //点击遮罩关闭层
+				area: ['520px', '600px'],
+				content: 'newhouse.html',
+				end: function () {
+					location.reload(); //点击后刷新父页面
+				}
+			});
+		})
+
+		//  点击新增合同
+		$("#nowcont").click(function () {
+			parent.layer.open({
+				type: 2,
+				title: '新增合同',
+				shadeClose: false, //点击遮罩关闭层
+				area: ['880px', '650px'],
+				content: 'newronmsg.html',
+				end: function () {
+					location.reload(); //点击后刷新父页面
+				}
+			});
+		})
+		//点击收款
+
+		$(".coll").each(function () {
+			$(this).click(function () {
+				parent.layer.open({
+					type: 2,
+					title: '收款',
+					shadeClose: false, //点击遮罩关闭层
+					area: ['690px', '640px'],
+					content: 'proceeds.html',
+					end: function () {
+						location.reload(); //点击后刷新父页面
+					}
+				});
+			})
+		})
+		//点击批量收款
+
+		$("#coall").click(function () {
+			parent.layer.open({
+				type: 2,
+				title: '批量收款',
+				shadeClose: false, //点击遮罩关闭层
+				area: ['700px', '640px'],
+				content: 'proceedsbat.html',
+				end: function () {
+					location.reload(); //点击后刷新父页面
+				}
+			});
+		})
+		//点击添加账单 addbill
+		$("#addbill").click(function () {
+			parent.layer.open({
+				type: 2,
+				title: '添加账单',
+				shadeClose: false, //点击遮罩关闭层
+				area: ['580px', '500px'],
+				content: 'addbill.html',
+				end: function () {
+					location.reload(); //点击后刷新父页面
+				}
+			});
+		})
+		// 点击添加附件 attupding
+		$(".attup").each(function () {
+			$(this).click(function () {
+				parent.layer.open({
+					type: 2,
+					title: '附件',
+					shadeClose: false, //点击遮罩关闭层
+					area: ['512px', '300px'],
+					content: 'attupding.html',
+					end: function () {
+						location.reload(); //点击后刷新父页面
+					}
+				});
+			})
+		})
+		// 点击合同的 编辑按钮  循环
+		$(".conedit").each(function () {
+			$(this).click(function () {
+				parent.layer.open({
+					type: 2,
+					title: '编辑',
+					shadeClose: false, //点击遮罩关闭层
+					area: ['880px', '650px'],
+					content: 'newronmsgedit.html',
+					end: function () {
+						location.reload(); //点击后刷新父页面
+					}
+				});
+			})
+		})
+		// 点击账单信息里面的编辑按钮
+		$(".moremsg").each(function () {
+			$(this).click(function () {
+				parent.layer.open({
+					type: 2,
+					title: '编辑',
+					shadeClose: false, //点击遮罩关闭层
+					area: ['700px', '451px'],
+					content: 'housebill.html',
+					end: function () {
+						location.reload(); //点击后刷新父页面
+					}
+				});
+			})
+		})
+		//  点击票据打印按钮
+		$("#printer").click(function () {
+			parent.layer.open({
+				type: 2,
+				title: '票据打印',
+				shadeClose: false, //点击遮罩关闭层
+				area: ['800px', '500px'],
+				content: 'printer.html',
+				end: function () {
+					location.reload(); //点击后刷新父页面
+				}
+			});
+		})
+
+
+
+		//  点击已处理账单的开票按钮
+		$(".magke").each(function () {
+			$(this).click(function () {
+				$(this).hide();
+				$(this).siblings(".mstate").html("已开票").removeClass("wait_payFee").addClass("wait-ord");;
+
+			})
+		})
+	</script>
+</body>
+
+</html>

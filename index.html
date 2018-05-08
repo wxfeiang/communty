@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+	<title>蓝格子生活平台</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+	<link rel="shortcut icon" href="logo_small.png">
+	<link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+	<link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/style.css?v=4.1.0" rel="stylesheet">
+	<style type="text/css">
+		.bg {
+			background: rgba(0, 0, 0, 0.3);
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			z-index: 99999999;
+			left: 0;
+			top: 0;
+		}
+
+		.tipBox {
+			width: 550px;
+			height: 300px;
+			border-radius: 4px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			-o-border-radius: 4px;
+			background: #FFFFFF;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			z-index: 999999999;
+			margin-left: -275px;
+			margin-top: -150px;
+			padding: 30px 70px;
+		}
+
+		.tipBox h3 {
+			font-size: 20px;
+			font-weight: normal;
+		}
+
+		.tipBox p {
+			font-size: 12px;
+			line-height: 26px;
+		}
+
+		.tipBox strong {
+			display: block;
+			font-weight: normal;
+			margin-top: 20px;
+			position: relative;
+		}
+
+		.tipBox strong span {
+			font-size: 14px;
+			display: block;
+			float: left;
+			text-align: right;
+			height: 30px;
+			line-height: 30px;
+			width: 100px;
+		}
+
+		.tipBox strong select {
+			float: left;
+			width: 180px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 4px;
+			font-size: 12px;
+			border: none;
+			outline: none;
+			border: 1px solid #E6E6E6;
+		}
+
+		.tipBox strong img {
+			margin: 7px 0 0 10px;
+		}
+
+		.tipBox .tip {
+			position: absolute;
+			right: 0;
+			top: 40px;
+			background: rgba(0, 0, 0, 0.7);
+			color: #FFFFFF;
+			z-index: 99999999999;
+			padding: 10px;
+			width: 300px;
+			border-radius: 4px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			-o-border-radius: 4px;
+			display: none;
+		}
+
+		.tipBox .tip p {
+			margin: 0;
+			line-height: 25px;
+		}
+
+		.saveBtn {
+			display: block;
+			width: 60px;
+			height: 30px;
+			border-radius: 4px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			-o-border-radius: 4px;
+			color: #FFFFFF;
+			background: #0c90fc;
+			text-align: center;
+			line-height: 30px;
+			position: absolute;
+			right: 70px;
+			bottom: 30px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+	<div id="wrapper">
+		<!--左侧导航开始-->
+		<nav class="navbar-default navbar-static-side" role="navigation">
+			<div class="nav-close">
+				<i class="fa fa-times-circle"></i>
+			</div>
+			<div class="sidebar-collapse">
+				<ul class="nav" id="side-menu">
+					<li class="nav-header" style="height: 100px;background:#212830;">
+						<div class="dropdown profile-element" style="color: #fff;font-size: 16px;margin-top: 2px;">
+							<img src="img/logo-lgz.png" style="margin: 10px auto 0;" />
+							<br>
+							<span style="line-height: 40px;">智慧生活服务云平台</span>
+						</div>
+						<div class="logo-element">
+							<img src="img/logo.png" />
+						</div>
+					</li>
+					<li>
+						<a class="J_menuItem" href="index_v1.html">
+							<i class="fa fa-home"></i>
+							<span class="nav-label">首页</span>
+						</a>
+					</li>
+					<!-- 系统管理 -->
+					<li>
+						<a href="#">
+							<i class="fa fa fa-bar-chart-o"></i>
+							<span class="nav-label">小区房产管理</span>
+							<span class="fa arrow"></span>
+						</a>
+						<ul class="nav nav-second-level">
+							<li>
+								<a class="J_menuItem" href="commagent.html">小区管理</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="combuding.html">楼宇管理</a>
+							</li>
+
+						</ul>
+					</li>
+					<!--业主-->
+					<li>
+						<a href="#">
+							<i class="fa fa fa-institution"></i>
+							<span class="nav-label">业主管理</span>
+							<span class="fa arrow"></span>
+						</a>
+						<ul class="nav nav-second-level">
+
+							<li>
+								<a class="J_menuItem" href="adminmsg.html">业主信息管理</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="residentmsg.html">住户信息管理</a>
+							</li>
+
+
+						</ul>
+					</li>
+
+					<!-- 费项设置 -->
+
+					<li>
+						<a href="#">
+							<i class="fa fa fa-bar-chart-o"></i>
+							<span class="nav-label">费项设置</span>
+							<span class="fa arrow"></span>
+						</a>
+						<ul class="nav nav-second-level">
+							<li>
+								<a class="J_menuItem" href="costadmin.html">收费项目管理</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="costsste.html">收费标准管理</a>
+							</li>
+
+						</ul>
+					</li>
+
+					<!--缴费管理-->
+					<li>
+						<a href="#">
+							<i class="fa fa fa-calculator"></i>
+							<span class="nav-label">缴费管理</span>
+							<span class="fa arrow"></span>
+						</a>
+						<ul class="nav nav-second-level">
+							<li>
+								<a class="J_menuItem" href="smCommunity.html">已缴账单</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="unpaid.html">未缴账单</a>
+							</li>
+
+							<li>
+								<a class="J_menuItem" href="perment.html">预存管理</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="metrdata.html">抄表数据管理</a>
+							</li>
+
+							<li>
+								<a class="J_menuItem" href="undlog.html">撤销日志</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="water.html">水表管理</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="ammeter.html">电表管理</a>
+							</li>
+
+
+						</ul>
+					</li>
+					<!--物业管理-->
+					<li>
+						<a href="#">
+							<i class="fa fa fa-bar-chart-o"></i>
+							<span class="nav-label">物业管理</span>
+							<span class="fa arrow"></span>
+						</a>
+						<ul class="nav nav-second-level">
+							<li>
+								<a class="J_menuItem" href="notification.html">通知管理</a>
+							</li>
+							<li>
+								<a href="#">
+
+									<span class="nav-label">生活服务</span>
+									<span class="fa arrow"></span>
+								</a>
+								<ul class="nav nav-second-level">
+									<li>
+										<a class="J_menuItem" href="secmarket.html">二手市场</a>
+									</li>
+
+									<li>
+										<a class="J_menuItem" href="publease.html">公共租赁</a>
+									</li>
+									<li>
+										<a class="J_menuItem" href="goods.html">物品出入</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a class="J_menuItem" href="divmerant.html">部门管理</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="staff.html">员工管理</a>
+							</li>
+							<li>
+								<a href="#">
+
+									<span class="nav-label">维修保障</span>
+									<span class="fa arrow"></span>
+								</a>
+								<ul class="nav nav-second-level">
+
+									<li>
+										<a class="J_menuItem" href="ermanage.html">报障管理</a>
+									</li>
+									<li>
+										<a class="J_menuItem" href="dispatching.html">派工管理</a>
+									</li>
+									<li>
+										<a class="J_menuItem" href="discuss.html">评论管理</a>
+									</li>
+								</ul>
+							</li>
+
+						</ul>
+					</li>
+
+					<li>
+						<a href="#">
+							<i class="fa fa fa-bar-chart-o"></i>
+							<span class="nav-label">物业办公</span>
+							<span class="fa arrow"></span>
+						</a>
+						<ul class="nav nav-second-level">
+							<li>
+								<a class="J_menuItem" href="">工单处理</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="">工作审批</a>
+							</li>
+
+						</ul>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa fa-bar-chart-o"></i>
+							<span class="nav-label">统计分析</span>
+							<span class="fa arrow"></span>
+						</a>
+						<ul class="nav nav-second-level">
+							<li>
+								<a class="J_menuItem" href="shart.html">统计分析</a>
+							</li>
+
+
+						</ul>
+					</li>
+
+
+
+				</ul>
+			</div>
+		</nav>
+		<!--左侧导航结束-->
+		<!--右侧部分开始-->
+		<div id="page-wrapper" class="gray-bg dashbard-1">
+			<div class="row border-bottom">
+				<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+					<div class="navbar-header">
+						<a class="navbar-minimalize minimalize-styl-2 " href="#">
+							<img src="img/closeRight.png" />
+						</a>
+					</div>
+					<ul class="nav navbar-top-links navbar-right">
+						<!--消息提醒-->
+						<li class="dropdown">
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<i class="fa fa-bell"></i>
+								<span class="label label-primary">8</span>
+							</a>
+							<ul class="dropdown-menu dropdown-alerts">
+								<li>
+									<a href="mailbox.html">
+										<div>
+											<i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<!--欢迎登陆-->
+						<li class="light-blue">
+
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<span style="margin: 0 5px;">
+									<img src="img/user.png" alt="用户头像" width="20px" height="20px">
+								</span>
+								<span class="user-info">
+									yyl0118
+								</span>
+								<i class="ace-icon fa fa-caret-down"></i>
+							</a>
+							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="profile.html" style="text-align: center;">
+										<i class="ace-icon fa fa-lock" style="margin-right: 8px;"></i>修改密码
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="login.html" style="text-align: center;">
+										<i class="ace-icon fa fa-power-off" style="margin-right: 8px;"></i>退出登出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="row content-tabs" style="display:none">
+				<button class="roll-nav roll-left J_tabLeft">
+					<i class="fa fa-backward"></i>
+				</button>
+				<nav class="page-tabs J_menuTabs">
+					<div class="page-tabs-content" style="margin-left: 0px;">
+						<a href="javascript:;" class="J_menuTab active" data-id="index_v1.html">首页</a>
+					</div>
+				</nav>
+				<button class="roll-nav roll-right J_tabRight">
+					<i class="fa fa-forward"></i>
+				</button>
+				<div class="btn-group roll-nav roll-right">
+					<button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作
+						<span class="caret"></span>
+					</button>
+					<ul role="menu" class="dropdown-menu dropdown-menu-right">
+						<li class="J_tabShowActive">
+							<a>定位当前选项卡</a>
+						</li>
+						<li class="divider"></li>
+						<li class="J_tabCloseAll">
+							<a>关闭全部选项卡</a>
+						</li>
+						<li class="J_tabCloseOther">
+							<a>关闭其他选项卡</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row J_mainContent" id="content-main">
+				<iframe class="J_iframe" width="100%" height="100%" src="default.html" frameborder="0" data-id="default.html" seamless></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="tipbg"></div>
+	<!--账单方式弹框-->
+	<div class="tipBox" style="display:none">
+		<h3>欢迎登陆蓝格子.办公楼宇管理服务云平台</h3>
+		<p>首次进入系统时请先进行账单设置，之后也可以进入系统管理→账单设置中进行修改（账单生成后不支持再次修改）</p>
+		<strong>
+			<span>账单推送方式：</span>
+			<select name="">
+				<option value="">合并推送账单</option>
+				<option value="">分开推送账单</option>
+			</select>
+			<img src="img/wenhao.png" />
+			<div class="tip">
+				<p>1.合并推送账单指一个合同有多个房间时，账单推送一条总账单 </p>
+				<p>2.分开推送账单时账单按房间推送多条</p>
+			</div>
+		</strong>
+		<strong>
+			<span>周期计算：</span>
+			<select name="">
+				<option value="">转为1号开始</option>
+			</select>
+			<img src="img/wenhao.png" />
+			<div class="tip">
+				<p>方式一：账单周期严格按照付款周期计算</p>
+				<p>1、天单价=实际输入天单价或者月单价*12/365</p>
+				<p>2、月单价=实际输入月单价或者天单价*365/12</p>
+				<p>3、总价=(月单价*月数*面积)+(天单价*实际天数*面积)</p>
+				<p>方式二：账单周期开始时间顺推到每月1号进行计算 </p>
+				<p>1、天单价=实际输入月单价/当月实际天数 </p>
+				<p>2、月单价=实际输入月单价或者天单价*365/12</p>
+				<p>3、总价=(月单价*月数*面积)+(天单价*实际天数*面积)</p>
+			</div>
+		</strong>
+		<span class="saveBtn">保存</span>
+	</div>
+	<!-- 全局js -->
+	<script src="js/jquery.min.js?v=2.1.4"></script>
+	<script src="js/bootstrap.min.js?v=3.3.6"></script>
+	<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+	<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="js/plugins/layer/layer.min.js"></script>
+	<script src="js/hplus.min.js"></script>
+	<script type="text/javascript" src="js/contabs.min.js"></script>
+	<script src="js/plugins/pace/pace.min.js"></script>
+	<script type="text/javascript">
+		//导航状态
+		$(".J_menuItem").on('click', function () {
+			$(".J_menuItem").removeClass("active");
+			$(this).addClass("active")
+			return false;
+		});
+		//点击侧面导航刷新一页面
+		$(".J_menuItem").each(function (index) {
+			$(this).click(function () {
+				$(".J_iframe").eq(index).attr("src", $(this).attr("href"));
+			})
+		})
+
+		function leftDropdown(obj) {
+			var host = window.location.host,
+				url = location.href,
+				domain = "http://" + host + "/",
+				menu = url.replace(domain, "");
+			$(obj).each(function () {
+				var current = $(this).find("a");
+				$(this).removeClass("current");
+				if (menu == $(current[0]).attr("href")) {
+					$(this).addClass("current");
+					$(this).parent("dl").find("dt").addClass("selected");
+					$(this).parent("dl").find("dd").show();
+				}
+			});
+		}
+
+		/*初次进入系统账单设置划过显示提示*/
+		$(".tipBox strong").each(function (index) {
+			$(this).find("img").hover(function () {
+				$(this).parents().find(".tip").eq(index).show();
+			}, function () {
+				$(this).parents().find(".tip").eq(index).hide();
+			})
+		})
+	</script>
+</body>
+
+</html>

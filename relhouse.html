@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关联水表</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <!--上传图片-->
+    <link rel="stylesheet" href="js/plugins/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">
+
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/my.css" />
+    <style type="text/css">
+       
+
+        .ibox-content {
+            padding: 0;
+            width: 670px;
+            background: #f5f6f8;
+
+        }
+
+        .form-horizontal .control-label {
+            padding-top: 0;
+            margin-bottom: 0;
+            text-align: right;
+        }
+
+        .form-group {
+            width: 290px;
+            float: left;
+        }
+
+        .form-group .floatDiv {
+            width: 173px;
+        }
+
+        .form-group .floatDiv select {
+            border-radius: 4px;
+        }
+
+        .upload_box {
+            margin: 0;
+        }
+
+        .form-horizontal .form-group {
+
+            margin: 0 0 0 -18px;
+            ;
+        }
+
+        .status_bar {
+            height: 47px;
+            border: none;
+        }
+
+        .webuploader_pick {
+            margin-left: 0;
+        }
+
+        .upload_submit {
+            padding-top: 0;
+        }
+
+        .upload_main {
+            border: none;
+        }
+
+        .upload_preview {
+            border: none;
+        }
+
+        .upload_append_list {
+            margin-left: 0;
+        }
+
+        .table {
+            background: #FFFFFF;
+
+        }
+
+        .table thead {
+            background: #fafafa;
+            border: 1px solid #e6e6e6;
+        }
+
+        table thead tr th,
+        table tbody tr td {
+            padding: 10px 8px !important;
+            font-size: 14px !important;
+        }
+
+        .layer-date {
+            margin: 0;
+        }
+
+        .warpbox {
+            padding-bottom: 60px;
+        }
+
+        .detailBox .maytit {
+            padding: 0 0 0 40px;
+            color: #1890ff;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 54px;
+        }
+
+        .detailBox {
+            position: fixed;
+            padding: 18px 0 0;
+            top: 0;
+        }
+
+      
+
+        .tableMain {
+            max-height: calc(100% - 100px);
+            margin: 78px 30px 10px;
+            background: #FFFFFF;
+            padding-top: 10px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        .w-btn {
+            width: 84px;
+        }
+
+        .w-btn1 {
+            background: #1890ff;
+            color: #fff;
+        }
+
+        .w-btn1:hover {
+            color: #fff;
+        }
+
+        .float-e-margins .btn-info {
+            margin-right: 31px;
+        }
+
+        .form-horizontal .form-group-btn1 {
+            margin: 0;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            padding: 15px 0 38px 0;
+            width: 100%;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="row warpbox">
+        <div class="col-sm-4">
+            <div class="float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+
+                        <!--房间信息-->
+                        <div class="detailBox">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">
+                                    <i>*</i>选择小区:</label>
+                                <div class="floatDiv">
+                                    <select>
+                                        <option value="0" selected="selected">高新大厦</option>
+                                        <option value="1">高新大厦</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">
+                                    <i>*</i>选择楼宇:</label>
+                                <div class="floatDiv">
+                                    <select>
+                                        <option value="0" selected="selected">A栋</option>
+                                        <option value="1">02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn w-btn w-btn1" type="submit">查询</button>
+
+                        </div>
+
+                        <div class="tableMain">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="ibox-content communityList">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>
+                                                        <input type="checkbox" class="i-checks" id="allOptionId" name="allOptionId">
+                                                    </th>
+                                                    <th>序号</th>
+                                                    <th>楼层</th>
+                                                    <th>房间号</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" name="input[]">
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>1001</td>
+                                                    <td>1001</td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" name="input[]">
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>1001</td>
+                                                    <td>1001</td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" name="input[]">
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>1001</td>
+                                                    <td>1001</td>
+
+                                                </tr>
+                                             
+
+                                                   
+
+
+
+
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <div class="form-group form-group-btn1">
+                            <button class="btn btn-w-m btn-info w-btn" type="submit">提交</button>
+                            <button type="button" class="btn btn-w-m btn-white btnCancle w-btn">取消</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- 表单验证-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+    <script src="js/plugins/layer/laydate/laydate.js"></script>
+    <!--上传图片-->
+    <script type="text/javascript" src="js/plugins/zyupload/zyupload.basic-1.0.0.js"></script>
+    <!-- Chosen -->
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+    <script type="text/javascript">
+        // 点击框内的新增按钮
+
+
+        //弹框内部高度控制
+        $(".formContent").height($("body,html").height() - 70);
+        /*取消*/
+
+
+        var index = parent.layer.getFrameIndex(window.name);
+        $(".btnCancle").click(function () {
+            parent.layer.close(index);
+        })
+    </script>
+</body>
+
+</html>

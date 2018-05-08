@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>业主信息管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- iCheck -->
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/wpublic.css">
+	<style type="text/css">
+		html,body{
+			height: 100%;
+			overflow: hidden;
+		}
+		tr{
+			cursor: pointer;
+		}
+	
+		.commenBtnBox .feeAdd{
+			width: 130px;
+    		text-indent: 30px;
+    		background: #20a8ff url(img/addWhite.png) no-repeat 10px center;
+        }
+        
+        .mommunity_btnBox{
+			position: absolute;
+		}
+		.commenBtnBox b.b3{
+			margin-left: 55px;
+		}
+		.commenBtnBox b.b4{
+			margin-left: 45px;
+		}
+		.tableMain {
+		    height: calc(100%  0px);
+		    margin: 30px 30px 20px;
+		}
+		.commenBtnBox .feeAdd{
+			width: 130px;
+    		text-indent: 30px;
+    		background: #20a8ff url(img/addWhite.png) no-repeat 10px center;
+		}
+		.commenBtnBox .spanExport{
+			text-indent: 37px;
+		    background: #20a8ff url(img/export.png) no-repeat 17px center;
+		    width: 90px;
+		}
+		.commenBtnBox strong{
+			margin-left:0;
+			float: left;
+		}
+		select{
+			width: 160px;
+		}
+		input{
+			outline: none;
+		    width: 200px;
+		    position: relative;
+		    border: none;
+		    border: 1px solid #e6e6e6;
+		    height: 35px;
+		    float: left;
+	        margin: -2px 0 0 0;
+		    padding: 0 10px;
+		    border-radius: 4px;
+		    -webkit-border-radius: 4px;
+		    -moz-border-radius: 4px;
+		    -ms-border-radius: 4px;
+		}
+		.commenBtnBox .spanSearch {
+		    width: 90px;
+		    background: #20a8ff url(img/search_white.png) no-repeat 15px center;
+		    cursor: pointer;
+		    text-indent: 40px;
+		    margin-left: 30px;
+		}
+		.b2{
+	    	clear: both;
+	    }
+	    .mommunity_btnBox{
+	    	height: 140px;
+	    	padding-top: 5px;
+	    }
+	    .btnBox{
+	    	top: 140px;
+	    }
+	    .analysisTop {
+		    top: 215px;
+		    padding: 0 0 10px;
+		}
+		@media screen and (max-width: 1400px) {
+		    .b1{
+		    	clear: both;
+		    }
+		    .b2{
+		    	clear: none;
+		    }
+		    .commenBtnBox b.b4{
+				margin-left: 55px;
+			}
+			.commenBtnBox b.b5{
+				margin-left: 45px;
+			}
+			.commenBtnBox strong{
+				width: 160px;
+			}
+			.commenBtnBox strong input {
+			    padding-left: 10px;
+			    width: 105px;
+			}
+			.commenBtnBox .spanSearch{
+				clear: both;
+			}
+			.btnBox{
+		    	top: 190px;
+		    }
+		    .mommunity_btnBox{
+		    	height: 120px;
+		    }
+		}
+		.top-head{
+			height: 50px;
+		}
+		.stsum{
+			padding: 20px  0 ;
+			height: 109px;
+			background: #fff;
+			
+		}
+		.stsum span{
+			color: #7087a4;
+		}
+		.stsum i{
+			color: #353b4b;
+		}
+		.stsum .oli1{
+			padding: 0 90px 0 53px;
+			border-right: 1px solid #ccc;
+		}
+		.stsum .oli2{
+			padding: 0 0 0 90px ;
+			
+		}
+        .me-input{
+            margin: 0 10px 0 ;
+            width: 64px;
+            text-align: center;
+            cursor: pointer;
+            background: none;
+
+        }
+        .inon1{
+
+            background: #1890ff;
+            border: none;
+            color: #fff;
+        }
+      .inon:hover{
+            cursor: pointer;
+            background: #1890ff;
+            color: #fff;
+        } 
+     .derive{
+
+		width: 64px;
+		height: 30px;
+		border: none;
+		outline: none;
+		line-height: 30px;
+		border-radius: 4px;
+		margin: 0px 20px 0;
+	 }
+	 .adtable thead tr th{
+		color: #262626;
+	 }
+	 .adtable tbody tr td{
+		color: #595959;
+	 }
+	 .form-group input {
+		 outline: none;
+		 height: 30px;
+		 width: 200px !important;
+		 border-radius: 4px;
+		 border: solid 1px #d9d9d9;
+		 
+
+	 }
+	 .page-header {
+          padding: 0 0 0 10px;
+        }
+	
+	</style>
+</head>
+<body class="gray-bg">
+      <!-- 头部导航展示 -->
+    <div class="con-layout navder">
+            <a href="">主页管理</a>
+            <span>/</span>
+            <a href="" class="aon">业主信息管理 </a>
+    </div>
+
+ <!--操作区域-->
+        <form class="form-inline form-search con-layout top-head">
+            <div class="form-group">
+				<label class="sr-only" for="exampleInputEmail3"></label>
+				<input type="text" class="form-control " id="exampleInputEmail3" placeholder="搜索业主">
+            </div>
+			<button type="submit" class=" pu-btn derive">查询</button>
+			<button type="submit" class="  pu-btn derive">导出</button>
+        
+
+        </form>
+
+ 
+    <!--小区展示-->
+    <div class="tableMain">
+        <div class="row">
+            <div class="col-sm-12">
+            	 <div class="ibox-content communityList">
+                        <table class="table table-hover adtable">
+                            <thead>
+                                <tr>
+        
+                                	<th>
+                                    	<input type="checkbox" class="i-checks"  id="allOptionId" name="allOptionId">
+                                   	</th>
+                                    <th>序号</th>
+                                    <th>业主姓名</th>
+                                    <th>性别</th>
+                                    <th>手机号码</th>
+									<th>身份证号</th>
+									<th>居住类型</th>
+                                    <th>紧急联系人</th>
+                                    <th>紧急联系人电话</th>
+									<th>户口类型</th>
+									<th>户口地址</th>
+									<th>住户户号</th>
+									<th>副业主姓名</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                	
+                                	<td>
+                                        <input type="checkbox"  class="i-checks" name="input[]">
+                                    </td>
+                                    <td>1</td>
+                                        <td>二大爷</td>
+                                        <td>男</td>
+                                        <td>18309469751</td>
+										<td>111111111111111111</td>
+										<td>常住</td>
+                                        <td>三大爷</td>
+										<td>18309469751</td>
+										<td>城镇</td>
+										<td>兰州市城关区...</td>
+										<td>105</td>
+										<td>三大爷</td>
+                                      
+                                        <td class="operation">
+											<span class="btn_blue buildingEdit">编辑</span>
+                                          <span class="btn_blue buildingDel mommunityDel">删除</span></td>
+                                </tr>
+                                <tr>
+                                	
+                                	<td>
+                                        <input type="checkbox"  class="i-checks" name="input[]">
+                                    </td>
+                                    <td>1</td>
+                                        <td>二大爷</td>
+                                        <td>男</td>
+                                        <td>18309469751</td>
+										<td>111111111111111111</td>
+										<td>常住</td>
+                                        <td>三大爷</td>
+										<td>18309469751</td>
+										<td>城镇</td>
+										<td>兰州市城关区...</td>
+										<td>105</td>
+										<td>三大爷</td>
+                                      
+                                        <td class="operation">
+											<span class="btn_blue buildingEdit">编辑</span>
+                                          <span class="btn_blue buildingDel mommunityDel">删除</span></td>
+                                </tr>
+                            </tbody>
+						</table>
+						 <!-- 分页框 -->
+						 <div class="page-header position-relative">
+							<table style="width:100%;">
+								<tr>
+									<td style="vertical-align:top;">
+										<div class="pagination" style="float: right;padding-top: 0px;margin-top: 0px;">
+											<ul class="pagination pull-right no-margin">
+												<li>
+													<a>共
+														<font color="red">2</font>条</a>
+												</li>
+												<li>
+													<input type="number" value="" id="toGoPage" style="width:55px;padding-left:10px;float:left;height:28px;border: 1px solid #ddd;border-left: none;margin:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;"
+														placeholder="页码" />
+												</li>
+												<li style="cursor:pointer;">
+													<a onclick="toTZ();" class="btn btn-mini btn-success" style="height:28px;color:#19a9d5!important">跳转</a>
+												</li>
+												<li>
+													<a>首页</a>
+												</li>
+												<li>
+													<a>上页</a>
+												</li>
+												<li class="active">
+													<a>
+														<font color="blue">1</font>
+													</a>
+												</li>
+												<li>
+													<a>下页</a>
+												</li>
+												<li>
+													<a>尾页</a>
+												</li>
+												<li>
+													<a>共1页</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>	
+    <script type="text/javascript">
+    
+    		/*点击操作里面的删除*/
+            $(".mommunityDel").each(function(){
+    		$(this).click(function(){
+	    		parent.layer.open({
+			      type: 1,
+			      title: '删除',
+			      shadeClose: false, //点击遮罩关闭层
+			      area : ['300px' , '200px'],
+				
+			      content: '是否确认删除',
+				  btn:["确定","取消"],
+			      end: function () {
+	               location.reload();//点击后刷新父页面
+				 
+	              }
+			    });
+    		})
+    	})
+      
+	      //点击操作里面的编辑
+		  $(".buildingEdit").each(function(){
+    		$(this).click(function(){
+	    		 parent.layer.open({
+			      type: 2,
+			      title: '编辑',
+			      shadeClose: false, //点击遮罩关闭层
+			      area : ['512px' , '540px'],
+			      content: 'adminedit.html',
+			      end: function () {
+	               location.reload();//点击后刷新父页面
+	              }
+			    });
+	    	})
+    	})
+
+   //  点击取消
+     var index = parent.layer.getFrameIndex(window.name); 
+        $(".btnCancle").click(function(){
+			parent.layer.close(index);
+	})
+
+
+
+	</script>
+	     <!-- 分页 -->
+		 <script type="text/javascript">
+			function nextPage(page) {
+				if (true && document.forms[0]) {
+					var url = document.forms[0].getAttribute("action");
+					if (url.indexOf('?') > -1) {
+						url += "&currentPage=";
+					} else {
+						url += "?currentPage=";
+					}
+					url = url + page + "&showCount=10";
+					document.forms[0].action = url;
+					document.forms[0].submit();
+				} else {
+					var url = document.location + '';
+					if (url.indexOf('?') > -1) {
+						if (url.indexOf('currentPage') > -1) {
+							var reg = /currentPage=\d*/g;
+							url = url.replace(reg, 'currentPage=');
+						} else {
+							url += "&currentPage=";
+						}
+					} else {
+						url += "?currentPage=";
+					}
+					url = url + page + "&showCount=10";
+					document.location = url;
+				}
+			}
+	
+			function changeCount(value) {
+				if (true && document.forms[0]) {
+					var url = document.forms[0].getAttribute("action");
+					if (url.indexOf('?') > -1) {
+						url += "&currentPage=";
+					} else {
+						url += "?currentPage=";
+					}
+					url = url + "1&showCount=" + value;
+					document.forms[0].action = url;
+					document.forms[0].submit();
+				} else {
+					var url = document.location + '';
+					if (url.indexOf('?') > -1) {
+						if (url.indexOf('currentPage') > -1) {
+							var reg = /currentPage=\d*/g;
+							url = url.replace(reg, 'currentPage=');
+						} else {
+							url += "1&currentPage=";
+						}
+					} else {
+						url += "?currentPage=";
+					}
+					url = url + "&showCount=" + value;
+					document.location = url;
+				}
+			}
+	
+			function toTZ() {
+				var toPaggeVlue = document.getElementById("toGoPage").value;
+				if (toPaggeVlue == '') {
+					document.getElementById("toGoPage").value = 1;
+					return;
+				}
+				if (isNaN(Number(toPaggeVlue))) {
+					document.getElementById("toGoPage").value = 1;
+					return;
+				}
+				nextPage(toPaggeVlue);
+			}
+		</script>
+</body>
+</html>

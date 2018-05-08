@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>票据打印</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+	<link rel="stylesheet" href="css/my.css" />
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+	<style type="text/css">
+		.tabBox{
+            width: 760px !important;
+            margin: 0 auto;
+        }
+        .tabBox h3{
+            padding:10px 20px;
+            font-weight:normal;
+            font-size: 12px;
+            text-align: right;
+            cursor: pointer;
+        }
+        .tabBox h3 i{
+          margin: 0 5px 0 0;
+          color: #1890ff;
+        }
+        .tabBox tr th, .tabBox tbody tr td{
+            text-align: center;
+        }
+	</style>
+</head>
+<body>
+    <div class="row ">
+       <div class="tabBox">
+             <h3><i class="fa fa-download"></i>打印</h3>
+            <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                 <input type="checkbox" class="i-checks"  id="allOptionId" name="allOptionId">
+                            </th>
+                            <th>序号</th>
+                            <th>账单周期</th>
+                            <th>账单类型</th>
+                            <th>账单金额</th>
+                            <th>实收日期</th>
+                            <th>开票状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>
+                             <input type="checkbox"  class="i-checks" name="input[]">
+                          </td>
+                          <td>1</td>
+                          <td>2017-12-12</td>
+                          <td>水费</td>
+                          <td>120.00</td>
+                          <td>2017-12-12</td>
+                          <td>未开票</td>
+                       
+                        </tr>
+                    </tbody>
+                </table>
+       </div>
+       
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!--layer.js-->
+	<script src="js/plugins/layer/layer.min.js"></script>
+	<script src="js/plugins/laydate/laydate.js"></script>
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+	   
+
+	<!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+	<script type="text/javascript">
+		 //弹框内部高度控制
+        $(".formContent").height($("body,html").height()-70);
+		
+      
+		/*获取弹出窗口索引*/
+		var index = parent.layer.getFrameIndex(window.name); 
+		/*保存，并进行表单验证*/
+	
+		/*取消*/
+        $(".btnCancle").click(function(){
+			parent.layer.close(index);
+		})
+	
+
+
+
+
+
+
+	</script>
+
+
+</body>
+</html>

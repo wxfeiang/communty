@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>票据打印</title>
+
+
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .printBox {
+            width: 24cm;
+            margin: 10px auto 0;
+            margin-bottom: 20px;
+        }
+
+        .printBox input {
+            width: 80px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .receipt {
+            width: 20cm;
+            height: 13.2cm;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 0.8cm 2cm 0;
+            font-size: 14px;
+        }
+
+        .receipt h6 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .receipt table {
+            width: 20cm;
+            border-collapse: collapse;
+            margin: 0 auto;
+            margin: 5px 0;
+        }
+
+        .receipt table td {
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .p_box {
+            width: 20cm;
+            overflow: hidden;
+        }
+
+        .p_box p {
+            float: left;
+            line-height: 20px;
+            width: 160px;
+            margin-right: 10px;
+        }
+
+        .p_box p:last-of-type {
+            margin-right: 0;
+        }
+
+        .bottom_p {
+            width: 20cm;
+            overflow: hidden;
+        }
+
+        .bottom_p p {
+            width: 33%;
+            float: left;
+        }
+
+        @page {
+            size: auto;
+            /* auto is the initial value */
+            margin: 0mm;
+            /* this affects the margin in the printer settings */
+        }
+
+        input {
+            border: none;
+            background: none;
+            outline: none;
+        }
+    </style>
+
+</head>
+
+<body class="no-skin">
+    <div class="printBox" id="printBox">
+        <a href="javascript:;" target="_self" onClick="print111()">打印</a>
+
+    </div>
+    <div class="receipt">
+        <h6>收款收据单</h6>
+        <div class="p_box">
+            <p style="width: 200px;">
+                <span style="float: left;">小区名称：</span>
+                <span style="float: left;">崔氏大厦A</span>
+            </p>
+            <p style="width: 130px;">缴费方式：现金支付</p>
+            <p>收费日期：2018-03-01</p>
+            <p style="width: 230px;">票据号：CSWY_201803150003</p>
+        </div>
+        <table border="" cellspacing="" cellpadding="">
+            <tr>
+                <td colspan="3">房号：A-101-C</td>
+                <td colspan="4">房主信息:cs</td>
+                <td colspan="3">建筑面积:800m²</td>
+            </tr>
+            <!-- tr 循环 -->
+            <tr>
+                <td>收费项目</td>
+                <td>标准名称</td>
+                <td>单价</td>
+                <td>购买量</td>
+                <td>费用类型</td>
+                <td>开始日期</td>
+                <td>结束日期</td>
+                <td>金额(元)</td>
+                <td>滞纳金(元)</td>
+                <td>备注</td>
+            </tr>
+
+            <tr>
+                <td>电费</td>
+                <td>电费</td>
+                <td>600元/度</td>
+                <td></td>
+                <td>基础费用</td>
+                <td>2018-03-01</td>
+                <td>2018-03-31</td>
+                <td>600.00</td>
+                <td>0</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>房屋租金</td>
+                <td>房屋租金</td>
+                <td></td>
+                <td></td>
+                <td>基础费用</td>
+                <td>2018-03-15</td>
+                <td>2018-06-30</td>
+                <td>8833.00</td>
+                <td>0</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>房屋租金</td>
+                <td>房屋租金</td>
+                <td></td>
+                <td></td>
+                <td>基础费用</td>
+                <td>2018-03-27</td>
+                <td>2018-06-30</td>
+                <td>850.00</td>
+                <td>0</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>房屋租金</td>
+                <td>房屋租金</td>
+                <td></td>
+                <td></td>
+                <td>基础费用</td>
+                <td>2018-07-01</td>
+                <td>2018-12-31</td>
+                <td>14500.00</td>
+                <td>0</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">合计(大写)</td>
+                <td colspan="4">贰万肆仟柒佰捌拾叁元整</td>
+                <td colspan="3">合计(小写)</td>
+                <td>24,783</td>
+            </tr>
+        </table>
+        <div class="bottom_p">
+            <p>收款单位：
+                <input type="text" value="" placeholder="请输入" />
+            </p>
+            <p>交款人：
+                <input type="text" value="" placeholder="请输入" />
+            </p>
+            <p>收款人：
+                <input type="text" value="" placeholder="请输入" />
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function print111() {
+            // var postData2 = {id:id};
+            // var url2 = "http://www.bdlgz.com:80//Office/House/isPrintYes"
+            // $.post(url2, postData2, function(data){
+
+            // })
+            var a = document.getElementById("printBox")
+            a.style.display = "none";
+            window.print();
+
+        }
+
+
+
+
+        //  页面打印
+        function toPrint(){
+			var checkedIds = "";
+			var ids = document.getElementsByName("ids");              
+			var flag = false ;              
+			for(var i=0;i<ids.length;i++){
+			    if(ids[i].checked){
+			        flag = true ;
+			        break ;
+			    }
+			}
+			if(!flag){
+			   // alert("请最少选择一项打印！");
+			    successDialog("至少选择一项打印！");
+			    return false ;
+			} 
+			var checkedElement = $(".i-checks");
+			for(var i = 0; i < checkedElement.length; i++){
+			   	if(checkedElement[i].checked){
+			    	checkedIds += $(checkedElement[i]).val() + ",";
+			   	}
+			}
+			window.open('http://www.bdlgz.com:80//Office/House/printBillDetail.do?id='+checkedIds);
+		
+		}
+
+    </script>
+</body>
+
+</html>

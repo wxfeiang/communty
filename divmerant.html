@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>部门管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- iCheck -->
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/wpublic.css">
+	<style type="text/css">
+		html,body{
+			height: 100%;
+			overflow: hidden;
+		}
+		tr{
+			cursor: pointer;
+		}
+	
+		.commenBtnBox .feeAdd{
+			width: 130px;
+    		text-indent: 30px;
+    		background: #20a8ff url(img/addWhite.png) no-repeat 10px center;
+        }
+        
+        .mommunity_btnBox{
+			position: absolute;
+		}
+		.commenBtnBox b.b3{
+			margin-left: 55px;
+		}
+		.commenBtnBox b.b4{
+			margin-left: 45px;
+		}
+		.tableMain {
+		    height: calc(100%  0px);
+			margin: 10px 20px 0 0;
+		}
+
+		.commenBtnBox .feeAdd{
+			width: 130px;
+    		text-indent: 30px;
+    		background: #20a8ff url(img/addWhite.png) no-repeat 10px center;
+		}
+		.commenBtnBox .spanExport{
+			text-indent: 37px;
+		    background: #20a8ff url(img/export.png) no-repeat 17px center;
+		    width: 90px;
+		}
+		.commenBtnBox strong{
+			margin-left:0;
+			float: left;
+		}
+		select{
+			width: 160px;
+		}
+		input{
+			outline: none;
+		    width: 160px;
+		    position: relative;
+		    border: none;
+		    border: 1px solid #e6e6e6;
+		    height: 30px;
+		    float: left;
+		    margin: 12px 0 0 0;
+		    padding: 0 10px;
+		    border-radius: 4px;
+		    -webkit-border-radius: 4px;
+		    -moz-border-radius: 4px;
+		    -ms-border-radius: 4px;
+		}
+		.commenBtnBox .spanSearch {
+		    width: 90px;
+		    background: #20a8ff url(img/search_white.png) no-repeat 15px center;
+		    cursor: pointer;
+		    text-indent: 40px;
+		    margin-left: 30px;
+		}
+		.b2{
+	    	clear: both;
+	    }
+	    .mommunity_btnBox{
+	    	height: 60px;
+	    	padding-top: 5px;
+	    }
+	    .btnBox{
+	    	top: 140px;
+	    }
+	    .analysisTop {
+		    top: 215px;
+		    padding: 0 0 10px;
+		}
+		@media screen and (max-width: 1400px) {
+		    .b1{
+		    	clear: both;
+		    }
+		    .b2{
+		    	clear: none;
+		    }
+		    .commenBtnBox b.b4{
+				margin-left: 55px;
+			}
+			.commenBtnBox b.b5{
+				margin-left: 45px;
+			}
+			.commenBtnBox strong{
+				width: 160px;
+			}
+			.commenBtnBox strong input {
+			    padding-left: 10px;
+			    width: 105px;
+			}
+			.commenBtnBox .spanSearch{
+				clear: both;
+			}
+			.btnBox{
+		    	top: 190px;
+		    }
+		    .mommunity_btnBox{
+		    	height: 60px;
+		    }
+		}
+
+		.stsum{
+			padding: 20px  0 ;
+			height: 109px;
+			background: #fff;
+			
+		}
+		.stsum span{
+			color: #7087a4;
+		}
+		.stsum i{
+			color: #353b4b;
+		}
+		.stsum .oli1{
+			padding: 0 90px 0 53px;
+			border-right: 1px solid #ccc;
+		}
+		.stsum .oli2{
+			padding: 0 0 0 90px ;
+			
+		}
+        .me-input{
+            margin: 0 10px 0 ;
+            width: 64px;
+            text-align: center;
+            cursor: pointer;
+            background: none;
+
+        }
+        .inon1{
+
+            background: #1890ff;
+            border: none;
+            color: #fff;
+        }
+      .inon:hover{
+            cursor: pointer;
+            background: #1890ff;
+            color: #fff;
+        } 
+       .newret{
+           border: 1px solid #ccc;
+           background: #fff;
+           color: #000;
+       }
+       .newret:hover{
+          color: #000;
+       }
+       .b1{
+		    	clear: both;
+            }
+            
+         .leftsider{
+             /* position: relative;
+             left: 38px;
+             top: 20px; */
+             float: left;
+             width: 200px;
+             height: 100%;
+             background: #ccc;
+
+		 }  
+		 .stbox{
+			 margin: 80px 0 0 38px;
+		 }
+		 
+	</style>
+</head>
+<body class="gray-bg">
+      <!-- 头部导航展示 -->
+    <div class="con-layout navder">
+            <a href="">物业管理</a>
+            <span>/</span>
+            <a href="" class="aon">通知管理 </a>
+    </div>
+
+ <!--操作区域-->
+ <div class="mommunity_btnBox commenBtnBox">
+        <form action="" style="margin-left: 38px;">
+           
+           <input type="button" class="me-input inon1" value="新增" id="newpublese">
+           <input type="button" class="me-input inon1" value="删除">
+       
+        </form>
+ </div>
+ <!-- 左边文件夹结构展示 -->
+
+      <table style=" width: 100%; height: 100%" class="stbox">
+          <tbody>
+              <tr>
+                  <td style="width:15%; height:100%">
+					    <iframe name="treeFrame"  frameborder="0" src="tree.html" style="margin:0 auto;width:100%;height:100%;"></iframe>
+				  </td>
+                  <td style="width:85%" >
+                        <iframe name="treeFrame" id="treeFrame" frameborder="0" src="righeshow.html" style="margin:0 auto;width:100%;height:100%;"></iframe>
+
+                  </td>
+              </tr>
+              
+          </tbody>
+      </table>
+     
+
+ 
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>	
+    <script type="text/javascript">
+    
+    		/*点击操作里面的删除*/
+            $(".mommunityDel").each(function(){
+    		$(this).click(function(){
+	    		parent.layer.open({
+			      type: 1,
+			      title: '新增小区',
+			      shadeClose: false, //点击遮罩关闭层
+			      area : ['512px' , '380px'],
+			      content: '是否确认删除',
+			      end: function () {
+	               location.reload();//点击后刷新父页面
+	              }
+			    });
+    		})
+    	})
+         //  点击新增
+         $("#newpublese").click(function(){
+    		parent.layer.open({
+		      type: 2,
+		      title: '新增部门',
+		      shadeClose: false, //点击遮罩关闭层
+		      area : ['512px' , '307px'],
+		      content: 'departmentadd.html',
+		      end: function () {
+               location.reload();//点击后刷新父页面
+              }
+		    });
+    	})
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

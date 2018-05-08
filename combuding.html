@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楼宇管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/wpublic.css">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        tr {
+            cursor: pointer;
+        }
+
+        .tableMain {
+            height: calc(100% - 235px);
+            margin: 20px 30px 20px;
+        }
+
+        .padin-show {
+            position: static;
+            margin: 70px 0 0 0;
+        }
+
+        .stsum {
+
+            height: 109px;
+            background: #fff;
+
+        }
+
+        .stsum span {
+            color: #7087a4;
+        }
+
+        .stsum i {
+            color: #353b4b;
+        }
+
+        .stsum .oli1 {
+            padding: 0 90px 0 53px;
+            border-right: 1px solid #ccc;
+        }
+
+        .stsum .oli2 {
+            border-right: 1px solid #ccc;
+            padding: 0 0 0 40px;
+
+        }
+
+        @media screen and (max-width: 1200px) {
+            .commenBtnBox strong,
+            .commenBtnBox strong input {
+                width: 160px !important;
+                ;
+            }
+        }
+
+
+
+        .analysisTop {
+            padding: 0;
+        }
+
+        .page-header {
+          padding: 0 0 0 10px;
+        }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <!-- 头部导航展示 -->
+    <div class="con-layout navder">
+        <a href="">小区房产管理 </a>
+        <span>/</span>
+        <a href="" class="aon">楼宇管理 </a>
+    </div>
+
+    <!--操作区域-->
+    <div class="mommunity_btnBox commenBtnBox">
+        <b>小区切换:</b>
+        <select placeholder="请选择小区名称" style="width:136px;">
+            <option>1</option>
+            <option>1</option>
+            <option>1</option>
+
+        </select>
+
+        <strong>
+            <input type="text" id="bname" value="" placeholder="请输入楼宇名称">
+        </strong>
+        <span class="spanAdd">查询</span>
+        <span class="spanAdd" id="addCommunity">新增楼宇</span>
+    </div>
+
+    <!-- 统计显示 -->
+    <div class="row analysisTop padin-show">
+        <div class="col-sm-12">
+            <ul class="stsum">
+                <li class="sysTxtBox oli1">
+                    <span>总楼宇</span>
+                    <i>150</i>
+                </li>
+                <li class="sysTxtBox oli1">
+                    <span>总户数</span>
+                    <i>150</i>
+                </li>
+                <li class="sysTxtBox oli1">
+                    <span>常住人口</span>
+                    <i>150</i>
+                </li>
+                <li class="sysTxtBox oli1">
+                    <span>流动人口</span>
+                    <i>150</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--小区展示-->
+    <div class="tableMain">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox-content communityList">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <input type="checkbox" class="i-checks" id="allOptionId" name="allOptionId">
+                                </th>
+                                <th>序号</th>
+                                <th>楼宇名称</th>
+                                <th>单元数量</th>
+                                <th>总楼层</th>
+                                <th>楼宇类型</th>
+                                <th>楼宇朝向</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="checkbox" class="i-checks" name="input[]">
+                                </td>
+                                <td>1</td>
+                                <td>
+                                    <img src="" />天庆花园</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>写字楼</td>
+                                <td>西南</td>
+                                <td class="operation">
+                                    <span class="btn_blue mommunityEdit">编辑</span>
+                                    <span class="btn_blue mommunityDel">删除</span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                               <!-- 分页框 -->
+                               <div class="page-header position-relative">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td style="vertical-align:top;">
+                                            <div class="pagination" style="float: right;padding-top: 0px;margin-top: 0px;">
+                                                <ul class="pagination pull-right no-margin">
+                                                    <li>
+                                                        <a>共
+                                                            <font color="red">2</font>条</a>
+                                                    </li>
+                                                    <li>
+                                                        <input type="number" value="" id="toGoPage" style="width:55px;padding-left:10px;float:left;height:28px;border: 1px solid #ddd;border-left: none;margin:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;"
+                                                            placeholder="页码" />
+                                                    </li>
+                                                    <li style="cursor:pointer;">
+                                                        <a onclick="toTZ();" class="btn btn-mini btn-success" style="height:28px;color:#19a9d5!important">跳转</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>首页</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>上页</a>
+                                                    </li>
+                                                    <li class="active">
+                                                        <a>
+                                                            <font color="blue">1</font>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>下页</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>尾页</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>共1页</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+    <script type="text/javascript">
+        /*点击每个楼宇跳转至房间管理页面*/
+        $("tr").each(function (index) {
+            $("tr").eq(index).find("td").not(".operation").click(function () {
+                location.href = "house.html";
+            })
+        })
+        /*新增小区*/
+        $("#addCommunity").click(function () {
+            parent.layer.open({
+                type: 2,
+                title: '新增楼宇',
+                shadeClose: false, //点击遮罩关闭层
+                area: ['512px', '585px'],
+                content: 'combudingadd.html',
+                end: function () {
+                    location.reload(); //点击后刷新父页面
+                }
+            });
+        })
+
+        $(".mommunityEdit").each(function () {
+            $(this).click(function () {
+                parent.layer.open({
+                    type: 2,
+                    title: '编辑',
+                    shadeClose: false, //点击遮罩关闭层
+                    area: ['512px', '585px'],
+                    content: 'conbudingedit.html',
+                    end: function () {
+                        location.reload(); //点击后刷新父页面
+                    }
+                });
+            })
+        })
+        /*点击删除*/
+        $(".mommunityDel").each(function () {
+            $(this).click(function () {
+                parent.layer.open({
+                    type: 1,
+                    title: '新增小区',
+                    shadeClose: false, //点击遮罩关闭层
+                    area: ['300px', '300px'],
+                    content: '是否确认删除',
+                    end: function () {
+                        location.reload(); //点击后刷新父页面
+                    }
+                });
+            })
+        })
+    </script>
+       <!-- 分页 -->
+       <script type="text/javascript">
+        function nextPage(page) {
+            if (true && document.forms[0]) {
+                var url = document.forms[0].getAttribute("action");
+                if (url.indexOf('?') > -1) {
+                    url += "&currentPage=";
+                } else {
+                    url += "?currentPage=";
+                }
+                url = url + page + "&showCount=10";
+                document.forms[0].action = url;
+                document.forms[0].submit();
+            } else {
+                var url = document.location + '';
+                if (url.indexOf('?') > -1) {
+                    if (url.indexOf('currentPage') > -1) {
+                        var reg = /currentPage=\d*/g;
+                        url = url.replace(reg, 'currentPage=');
+                    } else {
+                        url += "&currentPage=";
+                    }
+                } else {
+                    url += "?currentPage=";
+                }
+                url = url + page + "&showCount=10";
+                document.location = url;
+            }
+        }
+
+        function changeCount(value) {
+            if (true && document.forms[0]) {
+                var url = document.forms[0].getAttribute("action");
+                if (url.indexOf('?') > -1) {
+                    url += "&currentPage=";
+                } else {
+                    url += "?currentPage=";
+                }
+                url = url + "1&showCount=" + value;
+                document.forms[0].action = url;
+                document.forms[0].submit();
+            } else {
+                var url = document.location + '';
+                if (url.indexOf('?') > -1) {
+                    if (url.indexOf('currentPage') > -1) {
+                        var reg = /currentPage=\d*/g;
+                        url = url.replace(reg, 'currentPage=');
+                    } else {
+                        url += "1&currentPage=";
+                    }
+                } else {
+                    url += "?currentPage=";
+                }
+                url = url + "&showCount=" + value;
+                document.location = url;
+            }
+        }
+
+        function toTZ() {
+            var toPaggeVlue = document.getElementById("toGoPage").value;
+            if (toPaggeVlue == '') {
+                document.getElementById("toGoPage").value = 1;
+                return;
+            }
+            if (isNaN(Number(toPaggeVlue))) {
+                document.getElementById("toGoPage").value = 1;
+                return;
+            }
+            nextPage(toPaggeVlue);
+        }
+    </script>
+</body>
+
+</html>
