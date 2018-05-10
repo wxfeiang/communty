@@ -9,12 +9,9 @@
     <meta name="description" content="">
     <link rel="shortcut icon" href="favicon.ico">
     <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    
     <link href="css/style.css?v=4.1.0" rel="stylesheet">
-    <!--上传图片-->
-    <link rel="stylesheet" href="js/plugins/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">
+  
 
     <!-- iCheck -->
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
@@ -119,19 +116,23 @@
             position: fixed;
             padding: 18px 0 0;
             top: 0;
+            z-index: 999;
         }
 
       
 
         .tableMain {
-            max-height: calc(100% - 100px);
+            max-height: 200px !important;
+           
             margin: 78px 30px 10px;
             background: #FFFFFF;
             padding-top: 10px;
             overflow: hidden;
             overflow-y: auto;
         }
-
+        ::-webkit-scrollbar-thumb:window-inactive {  
+          background: rgba(255,0,0,0.4);  
+         }
         .w-btn {
             width: 84px;
         }
@@ -158,7 +159,25 @@
             width: 100%;
         }
 
-      
+      /*滚动条设置*/  
+/* 设置滚动条区域*/  
+ 
+/* Track */  
+::-webkit-scrollbar-track {  
+   
+    -webkit-border-radius: 10px;  
+    border-radius: 10px;  
+}   
+/* Handle */  
+::-webkit-scrollbar-thumb {  
+    -webkit-border-radius: 10px;  
+    border-radius: 10px;  
+    background: #ccc; 
+
+}  
+::-webkit-scrollbar-thumb:window-inactive {  
+    background: #ccc; 
+}  
     </style>
 </head>
 
@@ -244,6 +263,62 @@
                                                     <td>1001</td>
 
                                                 </tr>
+                                                 <tr>
+
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" name="input[]">
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>1001</td>
+                                                    <td>1001</td>
+
+                                                </tr>
+                                             
+
+                                                <tr>
+
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" name="input[]">
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>1001</td>
+                                                    <td>1001</td>
+
+                                                </tr>
+                                             
+                                                <tr>
+
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" name="input[]">
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>1001</td>
+                                                    <td>1001</td>
+
+                                                </tr>
+                                             
+                                                <tr>
+
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" name="input[]">
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>1001</td>
+                                                    <td>1001</td>
+
+                                                </tr>
+                                             
+                                                <tr>
+
+                                                    <td>
+                                                        <input type="checkbox" class="i-checks" name="input[]">
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>1001</td>
+                                                    <td>1001</td>
+
+                                                </tr>
+                                             
                                              
 
                                                    
