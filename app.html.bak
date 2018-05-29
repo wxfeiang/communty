@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>photoswipe的使用</title>
     <link rel="stylesheet prefetch" href="js/PhotoSwipe-4.1.2/dist/photoswipe.css">
-    <link rel="stylesheet prefetch" href="js/PhotoSwipe-4.1.2/dist/default-skin/default-skin.css">
+ <link rel="stylesheet prefetch" href="js/PhotoSwipe-4.1.2/dist/default-skin/default-skin.css">
     <style>
         * {margin: 0;padding: 0;}
         .clearfix::before, .clearfix::after {

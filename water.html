@@ -97,6 +97,7 @@
             white-space: nowrap;
             background-color: #F8F8F8;
         }
+        
     </style>
 </head>
 
@@ -167,7 +168,7 @@
                                 <td>
                                     <span class="btn_blue relhouse">关联房间</span>
                                     <span class="btn_blue mommunityEdit">编辑</span>
-                                    <span class="btn_blue">删除</span>
+                                    <span class="btn_blue  dele">删除</span>
                                 </td>
                             </tr>
                           
@@ -184,30 +185,15 @@
     <!-- 全局js -->
     <script src="js/jquery.min.js?v=2.1.4"></script>
     <script src="js/bootstrap.min.js?v=3.3.6"></script>
-   
+  
     <!-- iCheck -->
     <script src="js/plugins/iCheck/icheck.min.js"></script>
     <script src="js/plugins/iCheck/myIcheck.js"></script>
 
     <script>
-        var elem = document.querySelector('.js-switch');
-        var switchery = new Switchery(elem, {
-            color: '#20a8ff'
-        });
+       
 
-        //  点击新增
-        // $("#costadd").click(function () {
-        //     parent.layer.open({
-        //         type: 2,
-        //         title: '新增收费项目',
-        //         shadeClose: false, //点击遮罩关闭层
-        //         area: ['512px', '290px'],
-        //         content: 'costminadd.html',
-        //         end: function () {
-        //             location.reload(); //点击后刷新父页面
-        //         }
-        //     });
-        // })
+     
 
         // 点击编辑按钮
         $(".relhouse").each(function () {
@@ -241,8 +227,21 @@
                 });
             })
         })
-
-
+//  用删除键暂时
+   $(".dele").each(function () {
+            $(this).click(function () {
+                parent.layer.open({
+                    type: 2,
+                    title: '周期缴费',
+                    shadeClose: false, //点击遮罩关闭层
+                    area: ['512px', '480px'],
+                    content: 'paycost.html',
+                    end: function () {
+                        location.reload(); //点击后刷新父页面
+                    }
+                });
+            })
+        })
     </script>
    
 </body>
