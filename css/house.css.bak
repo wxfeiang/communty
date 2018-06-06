@@ -108,9 +108,9 @@ html,body{
 }
 .hoverbox{
     padding: 5px;
-    
+    overflow: heidden;
     color: #000;
-   
+    z-index: 999px;
 }
 .hoverbox p{
    

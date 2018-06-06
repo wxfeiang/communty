@@ -28,7 +28,15 @@
 		<span>/</span>
 		<a href="" class="aon">房间管理 </a>
 	</div>
-
+	<!-- //   局部存执 -->
+	<input type="hidden" name="mark" value="0" id="mark2" />
+	<input type="hidden" name="mark" value="" id="mark" />
+	<input type="hidden" name="mark" value="" id="lyn_floor_id" />
+	<input type="hidden" name="mark" value="" id="lyn_floor_num" />
+	<input type="hidden" name="mark" value="" id="lyn_house_num" />
+	<input type="hidden" name="mark" value="" id="lyn_house_area" />
+	<input type="hidden" name="mark" value="" id="lyn_house_status" />
+	<input type="hidden" name="mark" value="" id="lyn_houseinfo_id" />
 	<div class="wrapper wrapper-content ">
 		<div class="commuinityTop">
 			<div class="leftBox">
@@ -94,6 +102,7 @@
 			<span class="spanAdd spanAddC" id="nowcont">新增合同</span>
 		</div>
 		<!--房屋展示-->
+
 		<div class="houseBigBox">
 
 			<div class="houseBox">
@@ -107,6 +116,42 @@
 						<p>1单元1102室/150㎡</p>
 						<p>收费日期：2018-03-12"</p>
 					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
 					<li class="normal_li">
 						<p>周星驰</p>
 						<p>1单元1102室/150㎡</p>
@@ -272,6 +317,38 @@
 						<p>1单元1102室/150㎡</p>
 						<p>收费日期：2018-03-12"</p>
 					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+					<li class="rent_li">
+						<p>周星驰</p>
+						<p>1单元1102室/150㎡</p>
+						<p>收费日期：2018-03-12"</p>
+					</li>
+
 				</ul>
 			</div>
 
@@ -798,7 +875,7 @@
 						</div>
 						<p>费用信息</p>
 						<!-- 没有抄表数据的显示情况 -->
-						<div style="overflow: hidden; display:none;"  class="firstbill">
+						<div style="overflow: hidden; display:none;" class="firstbill">
 							<span class="billspan">物业费: 62652.22元</span>
 							<span class="billspan">逾期时间: 10天</span>
 							<span class="billspan">逾期金额: 500元</span>
@@ -879,6 +956,61 @@
 	<script src="js/plugins/iCheck/icheck.min.js"></script>
 
 	<script type="text/javascript">
+
+  $(function () {
+        var a = $("#mark").val();
+        if (a == 1) {
+            localStorage.id = $("#lyn_houseinfo_id").val();
+            billMessageDefault(
+            $("#lyn_floor_id").val(),
+            $("#lyn_floor_num").val(),
+            $("#lyn_house_num").val(),
+            $("#lyn_house_area").val(), 
+            $("#lyn_house_status").val(), 
+            $("#lyn_houseinfo_id").val());
+        }
+
+        function rightSlideShow() {
+            if (localStorage.slideType == 1) {
+                houseClick(localStorage.id);
+            }
+            if (localStorage.slideType == 2) {
+                houseClick(localStorage.id);
+                $(".rightBoxContent").hide();
+                $(".rightBoxTop1 span").removeClass("active");
+                $(".rightBoxContent2_1").show();
+            }
+          
+        }
+        rightSlideShow();
+        localStorage.slideType = "";
+        console.log(localStorage.slideType);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		// 当前合同
 		//单选
 		$('.i-checks').iCheck({
@@ -999,27 +1131,90 @@
 			})
 		})
 		/*有账单的每个房间显示tips*/
-		var tipsi;
+		 var tipsi;
+		 $(".rent_li").each(function () {
+		 	$(this).hover(function () {
+		 		stips =
+		 			`
+		 		<div class="hoverbox">
+		 			<p>账单总额(<i>7000元</i>)</p>
+		 			<ul>
+		 				<li>账单周期：2017-09-10至2017-10-12<br>
+		 				水费：100元
+		 			</li>
+		 			<li>账单周期：2017-09-10至2017-10-12<br>
+	 				水费：100元
+		 			</li>
+		 			<li>账单周期：2017-09-10至2017-10-12<br>
+		 				水费：100元
+		 			</li>
+		 			<li>账单周期：2017-09-10至2017-10-12<br>
+		 				水费：100元
+		 			</li>
+		 			</ul>
+					<ul>
+		 				<li>账单周期：2017-09-10至2017-10-12<br>
+		 				水费：100元
+		 			</li>
+		 			<li>账单周期：2017-09-10至2017-10-12<br>
+	 				水费：100元
+		 			</li>
+		 			<li>账单周期：2017-09-10至2017-10-12<br>
+		 				水费：100元
+		 			</li>
+		 			<li>账单周期：2017-09-10至2017-10-12<br>
+		 				水费：100元
+		 			</li>
+		 			</ul>
+					<ul>
+		 				<li>账单周期：2017-09-10至2017-10-12<br>
+		 				水费：100元
+		 			</li>
+		 			<li>账单周期：2017-09-10至2017-10-12<br>
+	 				水费：100元
+		 			</li>
+		 			<li>账单周期：2017-09-10至2017-10-12<br>
+		 				水费：100元
+		 			</li>
+		 			<li>账单周期：2017-09-10至2017-10-12<br>
+		 				水费：100元
+		 			</li>
+		 			</ul>
+		 		</div>
+				
+		 		`;
+		 		tipsi = layer.tips(
+		 			stips,
+	 			this, {
+						time: 0,
+		 				tips: [3, '#fff'],
+		 				area: ['auto', 'auto']
+		 			}
+
+	 		);
+		 	}, function () {
+		 		layer.close(tipsi);
+		 	});
+		 })
+		/*点击完右侧划出里的操作按钮刷新页面后继续让后侧显示*/
+       //  测试
+	  /* var tipsi;
 		$(".rent_li").each(function () {
 			$(this).hover(function () {
 				stips =
 					`
 				<div class="hoverbox">
-					<p>账单总额(<i>7000元</i>)</p>
+				
 					<ul>
-						<li>账单周期：2017-09-10至2017-10-12<br>
-						水费：100元
-					</li>
-					<li>账单周期：2017-09-10至2017-10-12<br>
-						水费：100元
-					</li>
-					<li>账单周期：2017-09-10至2017-10-12<br>
-						水费：100元
-					</li>
-					<li>账单周期：2017-09-10至2017-10-12<br>
-						水费：100元
-					</li>
-					</ul>
+						<li>
+							兰州益海仓 200
+							
+					  </li>
+					  <li>
+							兰州益海仓 200
+							
+					  </li>
+				
 				</div>
 				
 				`;
@@ -1027,7 +1222,7 @@
 					stips,
 					this, {
 						time: 0,
-						tips: [3, '#fff'],
+						tips: [2, '#fff'],
 						area: ['auto', 'auto']
 					}
 
@@ -1036,10 +1231,8 @@
 				layer.close(tipsi);
 			});
 		})
-		/*点击完右侧划出里的操作按钮刷新页面后继续让后侧显示*/
 
-
-
+ */
 
 		/*点击房间右侧划出*/
 		$(".houseBigBox li").each(function () {
@@ -1067,11 +1260,11 @@
 			$(".basicInfoList").hide();
 		})
 
-        $(".look_contrat1").each(function () {
+		$(".look_contrat1").each(function () {
 
 			$(this).click(function () {
 				$(".contrahistoy").show();
-			    $(".basicInfoList").hide();
+				$(".basicInfoList").hide();
 			})
 
 		})
@@ -1079,44 +1272,44 @@
 
 
 		/*点击待处理账单信息的查看*/
-		 $(".lookBill0").click(function () {
+		$(".lookBill0").click(function () {
 			$(".billDetail").show();
 			$(".billList").hide();
-			
+
 			var strtype = $(this).siblings(".typeex").html();
-				var prname = ["水费","电费"];
-				if(strtype == prname[0] || strtype == prname[1]){
-					
-					$(".twobill").show();
-				
-				}else{
-					// $(".twobill").show();
-					$(".firstbill").show();
-				}
+			var prname = ["水费", "电费"];
+			if (strtype == prname[0] || strtype == prname[1]) {
+
+				$(".twobill").show();
+
+			} else {
+				// $(".twobill").show();
+				$(".firstbill").show();
+			}
 
 
 
 
 
-		 })
+		})
 
 		//  点击已处里账单的每一个查看显示
-		 $(".lookBill").each(function () {
+		$(".lookBill").each(function () {
 
 			$(this).click(function () {
 				$(".prolook").show();
 				$(".billList").hide();
 				var strtype = $(this).siblings(".typeex").html();
-				var prname = ["水费","电费"];
-				if(strtype == prname[0] || strtype == prname[1]){
-				
+				var prname = ["水费", "电费"];
+				if (strtype == prname[0] || strtype == prname[1]) {
+
 					$(".fourbill").show();
-				
-				}else{
-					
+
+				} else {
+
 					$(".threebill").show();
 				}
-				
+
 			})
 
 		})
@@ -1134,16 +1327,16 @@
 			$(".contrahistoy").hide();
 
 		})
-        
+
 		/*点击待处理账单信息的返回上一页*/
 		$(".billDetail a").click(function () {
 			$(".billList").show();
-			 $(".twobill").hide();
+			$(".twobill").hide();
 			$(".firstbill").hide();
 			$(".billDetail").hide();
 		})
 		//点击已处理账单里面的返回上一页
-        $(".prolook a").click(function () {
+		$(".prolook a").click(function () {
 			$(".billList").show();
 			$(".threebill").hide();
 			$(".fourbill").hide();
@@ -1281,7 +1474,7 @@
 					type: 2,
 					title: '附件',
 					shadeClose: false, //点击遮罩关闭层
-					area: ['512px', '300px,],
+					area: ['512px', '300px'],
 					content: 'attupding.html',
 					end: function () {
 						location.reload(); //点击后刷新父页面
@@ -1297,7 +1490,7 @@
 					title: '编辑',
 					shadeClose: false, //点击遮罩关闭层
 					area: ['880px', '650px'],
-				    content: 'newronmsgedit.html',
+					content: 'newronmsgedit.html',
 					end: function () {
 						location.reload(); //点击后刷新父页面
 					}
@@ -1312,7 +1505,7 @@
 					title: '编辑',
 					shadeClose: false, //点击遮罩关闭层
 					area: ['700px', '451px'],
-				    content: 'housebill.html',
+					content: 'housebill.html',
 					end: function () {
 						location.reload(); //点击后刷新父页面
 					}
@@ -1340,7 +1533,7 @@
 			$(this).click(function () {
 				$(this).hide();
 				$(this).siblings(".mstate").html("已开票").removeClass("wait_payFee").addClass("wait-ord");;
-			
+
 			})
 		})
 	</script>

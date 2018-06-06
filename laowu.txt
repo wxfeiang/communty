@@ -1,0 +1,24 @@
+项目管理  project-management.html
+         
+        project-managementNEW.html   新建项目
+        project-managementEDIT.html  编辑项目
+
+
+黑名单    blacklist.html  
+
+
+          blacklistedit.html    黑名单编辑
+          blacklistnew.html     黑名单新建
+
+
+考勤管理   attenmagent.html      
+
+
+
+分包管理     sub-contractor.html
+             sub-contractorEDit.html  分包单位编辑
+             sub-contractorAdd.html   分包单位新增
+             teammagent.html      班组管理
+             teammagentAdd.html   新建班组
+             teammagentEdit,html   编辑班组
+	     workers.html           工人资料
