@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>工人资料管理</title>
+    <title>培训记录</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="favicon.ico">
@@ -98,25 +98,29 @@
     <!--操作区域-->
     <div class="mommunity_btnBox commenBtnBox">
         <form action="">
-            <b>分包切换:</b>
+            <b>项目切换:</b>
             <select name="" class="cosset">
                 <option value="">甘肃一建</option>
                 <option value="">2</option>
                 <option value="">3</option>
             </select>
-            <b>班组切换:</b>
+            <b>课程切换:</b>
             <select name="" class="cosset">
-                <option value="">水泥班</option>
+                <option value="">三级培训</option>
                 <option value="">2</option>
                 <option value="">3</option>
             </select>
-            <b>分包单位：</b>
-            <input name="" class="coinput cosset" type="text" placeholder="请输入">
+            <b>姓名:</b>
+            <select name="" class="cosset">
+                <option value="">李二狗</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+            
 
             <input type="button" value="搜索" class="cost-inpt cost-on">
-            <input type="button" value="新建" class="cost-inpt" id="costadd">
-            <input type="button" value="导入数据" class="cost-inpt daoru">
-            <input type="button" value="导出数据" class="cost-inpt daoru">
+            <input type="button" value="匹配课程" class="cost-inpt daoru" id="costadd">
+        
 
         </form>
     </div>
@@ -130,19 +134,15 @@
                             <tr>
 
                                 <th>
-                                    <input type="checkbox" class="i-checks" id="allOptionId" name="allOptionId">
+                                    姓名
                                 </th>
-                                <th>姓名</th>
-                                <th>身份证号</th>
-                                <th>所属单位</th>
-                                <th>考勤卡号</th>
-                                <th>所属班组</th>
-                                <th>工种 </th>
-                                <th>是否黑名单</th>
-                                <th>联系电话</th>
-                                <th>紧急联系人</th>
-                                <th>电话</th>
-                             
+                                <th>身份证号h</th>
+                                <th>所属项目</th>
+                                <th>培训课程</th>
+                                <th>培训内容</th>
+                                <th>培训时间</th>
+                                <th>培训地址</th>
+                                <th>培训状态</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
@@ -150,49 +150,18 @@
                             <tr>
 
                                 <td>
-                                    <input type="checkbox" class="i-checks" name="input[]">
+                                   李二狗
                                 </td>
                                 <td>
 
-                                    <span class="btn_blue sub-one">张奋男</span>
+                                    84151561894986151
                                 </td>
-                               
-                                <td>465151894151654984</td>
-                                <td>甘肃一键</td>
-                                <td>46165165</td>
-                                <td>钢筋班</td>
-                                <td>钢筋工</td>
-                                <td class="red">是</td>
-                                <td>12519324625</td>
-                                <td>二狗子</td>
-                                <td>13519201213</td>
-                           
-
-                                <td>
-                                    <span class="btn_blue mommunityEdit">编辑</span>
-                                    <span class="btn_blue delone">删除</span>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>
-                                    <input type="checkbox" class="i-checks" name="input[]">
-                                </td>
-                                <td>
-
-                                    <span class="btn_blue sub-one">张奋男</span>
-                                </td>
-                               
-                                <td>465151894151654984</td>
-                                <td>甘肃一键</td>
-                                <td>46165165</td>
-                                <td>钢筋班</td>
-                                <td>钢筋工</td>
-                                <td >否</td>
-                                <td>12519324625</td>
-                                <td>二狗子</td>
-                                <td>13519201213</td>
-                           
+                                <td>一建项目</td>
+                                <td>三级培训</td>
+                                <td>甘肃省兰州市城关区三级内容</td>
+                                <td>2017-17-78</td>
+                                <td>甘肃神兰州市</td>
+                                <td>已培训</td>
 
                                 <td>
                                     <span class="btn_blue mommunityEdit">编辑</span>
@@ -244,8 +213,8 @@
                 type: 2,
                 title: '新增项目',
                 shadeClose: false, //点击遮罩关闭层
-                area: ['614px', '400px'],
-                content: 'project-managementNEW.html',
+                area: ['614px', '420px'],
+                content: 'safetyroodNEW.html',
                 end: function () {
                     location.reload(); //点击后刷新父页面
                 }
@@ -261,8 +230,8 @@
                     type: 2,
                     title: '编辑',
                     shadeClose: false, //点击遮罩关闭层
-                    area: ['614px', '400px'],
-                    content: 'project-managementEDIT.html',
+                    area: ['614px', '420px'],
+                    content: 'safetyroodEDit.html',
                     end: function () {
                         location.reload(); //点击后刷新父页面
                     }

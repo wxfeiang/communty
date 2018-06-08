@@ -1,24 +1,55 @@
-ÏîÄ¿¹ÜÀí  project-management.html
+
+é¦–é¡µ   index.html
+
+
+
+é¡¹ç›®ç®¡ç†  project-management.html
          
-        project-managementNEW.html   ĞÂ½¨ÏîÄ¿
-        project-managementEDIT.html  ±à¼­ÏîÄ¿
+        project-managementNEW.html   æ–°å»ºé¡¹ç›®
+        project-managementEDIT.html  ç¼–è¾‘é¡¹ç›®
 
 
-ºÚÃûµ¥    blacklist.html  
+é»‘åå•    blacklist.html  
 
 
-          blacklistedit.html    ºÚÃûµ¥±à¼­
-          blacklistnew.html     ºÚÃûµ¥ĞÂ½¨
+          blacklistedit.html    é»‘åå•ç¼–è¾‘
+          blacklistnew.html     é»‘åå•æ–°å»º
 
 
-¿¼ÇÚ¹ÜÀí   attenmagent.html      
+è€ƒå‹¤ç®¡ç†  
+
+          attenmagent.html        æœˆåº¦æ±‡æ€»   (è¡¨æ ¼å¤´éƒ¨æ²¡æœ‰å±…ä¸­   å¤´ä¸æ—¥æœŸæ¡†å¾…å®Œå–„)
+          eveydata.html           æ¯æ—¥ç»Ÿè®¡
 
 
 
-·Ö°ü¹ÜÀí     sub-contractor.html
-             sub-contractorEDit.html  ·Ö°üµ¥Î»±à¼­
-             sub-contractorAdd.html   ·Ö°üµ¥Î»ĞÂÔö
-             teammagent.html      °à×é¹ÜÀí
-             teammagentAdd.html   ĞÂ½¨°à×é
-             teammagentEdit,html   ±à¼­°à×é
-	     workers.html           ¹¤ÈË×ÊÁÏ
+åˆ†åŒ…ç®¡ç†    
+        sub-contractor.html      åˆ†åŒ…å•ä½
+        sub-contractorEDit.html  åˆ†åŒ…å•ä½ç¼–è¾‘
+        sub-contractorAdd.html   åˆ†åŒ…å•ä½æ–°å¢
+
+        teammagent.html      ç­ç»„ç®¡ç†
+        teammagentAdd.html   æ–°å»ºç­ç»„
+        teammagentEdit.html  ç¼–è¾‘ç­ç»„
+
+
+        workers.html           å·¥äººèµ„æ–™
+
+å®‰å…¨åŸ¹è®­ 
+             safetytraining.html
+             safetyNEW.html   æ–°å»ºè¯¾ç¨‹
+             safetyEDit.html  ç¼–è¾‘   
+
+
+             safetyrood.html  åŸ¹è®­è®°å½•
+
+             å·¥äººé‚£å—å¸¦å®Œå–„
+             safetyroodNEW.html  åŒ¹é…è¯¾ç¨‹
+             safetyroodEDit.html  åŒ¹é…è¯¾ç¨‹ç¼–è¾‘
+
+
+
+å¾…è§£å†³     åˆ†åŒ…ç®¡ç†  å·¥äººèµ„æ–™  ç­ç»„ç®¡ç†
+
+
+          é‡Œé¢  ç‚¹å‡»å»è¯¦æƒ…
