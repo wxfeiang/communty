@@ -24,9 +24,16 @@
 
 
 分包管理    
+
+        subcontract.html     分包
+
+
         sub-contractor.html      分包单位
         sub-contractorEDit.html  分包单位编辑
         sub-contractorAdd.html   分包单位新增
+        sub-contractodata.html           分包单位详情展示
+
+
 
         teammagent.html      班组管理
         teammagentAdd.html   新建班组
@@ -47,9 +54,12 @@
              safetyroodNEW.html  匹配课程
              safetyroodEDit.html  匹配课程编辑
 
-
+删除提示页面    delcofin.html 
+完工提示页面     delcofin1.html
 
 待解决     分包管理  工人资料  班组管理
 
 
           里面  点击去详情
+
+

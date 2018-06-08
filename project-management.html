@@ -138,7 +138,7 @@
                                 <td>
                                     <span class="btn_blue mommunityEdit">编辑</span>
                                     <span class="btn_blue delone">删除</span>
-                                    <span class="btn_blue">完工</span>
+                                    <span class="btn_blue complet">完工</span>
                                 </td>
                             </tr>
                            
@@ -212,6 +212,25 @@
                     closeBtn: 0,
                     shadeClose: false,
                     content: "delcofin.html",
+                    end: function () {
+                        location.reload(); //点击后刷新父页面
+                    }
+                });
+
+
+            })
+        })
+        // 点击完工按钮
+        $(".complet").each(function () {
+            $(this).click(function () {
+
+                layer.open({
+                    type: 2,
+                    area: ['340px', '124px'],
+                    title: false,
+                    closeBtn: 0,
+                    shadeClose: false,
+                    content: "delcofin1.html",
                     end: function () {
                         location.reload(); //点击后刷新父页面
                     }

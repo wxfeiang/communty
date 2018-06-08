@@ -38,3 +38,41 @@
 .red{
     color: red !important;
 }
+
+  /* 分包管理详情样式 */
+  .databox{
+      position: absolute;
+      top: 15px;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+  }
+  .go-back a{
+    padding: 0 0 0 30px;
+    background: url(../img/back.png) no-repeat left center;
+    color: #1890ff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.subdata{
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.datalist {
+
+    width: 100%;
+
+}
+
+.datalist li {
+    float: left;
+    width: 25%;
+    min-height: 40px;
+    line-height: 40px;
+    color: #272727;
+}
+.datalist li span{
+    color: #1890FF;
+}

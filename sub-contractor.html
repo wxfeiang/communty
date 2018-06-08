@@ -158,18 +158,88 @@
                                     <span class="btn_blue delone">删除</span>
                                 </td>
                             </tr>
+                            <tr>
+
+                                <td>
+                                    <input type="checkbox" class="i-checks" name="input[]">
+                                </td>
+                                <td>
+
+                                    <span class="btn_blue sub-one">分包单位一</span>
+                                </td>
+                                <td>一建项目</td>
+                                <td>王石</td>
+                                <td>甘肃省兰州市城关区</td>
+                                <td>18309469751</td>
+                                <td>叶云龙</td>
+                                <td>三级</td>
+
+                                <td>
+                                    <span class="btn_blue mommunityEdit">编辑</span>
+                                    <span class="btn_blue delone">删除</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <input type="checkbox" class="i-checks" name="input[]">
+                                </td>
+                                <td>
+
+                                    <span class="btn_blue sub-one">分包单位一</span>
+                                </td>
+                                <td>一建项目</td>
+                                <td>王石</td>
+                                <td>甘肃省兰州市城关区</td>
+                                <td>18309469751</td>
+                                <td>叶云龙</td>
+                                <td>三级</td>
+
+                                <td>
+                                    <span class="btn_blue mommunityEdit">编辑</span>
+                                    <span class="btn_blue delone">删除</span>
+                                </td>
+                            </tr>
+
 
 
 
                         </tbody>
                     </table>
-                    <!--  点击分包的详情 -->
-                    <div class=" sub-box" style="display:none">
-                        <p class="go-back">返回</p>
+                    <!-- 分包单位详情 -->
+                    <div class="databox" style="display: none">
+                        <p class="go-back">
+                            <a href="javascript:;">返回</a>
+                        </p>
+                        <h1 class="subdata">分包单位详情</h1>
+                        <ul class=" clearfix datalist">
+                            <li>所属单位 : 甘肃一建项目</li>
+                            <li>分包方名称 : 甘肃一建分包 </li>
+                            <li>负责人员： 张三 </li>
+                            <li>地址： 甘肃省兰州市城关区xxx </li>
+                            <li>电话： 15002697423 </li>
+                            <li>经营许可证： 123458781 </li>
+                            <li>资质等级： 3级</li>
+                            <li>开户银行： 中国建设银行</li>
+                            <li>账号： 124510564868</li>
+                            <li>纳税人性质： 一般纳税人</li>
+                            <li>营业范围： 惺惺惜惺惺</li>
+                        </ul>
+                        <ul class=" clearfix datalist">
+
+                            <li>拟分包工程与类型 ：惺惺惜惺惺</li>
+                        </ul>
+                        <ul class=" clearfix datalist">
+                            <li>分包合同附件：
+                                <span>合同1.jpg 16 ，合同2.jpg</span>
+                            </li>
+                            <li>营业执照附件：
+                                <span>合同1.jpg</span>
+                            </li>
+                        </ul>
+
                     </div>
-
-
-
 
 
 
@@ -214,8 +284,8 @@
         // 点击编辑按钮
         $(".mommunityEdit").each(function () {
             $(this).click(function () {
-              
-                
+
+
                 parent.layer.open({
                     type: 2,
                     title: '编辑',
@@ -226,11 +296,11 @@
                         location.reload(); //点击后刷新父页面
                     }
                 });
-          
+
             })
         })
-     
-   
+
+
         // 点击删除按钮
         $(".delone").each(function () {
             $(this).click(function () {
@@ -257,10 +327,10 @@
         $(".sub-one").each(function () {
             $(this).click(function () {
 
-                $(".sub-box").show();
+                $(".databox").show();
                 $(".go-back").click(function () {
 
-                    $(".sub-box").hide();
+                    $(".databox").hide();
 
                 })
 

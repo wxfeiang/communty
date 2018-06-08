@@ -148,7 +148,7 @@
                                 <td>624151546546541354</td>
                                 <td>18309469751</td>
                                 <td>
-                                        <span class="btn_blue">150</span>
+                                        <span class="btn_blue peops">150</span>
                                 </td>
                                
 
@@ -239,21 +239,18 @@
 
 
 
-        // 点击每一个分包项目管理
-        $(".sub-one").each(function () {
+        /*点击人数 跳转 查看对应班组的人员情况*/
+    	
+
+        $(".peops").each(function () {
             $(this).click(function () {
-
-                $(".sub-box").show();
-                $(".go-back").click(function () {
-
-                    $(".sub-box").hide();
-
-                })
-
-
-
+                location.href="workers.html";
             })
-        })
+        });
+
+
+
+        
   </script>
 </body>
 

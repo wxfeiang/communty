@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>删除框</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="css/my.css" />
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+</head>
+<style>
+    html { overflow-x: hidden; overflow-y: hidden; }
+    .alertbox {
+        box-sizing: border-box;
+
+
+
+        background: #fff;
+    }
+
+    .alertbox h3 {
+
+        margin: 24px 0 0 0 ;
+        padding-left: 26px;
+        font: 14px/24px "Microsoft YaHei";
+
+        color: #5a5a5a;
+    }
+
+    .alertbox h3 img {
+        margin-right: 7px;
+    }
+
+    .alertbox p {
+        padding-left: 64px;
+        margin-bottom: 20px;
+        font: 14px/36px "Microsoft YaHei";
+        color: #999;
+    }
+
+    .red {
+        color: red;
+    }
+     .delbtn{
+         margin-top: 20px;
+         padding-left: 178px;
+     }
+    .delbtn span {
+        display: inline-block;
+        padding: 0 15px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .delbtn .on {
+        background: #1890ff;
+        color: #fff;
+    }
+
+    .delbtn .cancel:hover {
+        border-color: #ccc;
+  
+    }
+    .delbtn .on:hover{
+        background: #1482e8;
+    }
+</style>
+
+<body>
+
+    <div class="alertbox">
+
+        <h3>
+            <img src="img/delatl.png" alt="" width="24px" height="24px;"> 
+            是否确认完工
+
+        </h3>
+        <div class="delbtn">
+            <span class="cancel">取消</span>
+            <span class="on">继续</span>
+        </div>
+       
+    </div>
+
+</body>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+<script src="js/plugins/layer/layer.min.js"></script>
+<script src="js/plugins/layer/laydate/laydate.js"></script>
+
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="js/plugins/iCheck/myIcheck.js"></script>
+<script>
+    var index = parent.layer.getFrameIndex(window.name);
+    $(".cancel").click(function () {
+        parent.layer.close(index);
+    })
+</script>
+
+</html>

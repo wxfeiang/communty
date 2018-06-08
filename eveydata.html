@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每月统计</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/wpublic.css">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        tr {
+            cursor: pointer;
+        }
+
+        .tableMain {
+            height: calc(100% - 100px);
+            margin: 80px 30px 20px;
+        }
+
+        .commenBtnBox .feeAdd {
+            width: 130px;
+            text-indent: 30px;
+            background: #20a8ff url(img/addWhite.png) no-repeat 10px center;
+        }
+
+        .cosset {
+            width: 136px;
+        }
+
+        .cost-inpt {
+            margin: 0 5px 0;
+            width: 64px;
+            line-height: 28px;
+            text-align: center;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            background: none;
+            outline: none;
+
+        }
+
+        .cost-on {
+            margin: 0 5px 0 10px;
+        }
+
+        .cost-on,
+        .cost-inpt:hover {
+            background: #1890ff;
+            color: #fff;
+        }
+
+        .coinput {
+
+            line-height: 28px;
+            padding: 0 10px;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            background: none;
+            outline: none;
+        }
+
+        .page-header {
+            padding: 0 0 0 10px;
+        }
+
+        .daoru {
+            width: 90px;
+        }
+
+        #tr-center th {
+            text-align: center !important;
+        }
+        #tdimg{
+            width: 25%;
+            padding:20px 0 10px 0 !important;
+            /* text-align: left !important; */
+        }
+        #tdimg img{
+            width: 112px;
+            height: 82px;
+            margin-bottom: 10px;
+            border: 4px solid #ccc;
+        }
+        @media screen and (max-width: 1300px) {
+            #tdimg img{
+            width: 72px;
+            height: 32px;
+            margin-bottom: 10px;
+            border: 4px solid #ccc;
+        }
+        }
+
+
+    
+    </style>
+</head>
+
+<body class="gray-bg">
+    <!-- 头部导航展示 -->
+    <div class="con-layout navder">
+        <a href="">费项设置 </a>
+        <span>/</span>
+        <a href="" class="aon">收费项目管理 </a>
+    </div>
+
+
+    <!--操作区域-->
+    <div class="mommunity_btnBox commenBtnBox">
+        <form action="">
+            <b>项目切换:</b>
+            <select name="" class="cosset">
+                <option value="">甘肃一建</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+            <b>分包单位:</b>
+            <select name="" class="cosset">
+                <option value="">三级培训</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+            <b>班组切换:</b>
+            <select name="" class="cosset">
+                <option value="">李二狗</option>
+                <option value="">2</option>
+                <option value="">3</option>
+            </select>
+            <b>考勤状态:</b>
+            <select name="" class="cosset">
+                <option value="">全部</option>
+                <option value="">正常</option>
+                <option value="">迟到</option>
+                <option value="">早退</option>
+                <option value="">旷工</option>
+
+            </select>
+            <b>选择月份:</b>
+            <input placeholder="发布时间" class="laydate-icon form-control layer-date datainput coinput cosset" id="start">
+            <!-- <input name="" class="coinput cosset" type="text" placeholder="请输入名称"> -->
+
+            <input type="button" value="搜索" class="cost-inpt cost-on">
+            <input type="button" value="导出报表" class="cost-inpt daoru" id="costadd">
+
+
+        </form>
+    </div>
+    <!--小区展示-->
+    <div class="tableMain">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox-content communityList">
+                    <table class="table table-hover table-bordered text-center">
+                        <thead>
+                            <tr id="tr-center">
+
+                                <th> 姓名</th>
+                                <th>考勤时间</th>
+                                <th>出勤时长</th>
+                                <th>考勤状态</th>
+                                <th>抓拍图片</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td> 李二狗 </td>
+                                <td>
+                                    <p>16 : 20</p>
+                                    <p>16 : 20</p>
+                                    <p>16 : 20</p>
+                                </td>
+                                <td>15小时</td>
+                                <td>2小时</td>
+                                <td id="tdimg">
+                                  <img src="img/loginBigBg.jpg" alt="">
+                                  <img src="img/loginBigBg.jpg" alt="">
+                                  <img src="img/loginBigBg.jpg" alt="">
+                                
+
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--  点击分包的详情 -->
+                    <div class=" sub-box" style="display:none">
+                        <p class="go-back">返回</p>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+
+    <script>
+        var elem = document.querySelector('.js-switch');
+        var switchery = new Switchery(elem, {
+            color: '#20a8ff'
+        });
+
+
+
+        var start = {
+            elem: '#start',
+            format: 'YYYY/MM/DD',
+            // min: laydate.now(), //设定最小日期为当前日期
+            // max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+
+
+        laydate(start);
+        //  点击新增
+        $("#costadd").click(function () {
+            parent.layer.open({
+                type: 2,
+                title: '新增项目',
+                shadeClose: false, //点击遮罩关闭层
+                area: ['614px', '420px'],
+                content: 'safetyroodNEW.html',
+                end: function () {
+                    location.reload(); //点击后刷新父页面
+                }
+            });
+        })
+
+        // 点击编辑按钮
+        $(".mommunityEdit").each(function () {
+            $(this).click(function () {
+
+
+                parent.layer.open({
+                    type: 2,
+                    title: '编辑',
+                    shadeClose: false, //点击遮罩关闭层
+                    area: ['614px', '420px'],
+                    content: 'safetyroodEDit.html',
+                    end: function () {
+                        location.reload(); //点击后刷新父页面
+                    }
+                });
+
+            })
+        })
+
+
+        // 点击删除按钮
+        $(".delone").each(function () {
+            $(this).click(function () {
+
+                layer.open({
+                    type: 2,
+                    area: ['340px', '154px'],
+                    title: false,
+                    closeBtn: 0,
+                    shadeClose: false,
+                    content: "delcofin.html",
+                    end: function () {
+                        location.reload(); //点击后刷新父页面
+                    }
+                });
+
+
+            })
+        })
+
+
+
+        // 点击每一个分包项目管理
+        $(".sub-one").each(function () {
+            $(this).click(function () {
+
+                $(".sub-box").show();
+                $(".go-back").click(function () {
+
+                    $(".sub-box").hide();
+
+                })
+
+
+
+            })
+        })
+    </script>
+</body>
+
+</html>
