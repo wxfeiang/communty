@@ -83,8 +83,63 @@
         .daoru {
             width: 90px;
         }
-        #tr-center th{
+
+        #tr-center th {
             text-align: center !important;
+        }
+
+        #tdimg {
+            width: 25%;
+            padding: 20px 0 10px 0 !important;
+            /* text-align: left !important; */
+        }
+
+        #tdimg img {
+            width: 112px;
+            height: 82px;
+            margin-bottom: 10px;
+            border: 4px solid #ccc;
+        }
+
+        .dataicon {
+            background: url(img/dateicon.png) no-repeat right center;
+        }
+
+        .layer-date {
+
+            margin: 0 !important;
+        }
+
+        @media screen and (max-width: 1300px) {
+            #tdimg img {
+                width: 72px;
+                height: 62px;
+                margin-bottom: 10px;
+                border: 4px solid #ccc;
+            }
+            .cosset {
+                width: 251px;
+            }
+
+
+
+            .cost-on {
+                margin: 0 5px 0 36px;
+            }
+            select {
+                margin: 0 0 10px 0;
+            }
+            .mommunity_btnBox {
+                height: 78px;
+                background: #FFFFFF;
+                border-bottom: 1px solid #e6e6e6;
+                position: fixed;
+                width: 100%;
+                top: 50px;
+            }
+            .layer-date {
+                max-width: 251px !important;
+            }
         }
     </style>
 </head>
@@ -120,15 +175,15 @@
                 <option value="">3</option>
             </select>
             <b>选择月份:</b>
-            <input placeholder="发布时间" class="laydate-icon form-control layer-date datainput coinput cosset" id="start">
-            <!-- <input name="" class="coinput cosset" type="text" placeholder="请输入名称"> -->
+            <input placeholder="选择日期" class=" datainput coinput cosset dataicon" id="start">
 
 
-            
+
+
 
             <input type="button" value="搜索" class="cost-inpt cost-on">
             <input type="button" value="导出报表" class="cost-inpt daoru" id="costadd">
-        
+
 
         </form>
     </div>
@@ -139,7 +194,7 @@
                 <div class="ibox-content communityList">
                     <table class="table table-hover table-bordered text-center">
                         <thead>
-                            <tr id="tr-center" >
+                            <tr id="tr-center">
 
                                 <th>
                                     姓名
@@ -158,7 +213,7 @@
                             <tr>
 
                                 <td>
-                                   李二狗
+                                    李二狗
                                 </td>
                                 <td>
 
@@ -172,7 +227,7 @@
                                 <td>55小时</td>
 
                                 <td>
-                                        55小时
+                                    55小时
                                 </td>
                             </tr>
 
@@ -200,6 +255,9 @@
     <script src="js/bootstrap.min.js?v=3.3.6"></script>
     <!--layer.js-->
     <script src="js/plugins/layer/layer.min.js"></script>
+
+    <script src="js/plugins/laydate/laydate.js"></script>
+
     <!-- Switchery -->
     <script src="js/plugins/switchery/switchery.js"></script>
     <!-- 自定义js -->
@@ -214,23 +272,10 @@
             color: '#20a8ff'
         });
 
+        laydate.render({
+            elem: '#start'
+        });
 
-
-        var start = {
-            elem: '#start',
-            format: 'YYYY/MM/DD',
-            // min: laydate.now(), //设定最小日期为当前日期
-            // max: '2099-06-16 23:59:59', //最大日期
-            istime: true,
-            istoday: false,
-            choose: function (datas) {
-                end.min = datas; //开始日选好后，重置结束日的最小日期
-                end.start = datas //将结束日的初始值设定为开始日
-            }
-        };
-
-
-        laydate(start);
         //  点击新增
         $("#costadd").click(function () {
             parent.layer.open({
@@ -248,8 +293,8 @@
         // 点击编辑按钮
         $(".mommunityEdit").each(function () {
             $(this).click(function () {
-              
-                
+
+
                 parent.layer.open({
                     type: 2,
                     title: '编辑',
@@ -260,11 +305,11 @@
                         location.reload(); //点击后刷新父页面
                     }
                 });
-          
+
             })
         })
-     
-   
+
+
         // 点击删除按钮
         $(".delone").each(function () {
             $(this).click(function () {

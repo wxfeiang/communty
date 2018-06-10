@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>编辑匹配课程</title>
+    <title>匹配课程</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="favicon.ico">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/my.css" />
     <!-- iCheck -->
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/wpublic.css">
     <style type="text/css">
         .ibox-content {
             padding: 0;
@@ -120,6 +121,12 @@
         <div class="col-sm-4">
             <div class="float-e-margins">
                 <div class="ibox-content">
+
+                    <h3 class="selbox">匹配课程
+                        <span class="fr sclose1">×</span>
+                    </h3>
+
+
                     <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
                         <div class="formContent">
                             <div class="form-group form-group-fine">
@@ -154,13 +161,8 @@
                                 <label class="col-sm-3 control-label">
                                     <i>*</i>工人 :</label>
                                 <div class="floatDiv">
-                                    <select name="">
 
-                                        <option value="">甘肃一建</option>
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-
-                                    </select>
+                                    <div class="stafebtn">选择工人</div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -190,7 +192,7 @@
 
 
                         </div>
-                        <div class="form-group form-group-btn1">
+                        <div class="form-group form-group-btn1 ">
                             <button class="btn btn-w-m btn-info" type="submit">提交</button>
                             <button type="button" class="btn btn-w-m btn-white btnCancle">取消</button>
                         </div>
@@ -198,6 +200,106 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- 选择工人展示 -->
+    <div class="wor-select " style="display: none">
+
+        <h3 class="selbox">选择工人
+            <span class="fr sclose">×</span>
+        </h3>
+
+        <div class="slhead">
+            <label for="">分包单位:</label>
+            <select name="" id="">
+
+                <option value="">甘肃一键</option>
+                <option value="">甘肃一键</option>
+                <option value="">甘肃一键</option>
+
+            </select>
+            <input type="text">
+            <span>搜索</span>
+        </div>
+
+        <div class="scrol">
+
+
+            <div class="wr-tabbox">
+
+
+                <table class="table table-hover">
+
+
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" class="i-checks" id="allOptionId" name="allOptionId"> 姓名
+
+                            </th>
+                            <th>身份证号</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <input type="checkbox" class="i-checks" name="input[]"> 李二牛
+                            </td>
+
+                            <td>1004816516846841</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <input type="checkbox" class="i-checks" name="input[]"> 李二牛
+                            </td>
+
+                            <td>1004816516846841</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <input type="checkbox" class="i-checks" name="input[]"> 李二牛
+                            </td>
+
+                            <td>1004816516846841</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <input type="checkbox" class="i-checks" name="input[]"> 李二牛
+                            </td>
+
+                            <td>1004816516846841</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <input type="checkbox" class="i-checks" name="input[]"> 李二牛
+                            </td>
+
+                            <td>1004816516846841</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+        <div class="form-group form-group-btn1 warp-btn">
+            <button class="btn btn-w-m btn-info" type="submit">提交</button>
+            <button type="button" class="btn btn-w-m btn-white sclose">取消</button>
+        </div>
+
     </div>
     <!-- 全局js -->
     <script src="js/jquery.min.js?v=2.1.4"></script>
@@ -225,6 +327,14 @@
 
 
         /*取消*/
+        var index = parent.layer.getFrameIndex(window.name);
+        $(".btnCancle").click(function () {
+            parent.layer.close(index);
+        })
+
+        $(".sclose1").click(function () {
+            parent.layer.close(index);
+        })
 
         var start = {
             elem: '#start',
@@ -241,6 +351,20 @@
 
 
         laydate(start);
+        // 点击选择工人显示
+
+        $(".stafebtn").click(function () {
+            $(".wor-select ").show();
+
+        })
+
+        $(".sclose").each(function () {
+            $(this).click(function () {
+                $(".wor-select ").hide();
+
+            })
+
+        })
     </script>
 </body>
 

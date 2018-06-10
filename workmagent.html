@@ -133,12 +133,8 @@
 		 //弹框内部高度控制
         $(".formContent").height($("body,html").height()-70);
 		
-      
-		/*获取弹出窗口索引*/
-		var index = parent.layer.getFrameIndex(window.name); 
-		
-	
 		/*取消*/
+        var index = parent.layer.getFrameIndex(window.name); 
         $(".btnCancle").click(function(){
 			parent.layer.close(index);
 		})

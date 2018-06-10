@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增员工资料</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/wpublic.css">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        tr {
+            cursor: pointer;
+        }
+
+        .tableMain {
+            height: calc(100% - 100px);
+            margin: 80px 30px 20px;
+        }
+
+        .commenBtnBox .feeAdd {
+            width: 130px;
+            text-indent: 30px;
+            background: #20a8ff url(img/addWhite.png) no-repeat 10px center;
+        }
+
+
+
+
+        .daoru {
+            width: 90px;
+        }
+
+        /* 详情样式 */
+
+        .go-back a {
+            padding: 0 0 0 30px;
+            background: url(img/back.png) no-repeat left center;
+            color: #1890ff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .subdata1 {
+           
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .datalist {
+
+            width: 100%;
+
+        }
+
+        .datalist li {
+            float: left;
+            width: 25%;
+            min-height: 40px;
+            line-height: 40px;
+            color: #272727;
+        }
+
+        .datalist li span {
+            color: #1890FF;
+        }
+
+
+        .peopbox {}
+
+        .peopbox .pbox1 {
+            width: 50%;
+
+
+        }
+
+        .peopbox .pbox1 .p-imgbox {
+            width: 280px;
+            padding: 28px 24px 10px;
+            border: 1px solid #ccc;
+
+
+        }
+
+        .peopbox .pbox1 .img-title {
+            line-height: 50px;
+            font-size: 12px;
+            text-align: center;
+            color: #333;
+        }
+
+        .peopbox .pbox1 .p-duka {
+            margin: 0 auto;
+            width: 80px;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            background: #1188ff;
+            line-height: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+
+
+        }
+
+        .peopbox .p-imgdata {}
+
+        .peopbox .p-imgdata li {
+            float: left;
+            min-height: 36px;
+            line-height: 36px;
+
+
+
+        }
+
+        .wors-table {
+            margin: 30px auto 0;
+        }
+
+        .wors-table tr,
+        .wors-table td {
+
+            line-height: 30px;
+            color: #333;
+        }
+
+        .wors-table tr>th {
+            text-align: right;
+
+        }
+
+        .wors-table tr>td {
+            padding: 0 0 0 20px;
+        }
+
+
+        .pbox2 {
+            border-left: 1px solid #ccc;
+        }
+
+        .wors-table2 {
+
+            margin: 30px auto 0;
+            color: #333;
+        }
+
+        .wors-table2 tr {
+            line-height: 50px;
+        }
+
+        .wors-table2 tr>th {
+            text-align: right;
+        }
+
+        .wors-table2 tr>td {
+            padding: 0 0 0 20px;
+        }
+
+        .wors-table2 tr>td input {
+            padding: 0 0 0 10px;
+            width: 290px;
+            line-height: 30px;
+            border-radius: 4px;
+            border: none;
+            background: none;
+            -webkit-appearance: none;
+            border: 1px solid #ccc;
+
+        }
+
+        .wors-table2 tr select {
+            margin: 0;
+        }
+
+        .pepp-btn {
+            width: 100%;
+
+        }
+
+        .pepp-btn {
+            padding: 0 10% 0 0;
+            text-align: right;
+        }
+
+        .pepp-btn a {
+            display: inline-block;
+            margin: 0 20px 0 0;
+            width: 80px;
+            text-align: center;
+            font-size: 18px;
+
+            line-height: 30px;
+            border-radius: 4px;
+
+        }
+
+        .pepp-btn .abtn1 {
+            color: #fff;
+            background: #1188ff;
+        }
+
+        .pepp-btn .abtn2 {
+
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="tableMain">
+        <div class="databox">
+            <p class="go-back">
+                <a href="javascript:;">返回</a>
+            </p>
+            <h2 class="subdata1">新增员工</h2>
+            <form action="">
+                <div class="clearfix peopbox">
+                    <!-- 左边 -->
+                    <div class="clearfix fl pbox1">
+
+                        <div class="fl p-imgbox">
+                            <img src="img/loginBigBg.jpg" alt="头像" width="230px" height="280px;">
+                            <h3 class="img-title">
+                                请将工人身份证放置在读卡器上
+                            </h3>
+
+                            <p class="p-duka">读卡</p>
+                        </div>
+                        <!-- 信息展示 -->
+                        <table class="wors-table">
+                            <tbody>
+                                <tr>
+                                    <th>照片: </th>
+                                    <td>
+                                        <img src="img/loginBigBg.jpg" alt="照片" width="80px" height="86px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>姓名 : </th>
+                                    <td>
+                                        李二狗
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>身份证号 : </th>
+                                    <td>
+                                        8941561654984165149
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>性别 : </th>
+                                    <td>
+                                        男
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>民族 : </th>
+                                    <td>
+                                        汉
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>出身日期 : </th>
+                                    <td>
+                                        2011-12-12
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>住址 : </th>
+                                    <td>
+                                        甘肃神兰州市近年来考哪了
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>有效期 : </th>
+                                    <td>
+                                        2017-12-1
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>签发机关 : </th>
+                                    <td>
+                                        甘肃神兰州市
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+
+                        </table>
+
+
+
+                    </div>
+                    <!-- 右边 -->
+                    <div class="clearfix fl pbox1 pbox2">
+                        <table class="wors-table2">
+                            <tbody>
+
+                                <tr>
+                                    <th>所属单位 : </th>
+                                    <td>
+                                        <select name="">
+
+                                            <option value="">甘肃一建</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>所属班组 : </th>
+                                    <td>
+                                        <select name="">
+
+                                            <option value="">甘肃一建</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>工种 : </th>
+                                    <td>
+                                        <input type="text" value="当前值是要查过来d不可输入" disabled>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>文化程度 : </th>
+                                    <td>
+                                        <select name="">
+
+                                            <option value="">本科</option>
+                                            <option value="">大专</option>
+                                            <option value="">高中</option>
+                                            <option value="">中专</option>
+                                            <option value="">初中</option>
+                                            <option value="">小学</option>
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>联系电话 : </th>
+                                    <td>
+                                        <input type="text" placeholder="请输入联系电话">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>紧急联系人 : </th>
+                                    <td>
+                                        <input type="text" placeholder="请输入紧急联系">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>紧急联系电话 : </th>
+                                    <td>
+                                        <input type="text" placeholder="请输入联系人电话">
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+
+
+                        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="pepp-btn ">
+                    <a href="javascript:;" class="abtn1">
+                        保存
+                    </a>
+                    <a href="javascript:;" class="abtn2">
+                        取消
+                    </a>
+
+                </div>
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+<script>
+</script>
+
+</html>

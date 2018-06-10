@@ -18,7 +18,7 @@
 
 考勤管理  
 
-          attenmagent.html        月度汇总   (表格头部没有居中   头不日期框待完善)
+          attenmagent.html        月度汇总   
           eveydata.html           每日统计
 
 
@@ -29,8 +29,8 @@
 
 
         sub-contractor.html      分包单位
-        sub-contractorEDit.html  分包单位编辑
-        sub-contractorAdd.html   分包单位新增
+        sub-contractorEDit.html  分包单位编辑 
+        sub-contractorAdd.html   分包单位新增   里面的 上传控件
         sub-contractodata.html           分包单位详情展示
 
 
@@ -41,6 +41,8 @@
 
 
         workers.html           工人资料
+        workersadd.html        新增工人资料
+        workerdata.html        工人资料详情
 
 安全培训 
              safetytraining.html
@@ -50,16 +52,15 @@
 
              safetyrood.html  培训记录
 
-             工人那块带完善
+          
              safetyroodNEW.html  匹配课程
              safetyroodEDit.html  匹配课程编辑
 
-删除提示页面    delcofin.html 
+删除提示页面     delcofin.html 
 完工提示页面     delcofin1.html
 
-待解决     分包管理  工人资料  班组管理
 
 
-          里面  点击去详情
+
 
 

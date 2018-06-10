@@ -16,8 +16,10 @@
     <!-- iCheck -->
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/style.css?v=4.1.0" rel="stylesheet">
-    <link href="css/my.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/my.css" />
     <link rel="stylesheet" href="css/wpublic.css">
+
+
     <style type="text/css">
         html,
         body {
@@ -72,7 +74,7 @@
             padding: 0 10px;
             border: 1px solid #d9d9d9;
             border-radius: 4px;
-            background: none;
+          
             outline: none;
         }
 
@@ -87,28 +89,55 @@
         #tr-center th {
             text-align: center !important;
         }
-        #tdimg{
+
+        #tdimg {
             width: 25%;
-            padding:20px 0 10px 0 !important;
+            padding: 20px 0 10px 0 !important;
             /* text-align: left !important; */
         }
-        #tdimg img{
+
+        #tdimg img {
             width: 112px;
             height: 82px;
             margin-bottom: 10px;
             border: 4px solid #ccc;
         }
+
+        
+
+        .layer-date {
+
+            margin: 0 !important;
+        }
+
         @media screen and (max-width: 1300px) {
-            #tdimg img{
-            width: 72px;
-            height: 32px;
-            margin-bottom: 10px;
-            border: 4px solid #ccc;
-        }
-        }
+            #tdimg img {
+                width: 72px;
+                height: 62px;
+                margin-bottom: 10px;
+                border: 4px solid #ccc;
+            }
+            .cosset {
+                width: 180px;
+            }
 
 
-    
+
+            .cost-on {
+                margin: 0 5px 0 36px;
+            }
+            select {
+                margin: 0 0 10px 0;
+            }
+            .mommunity_btnBox {
+                height: 78px;
+                background: #FFFFFF;
+                border-bottom: 1px solid #e6e6e6;
+                position: fixed;
+                width: 100%;
+                top: 50px;
+            }
+        }
     </style>
 </head>
 
@@ -152,8 +181,7 @@
 
             </select>
             <b>选择月份:</b>
-            <input placeholder="发布时间" class="laydate-icon form-control layer-date datainput coinput cosset" id="start">
-            <!-- <input name="" class="coinput cosset" type="text" placeholder="请输入名称"> -->
+            <input placeholder="选择日期" class=" datainput coinput cosset dataicon" id="start">
 
             <input type="button" value="搜索" class="cost-inpt cost-on">
             <input type="button" value="导出报表" class="cost-inpt daoru" id="costadd">
@@ -190,10 +218,10 @@
                                 <td>15小时</td>
                                 <td>2小时</td>
                                 <td id="tdimg">
-                                  <img src="img/loginBigBg.jpg" alt="">
-                                  <img src="img/loginBigBg.jpg" alt="">
-                                  <img src="img/loginBigBg.jpg" alt="">
-                                
+                                    <img src="img/loginBigBg.jpg" alt="">
+                                    <img src="img/loginBigBg.jpg" alt="">
+                                    <img src="img/loginBigBg.jpg" alt="">
+
 
                                 </td>
 
@@ -220,37 +248,21 @@
     <script src="js/bootstrap.min.js?v=3.3.6"></script>
     <!--layer.js-->
     <script src="js/plugins/layer/layer.min.js"></script>
-    <!-- Switchery -->
-    <script src="js/plugins/switchery/switchery.js"></script>
+    <script src="js/plugins/laydate/laydate.js"></script>
     <!-- 自定义js -->
     <script src="js/content.js?v=1.0.0"></script>
     <!-- iCheck -->
     <script src="js/plugins/iCheck/icheck.min.js"></script>
     <script src="js/plugins/iCheck/myIcheck.js"></script>
 
+    
+
     <script>
-        var elem = document.querySelector('.js-switch');
-        var switchery = new Switchery(elem, {
-            color: '#20a8ff'
+       
+
+        laydate.render({
+            elem: '#start'
         });
-
-
-
-        var start = {
-            elem: '#start',
-            format: 'YYYY/MM/DD',
-            // min: laydate.now(), //设定最小日期为当前日期
-            // max: '2099-06-16 23:59:59', //最大日期
-            istime: true,
-            istoday: false,
-            choose: function (datas) {
-                end.min = datas; //开始日选好后，重置结束日的最小日期
-                end.start = datas //将结束日的初始值设定为开始日
-            }
-        };
-
-
-        laydate(start);
         //  点击新增
         $("#costadd").click(function () {
             parent.layer.open({

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新建分包单位</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="css/my.css" />
+    <link rel="stylesheet" href="css/wpublic.css">
+    <!-- iCheck -->
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <!-- webuploader上传插件css -->
+    <link rel="stylesheet" href="plugins/webuploader/webuploader.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/webuploader/style.css" />
+
+    <style type="text/css">
+        .ibox-content {
+            padding: 0;
+        }
+
+        .form-group .floatDiv {
+            float: left;
+            width: 400px;
+        }
+
+        .form-group label {
+            width: 150px;
+        }
+
+        .form-group .floatDiv2 {
+            width: 330px;
+        }
+
+        .form-group .floatDiv2 input {
+            width: 300px;
+            float: left;
+            margin-right: 5px;
+        }
+
+        .form-horizontal .formContent {
+            margin-left: auto;
+        }
+
+        .heatingOne {
+            display: none;
+        }
+
+        .heatingTwo {
+            display: none;
+        }
+
+        .form-group .floatDiv3 input {
+            width: 30px;
+        }
+
+        /*.form-group .floatDiv{
+			width: 290px;
+		}*/
+
+        
+
+       
+        #s_province {
+            float: left;
+            width: 120px;
+            margin: 0 20px 0 0;
+        }
+
+        #s_city {
+            float: left;
+            width: 120px;
+            margin: 0 15px 0 0;
+        }
+
+        #s_county {
+            float: left;
+            width: 120px;
+            margin: -18px 0 0 5px;
+            ;
+
+        }
+
+        .info #show {
+            color: #3399FF;
+        }
+
+        .imgwarp .imgspan {
+            display: inline-block;
+            width: 108px;
+            height: 30px;
+            border-radius: 4px;
+            background: #4f9eff;
+            color: #fff;
+
+            text-align: center;
+            line-height: 30px;
+
+        }
+
+        .imgwarp .imgfile {
+            position: relative;
+            top: -30px;
+            left: -5px;
+            opacity: 0;
+            width: 108px;
+            cursor: pointer;
+            z-index: 20;
+
+        }
+
+        .datainput {
+            width: 400px !important;
+            max-width: 400px !important;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="scrol">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="float-e-margins">
+                    <div class="ibox-content">
+                        <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate">
+                            <div class="formContent">
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>分包方名称 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入分包方名称">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>负责人员 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入负责人员">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>地址 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入地址">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>电话 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入负责人员电话">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>经营许可证 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入经营许可证">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>资质等级 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入资质等级">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>开户银行 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入开户银行">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>账号 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入账号">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>纳税人性质 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入纳税人性质">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>营业范围 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入营业范围">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">
+                                        <i>*</i>拟分包工程与类型 :</label>
+                                    <div class="floatDiv">
+                                        <input class="form-control" type="text" placeholder="请输入营业范围">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">
+                                        <i>*</i>分包合同附件 ：</label>
+                                    <div class="floatDiv">
+                                        <div class="pictrueUrl">
+                                            <input type="hidden" name="headportrait" id="headportrait" value="" maxlength="200" placeholder="这里输入图片" />
+                                            <div id="uploader">
+                                                <div class="queueList">
+                                                    <div id="dndArea" class="placeholder">
+                                                        <div id="filePicker"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="statusBar" style="display:none;">
+                                                    <div class="progress">
+                                                        <span class="text">0%</span>
+                                                        <span class="percentage"></span>
+                                                    </div>
+                                                    <div class="info"></div>
+                                                    <div class="btns">
+                                                        <div id="filePicker2"></div>
+                                                        <div class="uploadBtn">开始上传</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">
+                                        <i>*</i>资历附件 ：</label>
+                                    <div class="floatDiv">
+                                        <div class="pictrueUrl">
+                                            <input type="hidden" name="headportrait" id="headportrait" value="" maxlength="200" placeholder="这里输入图片" />
+                                            <div id="uploader">
+                                                <div class="queueList">
+                                                    <div id="dndArea" class="placeholder">
+                                                        <div id="filePicker"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="statusBar" style="display:none;">
+                                                    <div class="progress">
+                                                        <span class="text">0%</span>
+                                                        <span class="percentage"></span>
+                                                    </div>
+                                                    <div class="info"></div>
+                                                    <div class="btns">
+                                                        <div id="filePicker2"></div>
+                                                        <div class="uploadBtn">开始上传</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+                            </div>
+                            <div class="form-group form-group-btn1">
+                                <button class="btn btn-w-m btn-info" type="submit">提交</button>
+                                <button type="button" class="btn btn-w-m btn-white btnCancle">取消</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <!--layer.js-->
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <!-- jQuery Validation plugin javascript-->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+    <script src="js/plugins/layer/laydate/laydate.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/iCheck/myIcheck.js"></script>
+    <script src="js/area.js" type="text/javascript"></script>
+    <script type="text/javascript" src="plugins/webuploader/webuploader.js"></script>
+    <script type="text/javascript" src="plugins/webuploader/upload2.js"></script>
+
+
+    <script type="text/javascript">
+        //弹框内部高度控制
+        $(".formContent").height($("body,html").height() - 70);
+
+
+        /*取消*/
+        var index = parent.layer.getFrameIndex(window.name);
+        $(".btnCancle").click(function () {
+            parent.layer.close(index);
+        })
+        //三级联动
+        _init_area();
+        var Gid = document.getElementById;
+        var showArea = function () {
+            Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" +
+                Gid('s_city').value + " - 县/区" +
+                Gid('s_county').value + "</h3>"
+        }
+
+
+
+        var start = {
+            elem: '#start',
+            format: 'YYYY/MM/DD',
+            // min: laydate.now(), //设定最小日期为当前日期
+            // max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+
+        var end = {
+            elem: '#end',
+            format: 'YYYY/MM/DD',
+            // min: laydate.now(), //设定最小日期为当前日期
+            // max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function (datas) {
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+
+        laydate(start);
+        laydate(end);
+    </script>
+</body>
+
+</html>

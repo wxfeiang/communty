@@ -209,37 +209,35 @@
 
         //  点击新增
         $("#costadd").click(function () {
-            parent.layer.open({
-                type: 2,
-                title: '新增项目',
-                shadeClose: false, //点击遮罩关闭层
-                area: ['614px', '420px'],
-                content: 'safetyroodNEW.html',
-                end: function () {
-                    location.reload(); //点击后刷新父页面
-                }
-            });
-        })
-
-        // 点击编辑按钮
-        $(".mommunityEdit").each(function () {
-            $(this).click(function () {
-              
-                
-                parent.layer.open({
+            layer.open({
                     type: 2,
-                    title: '编辑',
-                    shadeClose: false, //点击遮罩关闭层
                     area: ['614px', '420px'],
+                    title: false,
+                    closeBtn: 0,
+                    shadeClose: false,
+                    content: 'safetyroodNEW.html',
+                    end: function () {
+                        location.reload(); //点击后刷新父页面
+                    }
+                });
+        })
+        
+    
+        // 点击编辑按钮
+    
+        $(".mommunityEdit").click(function () {
+            layer.open({
+                    type: 2,
+                    area: ['614px', '420px'],
+                    title: false,
+                    closeBtn: 0,
+                    shadeClose: false,
                     content: 'safetyroodEDit.html',
                     end: function () {
                         location.reload(); //点击后刷新父页面
                     }
                 });
-          
-            })
         })
-     
    
         // 点击删除按钮
         $(".delone").each(function () {
@@ -263,21 +261,7 @@
 
 
 
-        // 点击每一个分包项目管理
-        $(".sub-one").each(function () {
-            $(this).click(function () {
-
-                $(".sub-box").show();
-                $(".go-back").click(function () {
-
-                    $(".sub-box").hide();
-
-                })
-
-
-
-            })
-        })
+       
     </script>
 </body>
 
